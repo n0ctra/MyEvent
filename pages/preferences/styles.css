@@ -1,6 +1,7 @@
 /* ============================================================
-   MyEvent Tech — Estilos base
-   (los estilos de utilidad vienen de Tailwind CDN)
+   MyEvent Tech — Onboarding / Personalización (Paso 2 de 2)
+   Estilos base + utilidades propias
+   (los estilos visuales vienen de Tailwind CDN)
    ============================================================ */
 
 /* ---------- Reset / Base ---------- */
@@ -24,12 +25,10 @@ main > :last-child {
 }
 
 /* ---------- Scrollbars ---------- */
-/* Oculta la barra de scroll en todo el documento (WebKit) */
 ::-webkit-scrollbar {
   display: none;
 }
 
-/* Utilidad para carruseles/chips: oculta la barra de scroll */
 .scrollbar-none {
   -ms-overflow-style: none;  /* IE / Edge */
   scrollbar-width: none;     /* Firefox */
@@ -37,4 +36,16 @@ main > :last-child {
 
 .scrollbar-none::-webkit-scrollbar {
   display: none;
+}
+
+/* ---------- Utilidades extraídas de estilos inline ---------- */
+
+/* Icono Material Symbols con relleno sólido */
+.material-symbols-filled {
+  font-variation-settings: 'FILL' 1;
+}
+
+/* Icono Material Symbols con contorno (relleno 0) */
+.material-symbols-outline {
+  font-variation-settings: 'FILL' 0;
 }

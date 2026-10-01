@@ -1,0 +1,48 @@
+/* ============================================================
+   MyEvent Tech — Crear nuevo evento
+   Estilos base + utilidades propias
+   (los estilos visuales vienen de Tailwind CDN)
+   ============================================================ */
+
+/* ---------- Reset / Base ---------- */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overscroll-behavior: none;
+}
+
+/* Evita márgenes fantasma dentro de <main> */
+main > :first-child {
+  margin-top: 0 !important;
+}
+
+main > :last-child {
+  margin-bottom: 0 !important;
+}
+
+/* ---------- Scrollbars ---------- */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE / Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------- Utilidades extraídas de estilos inline ---------- */
+
+/* Fondo del mini-mapa de ubicación (Salento – Armenia, Quindío) */
+.bg-map-preview {
+  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCw_LXbd39mroB1dHODknE4CWsyLWeGRqlZF99PxENAAOCGfpBzRiUFSaixUVguGH5fVK_fXowTk0C5xkTs3pTc9-DtV55Jpgt3yQepMKAyzrFBcKpXfqUWGgzcFO7g2dnmq73uth5iohJVoQjzXsNlCH74NZXbdWIQNOKd3e_suZ9FY7XIQOXINTwzHEBt8VSIRroV5b8DlyQ93S949dlCJVwXBOb2NdXoil0WRKB4JqdgBf_9xterhw');
+  background-size: cover;
+  background-position: center;
+}

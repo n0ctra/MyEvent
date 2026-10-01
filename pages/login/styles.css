@@ -1,6 +1,7 @@
 /* ============================================================
-   MyEvent Tech — Estilos base
-   (los estilos de utilidad vienen de Tailwind CDN)
+   MyEvent Tech — Iniciar sesión
+   Estilos base + utilidades propias
+   (los estilos visuales vienen de Tailwind CDN)
    ============================================================ */
 
 /* ---------- Reset / Base ---------- */
@@ -24,12 +25,10 @@ main > :last-child {
 }
 
 /* ---------- Scrollbars ---------- */
-/* Oculta la barra de scroll en todo el documento (WebKit) */
 ::-webkit-scrollbar {
   display: none;
 }
 
-/* Utilidad para carruseles/chips: oculta la barra de scroll */
 .scrollbar-none {
   -ms-overflow-style: none;  /* IE / Edge */
   scrollbar-width: none;     /* Firefox */
