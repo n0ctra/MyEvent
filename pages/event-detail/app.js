@@ -1,6 +1,6 @@
 /* ============================================================
-   Renderiza el detalle de CUALQUIER evento desde eventsStore.
-   No conoce eventos concretos. Solo lee el schema.
+   Renderiza el detalle de CUALQUIER evento.
+   Reserva requiere sesión y persiste en reservationsStore.
    ============================================================ */
    (function () {
     'use strict';
@@ -11,6 +11,10 @@
       : window.eventsStore.getAll()[0];
   
     if (!event) return renderNotFound(id);
+  
+    if (window.auth) {
+      window.auth.mountAuthNav('auth-nav', { loginPath: '../login/' });
+    }
   
     // ---------- HERO ----------
     document.title = event.title + ' | MyEvent Tech';
@@ -290,7 +294,9 @@
       return div;
     }
   
-    // ---------- Widget de reserva ----------
+    // ================================================================
+    // Widget de reserva
+    // ================================================================
     function initBookingWidget(event) {
       const soldOut = event.spotsLeft === 0;
       const cfg = {
@@ -313,9 +319,15 @@
         inc:           document.getElementById('btn-increment'),
         form:          document.getElementById('reservation-form'),
         success:       document.getElementById('booking-success'),
+        successCode:   document.getElementById('booking-success-code'),
         unitPriceEl:   document.getElementById('unit-price-display'),
         maxLabel:      document.getElementById('max-tickets-label'),
-        spotsLabel:    document.getElementById('spots-left-label')
+        spotsLabel:    document.getElementById('spots-left-label'),
+        nameInput:     document.getElementById('name'),
+        emailInput:    document.getElementById('email'),
+        phoneInput:    document.getElementById('phone'),
+        notesInput:    document.getElementById('notes'),
+        authNotice:    document.getElementById('booking-auth')
       };
   
       if (els.unitPriceEl) els.unitPriceEl.textContent = window.formatCOP(cfg.unitPrice, event.currency);
@@ -325,6 +337,66 @@
       let tickets = cfg.initial;
       let busy = false;
   
+      // --- Estado de sesión ---
+      function refreshAuthState() {
+        if (!window.auth || !els.authNotice) return;
+        const user = window.auth.getCurrentUser();
+        els.authNotice.innerHTML = '';
+  
+        if (user) {
+          if (els.nameInput && !els.nameInput.value)   els.nameInput.value   = user.name;
+          if (els.emailInput && !els.emailInput.value) els.emailInput.value = user.email;
+  
+          const row = document.createElement('div');
+          row.className = 'flex items-center gap-3 p-3 rounded-xl bg-emerald-50 border border-emerald-200';
+          row.innerHTML =
+            '<div class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center font-label-md font-bold shrink-0"></div>' +
+            '<div class="flex-1 min-w-0">' +
+              '<p class="font-label-md text-emerald-900">Reservando como <span class="font-bold"></span></p>' +
+              '<p class="font-body-sm text-emerald-700 truncate"></p>' +
+            '</div>' +
+            '<button type="button" class="text-emerald-700 hover:text-emerald-900 font-label-md shrink-0" data-auth-action="switch">Cambiar</button>';
+  
+          row.querySelector('div.w-8').textContent = user.name.trim().charAt(0).toUpperCase();
+          row.querySelector('span.font-bold').textContent = user.name.split(' ')[0];
+          row.querySelector('p.font-body-sm').textContent = user.email;
+  
+          row.querySelector('[data-auth-action="switch"]').addEventListener('click', () => {
+            window.auth.signOut();
+          });
+  
+          els.authNotice.appendChild(row);
+          els.authNotice.classList.remove('hidden');
+          els.authNotice.classList.add('block');
+        } else {
+          const row = document.createElement('div');
+          row.className = 'flex items-center gap-3 p-3 rounded-xl bg-amber-50 border border-amber-200';
+          row.innerHTML =
+            '<span class="material-symbols-outlined text-amber-700 text-[22px] shrink-0">lock</span>' +
+            '<div class="flex-1">' +
+              '<p class="font-label-md text-amber-900">Inicia sesión para reservar</p>' +
+              '<p class="font-body-sm text-amber-800">Serás redirigido a la página de acceso.</p>' +
+            '</div>' +
+            '<a class="text-amber-800 hover:text-amber-900 font-label-md font-bold shrink-0" href="../login/" data-auth-action="go-login">Entrar</a>';
+  
+          row.querySelector('[data-auth-action="go-login"]').addEventListener('click', (e) => {
+            e.preventDefault();
+            const ret = window.location.pathname + window.location.search;
+            window.location.href = '../login/?return=' + encodeURIComponent(ret);
+          });
+  
+          els.authNotice.appendChild(row);
+          els.authNotice.classList.remove('hidden');
+          els.authNotice.classList.add('block');
+        }
+      }
+  
+      if (window.auth) {
+        window.auth.on(refreshAuthState);
+        refreshAuthState();
+      }
+  
+      // --- Render stepper ---
       function render() {
         const total = tickets * cfg.unitPrice;
         if (els.count)     els.count.textContent = tickets;
@@ -348,6 +420,7 @@
       if (els.dec) els.dec.addEventListener('click', () => change(-1));
       if (els.inc) els.inc.addEventListener('click', () => change(1));
   
+      // --- Estado agotado ---
       if (cfg.soldOut) {
         if (els.submitBtn) {
           els.submitBtn.disabled = true;
@@ -360,22 +433,57 @@
         els.form?.querySelectorAll('input, textarea').forEach((f) => (f.disabled = true));
       }
   
+      // --- Submit ---
       if (els.form) {
         els.form.addEventListener('submit', (e) => {
           e.preventDefault();
           if (busy || cfg.soldOut) return;
+  
+          // 1) Auth primero
+          if (window.auth && !window.auth.requireAuth('../login/')) return;
+  
+          // 2) Validación
           if (!els.form.reportValidity()) return;
+  
           busy = true;
           els.submitBtn.classList.add('opacity-75', 'pointer-events-none');
           if (els.submitBtnText) els.submitBtnText.textContent = 'Procesando reserva...';
   
-          setTimeout(() => {
+          const user = window.auth ? window.auth.getCurrentUser() : null;
+  
+          window.setTimeout(() => {
+            // 3) Crear la reserva real
+            let reservation = null;
+            if (window.reservationsStore && user) {
+              reservation = window.reservationsStore.create({
+                userId:         user.id,
+                eventId:        event.id,
+                eventTitle:     event.title,
+                eventDate:      event.date,
+                eventLocation:  event.location,
+                eventAddress:   event.address,
+                eventImage:     event.heroImage,
+                eventCategory:  event.category,
+                tickets:        tickets,
+                unitPrice:      cfg.unitPrice,
+                total:          tickets * cfg.unitPrice,
+                currency:       event.currency || 'COP',
+                attendee: {
+                  name:  els.nameInput  ? els.nameInput.value.trim()  : '',
+                  email: els.emailInput ? els.emailInput.value.trim() : '',
+                  phone: els.phoneInput ? els.phoneInput.value.trim() : '',
+                  notes: els.notesInput ? els.notesInput.value.trim() : ''
+                }
+              });
+            }
+  
             busy = false;
             els.submitBtn.classList.remove('opacity-75', 'pointer-events-none');
             els.submitBtn.classList.remove('bg-primary');
             els.submitBtn.classList.add('bg-emerald-600');
             if (els.submitBtnText) els.submitBtnText.textContent = 'Reserva Confirmada ✓';
             if (els.submitBtnIcon) els.submitBtnIcon.textContent = 'check_circle';
+            if (els.successCode && reservation) els.successCode.textContent = reservation.code;
             els.success?.classList.remove('hidden');
             els.success?.classList.add('flex');
             els.success?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -390,7 +498,6 @@
     function renderNotFound(missingId) {
       const main = document.querySelector('main');
       if (!main) return;
-      // ⚠️ Estamos en /pages/event-detail/ → la raíz está 2 niveles arriba
       main.innerHTML =
         '<div class="max-w-3xl mx-auto px-6 py-24 text-center">' +
           '<span class="material-symbols-outlined text-6xl text-outline mb-4">event_busy</span>' +

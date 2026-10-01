@@ -33,10 +33,9 @@
           },
           borderRadius: { DEFAULT:"0.25rem", lg:"0.5rem", xl:"0.75rem", full:"9999px" },
           fontFamily: {
-            "headline-lg":["Space Grotesk"], "headline-lg-mobile":["Space Grotesk"], "headline-sm":["Space Grotesk"],
-            "body-lg":["Inter"], display:["Space Grotesk"], "headline-md":["Space Grotesk"], "display-mobile":["Space Grotesk"],
-            "label-lg":["Space Grotesk"], "label-md":["Space Grotesk"], "label-sm":["Inter"], "code-num":["Space Grotesk"],
-            "body-md":["Inter"], "body-sm":["Inter"]
+            "headline-lg":["Space Grotesk"], "headline-sm":["Space Grotesk"], "body-lg":["Inter"], display:["Space Grotesk"],
+            "headline-md":["Space Grotesk"], "label-lg":["Space Grotesk"], "label-md":["Space Grotesk"], "label-sm":["Inter"],
+            "code-num":["Space Grotesk"], "body-md":["Inter"], "body-sm":["Inter"]
           },
           fontSize: {
             "display":["3.5rem",{lineHeight:"1.1",letterSpacing:"-0.02em"}],
@@ -68,7 +67,7 @@
   <header class="fixed top-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
     <div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-6">
       <div class="flex items-center gap-8">
-        <a class="flex items-center gap-3 transition-transform active:scale-95" data-path="cartelera" href="#">
+        <a class="flex items-center gap-3 transition-transform active:scale-95" href="../../">
           <img alt="MyEvent Brand Logo" class="h-8 w-auto object-contain"
             src="https://lh3.googleusercontent.com/aida/AEtjO1WlnIdFYKqyKMGajwDfJ6rsqKQQLp2dZImf9xcui5zxUQX1REhJOsgJCA0Ry42meNkqlstH75DWo0WF7HI_Wvzam6Fp-pCJTYUzpqgatTOgqZmQ3fHd5vGMoIjqkJNZatmZGcqfHdws5_uZuaItJNjK-y1jxMYNTMcc-PAXvl-wSyWPvo1GdUk6Q3zKRrLeD1KbbTL3V_3HqsXNZeBVgZ_nBZe0UWBZMXTfSBftSzAGk6HL4By27v0uDduT">
           <span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">MyEvent
@@ -76,17 +75,14 @@
           </span>
         </a>
         <nav class="hidden md:flex items-center gap-2">
-          <a class="px-3.5 py-1.5 font-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-full" data-path="cartelera" href="#">Cartelera</a>
-          <a class="px-3.5 py-1.5 font-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-full" data-path="mis-reservas" href="#">Mis reservas</a>
-          <a class="px-3.5 py-1.5 font-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-full" data-path="explorar-salas" href="#">Explorar salas</a>
+          <a class="px-3.5 py-1.5 font-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-full" href="../../">Cartelera</a>
+          <a class="px-3.5 py-1.5 font-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-full" href="../my-event/">Mis reservas</a>
+          <a class="px-3.5 py-1.5 font-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-full" href="#">Explorar salas</a>
         </nav>
       </div>
       <div class="flex items-center gap-4">
-        <a class="hidden sm:inline-flex items-center justify-center px-4 py-2 font-label-lg text-on-primary bg-primary hover:bg-primary-container rounded-full transition-all shadow-[0_4px_14px_0_rgba(37,99,235,0.28)] active:scale-95" data-path="crear-evento" href="#">Crear evento</a>
-        <div class="flex items-center gap-3">
-          <a class="inline-flex items-center justify-center px-4 py-2 font-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-full transition-all" data-path="login" href="#">Iniciar sesión</a>
-          <a class="inline-flex items-center justify-center px-4 py-2 font-label-lg text-on-primary bg-primary hover:bg-primary-container rounded-full transition-all shadow-[0_4px_14px_0_rgba(37,99,235,0.28)] active:scale-95" data-path="register" href="#">Registrarse</a>
-        </div>
+        <a class="hidden sm:inline-flex items-center justify-center px-4 py-2 font-label-lg text-on-primary bg-primary hover:bg-primary-container rounded-full transition-all shadow-[0_4px_14px_0_rgba(37,99,235,0.28)] active:scale-95" href="../new-event/">Crear evento</a>
+        <div class="flex items-center gap-3" id="auth-nav"></div>
       </div>
     </div>
   </header>
@@ -95,14 +91,12 @@
     <div class="flex flex-col w-full">
       <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-12 py-8">
 
-        <!-- Breadcrumb -->
         <nav aria-label="Ruta de navegación" class="flex items-center gap-2 mb-6 text-on-surface-variant font-label-md">
           <a class="hover:text-primary transition-colors" href="../../">Cartelera</a>
           <span class="material-symbols-outlined text-outline text-[16px]" aria-hidden="true">chevron_right</span>
           <span id="breadcrumb-title" class="text-on-surface font-semibold truncate max-w-xs md:max-w-md" aria-current="page">Cargando…</span>
         </nav>
 
-        <!-- HERO (oculto hasta que JS lo rellene) -->
         <section id="hero" class="relative w-full rounded-2xl overflow-hidden bg-surface-container-lowest shadow-xl mb-10 hidden">
           <div class="absolute inset-0 z-0">
             <img id="hero-image" class="w-full h-full object-cover object-center filter brightness-[0.88]" alt="" fetchpriority="high" decoding="async">
@@ -119,13 +113,8 @@
           </div>
         </section>
 
-        <!-- Layout principal -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-
-          <!-- Columna izquierda -->
           <div class="lg:col-span-7 space-y-8">
-
-            <!-- Descripción -->
             <article id="block-description" class="p-6 sm:p-8 rounded-2xl bg-surface-container-lowest shadow-sm hidden">
               <div class="flex items-center gap-2 text-primary mb-3">
                 <span class="material-symbols-outlined text-[22px]" aria-hidden="true">coffee</span>
@@ -136,10 +125,8 @@
               <div id="highlights" class="flex flex-wrap gap-4 pt-4 mt-2"></div>
             </article>
 
-            <!-- Galería -->
             <div id="gallery" class="grid grid-cols-2 gap-4 hidden"></div>
 
-            <!-- Agenda -->
             <article id="block-agenda" class="p-6 sm:p-8 rounded-2xl bg-surface-container-lowest shadow-sm hidden">
               <div class="flex items-center justify-between mb-6">
                 <div>
@@ -151,7 +138,6 @@
               <div id="agenda-timeline" class="relative pl-8 space-y-8 before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-surface-container-highest"></div>
             </article>
 
-            <!-- Ubicación -->
             <article id="block-location" class="p-6 sm:p-8 rounded-2xl bg-surface-container-lowest shadow-sm hidden">
               <div class="flex items-center gap-2 text-primary mb-2">
                 <span class="material-symbols-outlined text-[22px]" aria-hidden="true">map</span>
@@ -169,14 +155,12 @@
               <div id="location-extra" class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6"></div>
             </article>
 
-            <!-- FAQs -->
             <article id="block-faqs" class="p-6 sm:p-8 rounded-2xl bg-surface-container-lowest shadow-sm hidden">
               <h2 class="font-headline-md font-bold text-on-surface mb-6">Preguntas frecuentes</h2>
               <div id="faqs-list" class="space-y-4"></div>
             </article>
           </div>
 
-          <!-- Columna derecha: widget de reserva -->
           <div class="lg:col-span-5 lg:sticky lg:top-24">
             <div class="rounded-2xl bg-surface-container-lowest p-6 sm:p-8 shadow-[0_12px_40px_-8px_rgba(0,42,120,0.12)] relative overflow-hidden">
               <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-secondary to-primary-container"></div>
@@ -192,7 +176,6 @@
                 </div>
               </div>
 
-              <!-- Stepper -->
               <div class="bg-surface-container-low rounded-xl p-4 mb-6">
                 <div class="flex items-center justify-between mb-2">
                   <div>
@@ -215,7 +198,6 @@
                 </div>
               </div>
 
-              <!-- Desglose -->
               <div class="space-y-2.5 mb-6 text-body-sm font-body-sm text-on-surface-variant border-b border-surface-container pb-5">
                 <div class="flex items-center justify-between">
                   <span id="label-tickets-calc">1 x Entrada General</span>
@@ -234,7 +216,8 @@
                 </div>
               </div>
 
-              <!-- Formulario -->
+              <div id="booking-auth" class="hidden mb-5"></div>
+
               <form class="space-y-4" id="reservation-form" novalidate>
                 <div>
                   <label class="block font-label-md text-on-surface mb-1 font-medium" for="name">Nombre completo <span class="text-error" aria-hidden="true">*</span></label>
@@ -275,9 +258,16 @@
 
               <div class="hidden mt-6 p-4 rounded-xl bg-emerald-50 text-emerald-900 items-start gap-3 border border-emerald-200 animate-fadeIn" id="booking-success" role="status" aria-live="polite">
                 <span class="material-symbols-outlined text-emerald-600 text-[24px]" aria-hidden="true">task_alt</span>
-                <div>
+                <div class="flex-1">
                   <p class="font-headline-sm text-body-md font-bold text-emerald-900">¡Reserva completada con éxito!</p>
-                  <p class="font-body-sm text-emerald-700">Hemos enviado tus entradas y el código QR de acceso a tu correo.</p>
+                  <p class="font-body-sm text-body-sm text-emerald-700">
+                    Código de acceso: <span class="font-code-num font-bold" id="booking-success-code">—</span>
+                  </p>
+                  <p class="font-body-sm text-body-sm text-emerald-700">Hemos enviado tus entradas y el código QR de acceso a tu correo.</p>
+                  <a href="../my-event/" class="mt-3 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-label-md font-bold transition-colors">
+                    <span class="material-symbols-outlined text-[16px]" aria-hidden="true">confirmation_number</span>
+                    Ver mis reservas
+                  </a>
                 </div>
               </div>
             </div>
@@ -310,10 +300,11 @@
     </div>
   </footer>
 
-  <!-- Scripts: subimos 2 niveles para llegar a la raíz; app.js es local -->
   <script src="../../render-styles.js"></script>
   <script src="../../events-seed.js"></script>
   <script src="../../events-store.js"></script>
+  <script src="../../auth-store.js"></script>
+  <script src="../../reservations-store.js"></script>
   <script src="app.js"></script>
   <script src="../../nav.js"></script>
 </body>

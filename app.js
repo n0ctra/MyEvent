@@ -1,6 +1,7 @@
 /* ============================================================
    Cartelera (landing): pinta las tarjetas desde eventsStore.
    Filtros por categoría + búsqueda full-text.
+   Monta el auth-nav en el header.
    ============================================================ */
    (function () {
     'use strict';
@@ -118,7 +119,7 @@
       const urgency = window.computeUrgency(event);
       const soldOut = event.spotsLeft === 0;
   
-      // ⚠️ Estructura raíz → pages/<page> → archivos
+      // Estructura raíz → pages/event-detail/
       const href = 'pages/event-detail/?id=' + encodeURIComponent(event.id);
   
       const card = document.createElement('article');
@@ -229,4 +230,9 @@
     renderChips();
     applyChipStyles();
     renderCards();
+  
+    // Header: botones de sesión
+    if (window.auth) {
+      window.auth.mountAuthNav('auth-nav', { loginPath: 'pages/login/' });
+    }
   })();

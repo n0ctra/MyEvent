@@ -1,39 +1,51 @@
 /* ============================================================
-   MyEvent Tech — Iniciar sesión
+   MyEvent Tech — Página de login / registro
    Estilos base + utilidades propias
-   (los estilos visuales vienen de Tailwind CDN)
    ============================================================ */
 
-/* ---------- Reset / Base ---------- */
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  overscroll-behavior: none;
-}
-
-/* Evita márgenes fantasma dentro de <main> */
-main > :first-child {
-  margin-top: 0 !important;
-}
-
-main > :last-child {
-  margin-bottom: 0 !important;
-}
-
-/* ---------- Scrollbars ---------- */
-::-webkit-scrollbar {
-  display: none;
-}
-
-.scrollbar-none {
-  -ms-overflow-style: none;  /* IE / Edge */
-  scrollbar-width: none;     /* Firefox */
-}
-
-.scrollbar-none::-webkit-scrollbar {
-  display: none;
-}
+   html,
+   body {
+     margin: 0;
+     padding: 0;
+   }
+   
+   body {
+     overscroll-behavior: none;
+   }
+   
+   main > :first-child { margin-top: 0 !important; }
+   main > :last-child  { margin-bottom: 0 !important; }
+   
+   ::-webkit-scrollbar { display: none; }
+   
+   .scrollbar-none {
+     -ms-overflow-style: none;
+     scrollbar-width: none;
+   }
+   .scrollbar-none::-webkit-scrollbar { display: none; }
+   
+   .material-symbols-filled {
+     font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+   }
+   
+   /* Contiene los blobs decorativos para que no generen scroll */
+   .ambient-blobs {
+     contain: paint;
+   }
+   
+   /* ---------- Animación de error (entrada) ---------- */
+   @keyframes shakeIn {
+     0%   { transform: translateX(0);     opacity: 0; }
+     20%  { transform: translateX(-4px);  opacity: 1; }
+     40%  { transform: translateX(4px); }
+     60%  { transform: translateX(-3px); }
+     80%  { transform: translateX(2px); }
+     100% { transform: translateX(0); }
+   }
+   #auth-error.flex {
+     animation: shakeIn 0.4s ease-out both;
+   }
+   
+   @media (prefers-reduced-motion: reduce) {
+     #auth-error.flex { animation: none; }
+   }

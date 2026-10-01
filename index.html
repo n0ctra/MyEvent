@@ -80,9 +80,8 @@
           <span class="material-symbols-outlined text-sm text-primary">payments</span><span>CO / COP</span>
         </div>
         <a class="hidden sm:inline-flex items-center justify-center px-4 py-2 font-label-lg text-label-lg text-on-primary bg-primary hover:bg-primary-container rounded-full transition-all shadow-[0_4px_14px_0_rgba(37,99,235,0.28)] active:scale-95" data-path="new-event" href="#">Crear evento</a>
-        <div class="flex items-center gap-3">
-          <a class="inline-flex items-center justify-center px-4 py-2 font-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-full transition-all" data-path="login" href="#">Iniciar sesión</a>
-          <a class="inline-flex items-center justify-center px-4 py-2 font-label-lg text-on-primary bg-primary hover:bg-primary-container rounded-full transition-all shadow-[0_4px_14px_0_rgba(37,99,235,0.28)] active:scale-95" data-path="register" href="#">Registrarse</a>
+        <div class="flex items-center gap-3" id="auth-nav">
+          <!-- Se rellena dinámicamente según la sesión -->
         </div>
       </div>
     </div>
@@ -93,7 +92,6 @@
       <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-8 sm:pt-14 pb-12 sm:pb-20">
         <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[720px] max-w-full h-72 bg-gradient-to-tr from-primary/10 via-secondary/5 to-tertiary-container/10 blur-3xl pointer-events-none -z-10 rounded-full"></div>
 
-        <!-- HERO -->
         <section class="flex flex-col items-center text-center max-w-4xl mx-auto mb-14 sm:mb-20">
           <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-surface-container-high text-primary mb-6 shadow-sm">
             <span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
@@ -117,7 +115,6 @@
           </div>
         </section>
 
-        <!-- CARTELERA -->
         <section class="w-full flex flex-col pt-4 scroll-mt-24" id="cartelera-grid">
           <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8 pb-6 bg-surface-container-low/60 rounded-3xl p-6 sm:p-8 backdrop-blur-sm">
             <div>
@@ -151,7 +148,6 @@
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="cards-container"></div>
         </section>
 
-        <!-- TRUST BANNER -->
         <section class="mt-20 rounded-3xl bg-surface-container-lowest p-8 sm:p-12 shadow-[0_4px_24px_rgba(21,27,42,0.04)] relative overflow-hidden">
           <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-primary-fixed/40 blur-3xl pointer-events-none"></div>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
@@ -211,10 +207,10 @@
     </div>
   </footer>
 
-  <!-- Scripts: los tres compartidos viven en la raíz; app.js también -->
   <script src="render-styles.js"></script>
   <script src="events-seed.js"></script>
   <script src="events-store.js"></script>
+  <script src="auth-store.js"></script>
   <script src="app.js"></script>
   <script src="nav.js"></script>
 </body>

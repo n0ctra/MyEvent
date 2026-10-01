@@ -1,46 +1,37 @@
 /* ============================================================
-   MyEvent Tech — Mis Reservas y Entradas
+   MyEvent Tech — Mis Reservas
    Estilos base + utilidades propias
-   (los estilos visuales vienen de Tailwind CDN)
    ============================================================ */
 
-/* ---------- Reset / Base ---------- */
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  overscroll-behavior: none;
-}
-
-/* Evita márgenes fantasma dentro de <main> */
-main > :first-child {
-  margin-top: 0 !important;
-}
-
-main > :last-child {
-  margin-bottom: 0 !important;
-}
-
-/* ---------- Scrollbars ---------- */
-::-webkit-scrollbar {
-  display: none;
-}
-
-.scrollbar-none {
-  -ms-overflow-style: none;  /* IE / Edge */
-  scrollbar-width: none;     /* Firefox */
-}
-
-.scrollbar-none::-webkit-scrollbar {
-  display: none;
-}
-
-/* ---------- Utilidades extraídas de estilos inline ---------- */
-
-/* Barras del visualizador de intereses (Distribución de Intereses) */
-.metric-bar--cafe   { width: 50%; }   /* Café & Catas */
-.metric-bar--musica { width: 30%; }   /* Música & Naturaleza */
-.metric-bar--tech   { width: 20%; }   /* AgroTech & Emprendimiento */
+   html,
+   body { margin: 0; padding: 0; }
+   body { overscroll-behavior: none; }
+   
+   main > :first-child { margin-top: 0 !important; }
+   main > :last-child  { margin-bottom: 0 !important; }
+   
+   ::-webkit-scrollbar { display: none; }
+   .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+   .scrollbar-none::-webkit-scrollbar { display: none; }
+   
+   /* Iconos Material Symbols rellenos */
+   .material-symbols-filled {
+     font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+   }
+   
+   /* Barras de "Distribución de intereses" — valores por defecto.
+      app.js sobreescribe con estilos inline según las reservas reales. */
+   .metric-bar--cafe   { width: 0%; }
+   .metric-bar--musica { width: 0%; }
+   .metric-bar--tech   { width: 0%; }
+   
+   /* ---------- Animación del toast ---------- */
+   @keyframes slideUp {
+     from { transform: translateY(20px); opacity: 0; }
+     to   { transform: translateY(0);    opacity: 1; }
+   }
+   .reservation-card { animation: slideUp 0.25s ease-out both; }
+   
+   @media (prefers-reduced-motion: reduce) {
+     .reservation-card { animation: none; }
+   }
