@@ -5,18 +5,27 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="web_standard" name="shell-type">
+  <meta name="theme-color" content="#004ac6">
+
+  <title>Crear cuenta | MyEvent Tech</title>
+  <meta name="description"
+    content="Únete a MyEvent Tech: descubre experiencias cafeteras, reserva en segundos en el Quindío o publica tus propios eventos y catas culturales.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Crear cuenta | MyEvent Tech">
+  <meta property="og:description"
+    content="Descubre experiencias cafeteras íntimas, reserva en segundos o publica tus propios encuentros culturales.">
+  <meta property="og:locale" content="es_CO">
 
   <!-- Fuentes -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap"
     rel="stylesheet">
   <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap"
     rel="stylesheet">
 
   <!-- Estilos propios -->
@@ -24,81 +33,222 @@
 
   <!-- Tailwind CDN + configuración del tema -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script
-    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-tint": "#0053db", "on-tertiary-fixed-variant": "#004e5c", "surface-bright": "#f9f9ff", "on-tertiary-fixed": "#001f26", "surface-container-high": "#e2e8fc", "primary": "#004ac6", "on-surface-variant": "#434655", "secondary": "#712ae2", "on-secondary-fixed-variant": "#5a00c6", "surface": "#f9f9ff", "surface-container-highest": "#dce2f6", "secondary-fixed": "#eaddff", "on-secondary-fixed": "#25005a", "primary-fixed-dim": "#b4c5ff", "tertiary-fixed-dim": "#4cd7f6", "secondary-container": "#8a4cfc", "on-primary": "#ffffff", "tertiary-container": "#00788c", "outline-variant": "#c3c6d7", "secondary-fixed-dim": "#d2bbff", "on-tertiary": "#ffffff", "primary-container": "#2563eb", "background": "#f9f9ff", "primary-fixed": "#dbe1ff", "inverse-primary": "#b4c5ff", "surface-dim": "#d3daee", "error": "#ba1a1a", "on-tertiary-container": "#d7f6ff", "inverse-surface": "#2a3040", "tertiary-fixed": "#acedff", "on-primary-container": "#eeefff", "error-container": "#ffdad6", "on-secondary-container": "#fffbff", "on-error-container": "#93000a", "on-secondary": "#ffffff", "tertiary": "#005e6e", "on-primary-fixed": "#00174b", "surface-container-lowest": "#ffffff", "surface-variant": "#dce2f6", "on-surface": "#151b2a", "inverse-on-surface": "#edf0ff", "on-background": "#151b2a", "on-primary-fixed-variant": "#003ea8", "on-error": "#ffffff", "surface-container": "#e9edff", "outline": "#737686", "surface-container-low": "#f1f3ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "margin-sm": "1rem", "space-xs": "0.25rem", "margin-lg": "3rem", "margin": "1.5rem", "space-lg": "1.5rem", "gutter-lg": "2rem", "gutter-sm": "1rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-md": "1rem" }, "fontFamily": { "body-md": [ "Inter" ], "headline-sm": [ "Space Grotesk" ], "display": [ "Space Grotesk" ], "body-sm": [ "Inter" ], "headline-lg": [ "Space Grotesk" ], "headline-md": [ "Space Grotesk" ], "body-lg": [ "Inter" ], "display-mobile": [ "Space Grotesk" ], "label-sm": [ "Space Grotesk" ], "headline-lg-mobile": [ "Space Grotesk" ], "label-lg": [ "Space Grotesk" ], "label-md": [ "Space Grotesk" ], "code-num": [ "Space Grotesk" ] }, "fontSize": { "body-md": [ "15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "display": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "body-sm": [ "13px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" } ], "headline-md": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "body-lg": [ "18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "display-mobile": [ "36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "code-num": [ "24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" } ] } } } };</script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-tint": "#0053db",
+            "on-tertiary-fixed-variant": "#004e5c",
+            "surface-bright": "#f9f9ff",
+            "on-tertiary-fixed": "#001f26",
+            "surface-container-high": "#e2e8fc",
+            "primary": "#004ac6",
+            "on-surface-variant": "#434655",
+            "secondary": "#712ae2",
+            "on-secondary-fixed-variant": "#5a00c6",
+            "surface": "#f9f9ff",
+            "surface-container-highest": "#dce2f6",
+            "secondary-fixed": "#eaddff",
+            "on-secondary-fixed": "#25005a",
+            "primary-fixed-dim": "#b4c5ff",
+            "tertiary-fixed-dim": "#4cd7f6",
+            "secondary-container": "#8a4cfc",
+            "on-primary": "#ffffff",
+            "tertiary-container": "#00788c",
+            "outline-variant": "#c3c6d7",
+            "secondary-fixed-dim": "#d2bbff",
+            "on-tertiary": "#ffffff",
+            "primary-container": "#2563eb",
+            "background": "#f9f9ff",
+            "primary-fixed": "#dbe1ff",
+            "inverse-primary": "#b4c5ff",
+            "surface-dim": "#d3daee",
+            "error": "#ba1a1a",
+            "on-tertiary-container": "#d7f6ff",
+            "inverse-surface": "#2a3040",
+            "tertiary-fixed": "#acedff",
+            "on-primary-container": "#eeefff",
+            "error-container": "#ffdad6",
+            "on-secondary-container": "#fffbff",
+            "on-error-container": "#93000a",
+            "on-secondary": "#ffffff",
+            "tertiary": "#005e6e",
+            "on-primary-fixed": "#00174b",
+            "surface-container-lowest": "#ffffff",
+            "surface-variant": "#dce2f6",
+            "on-surface": "#151b2a",
+            "inverse-on-surface": "#edf0ff",
+            "on-background": "#151b2a",
+            "on-primary-fixed-variant": "#003ea8",
+            "on-error": "#ffffff",
+            "surface-container": "#e9edff",
+            "outline": "#737686",
+            "surface-container-low": "#f1f3ff"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          },
+          spacing: {
+            "gutter": "1.5rem",
+            "margin-sm": "1rem",
+            "space-xs": "0.25rem",
+            "margin-lg": "3rem",
+            "margin": "1.5rem",
+            "space-lg": "1.5rem",
+            "gutter-lg": "2rem",
+            "gutter-sm": "1rem",
+            "space-xl": "2.5rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem"
+          },
+          /* FALTABA: escala tipográfica usada en text-headline-*, text-body-*, text-label-*, text-code-num */
+          fontSize: {
+            "display": ["3.5rem", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
+            "display-mobile": ["2.25rem", { lineHeight: "1.15", letterSpacing: "-0.02em" }],
+            "headline-lg": ["2.25rem", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
+            "headline-lg-mobile": ["1.75rem", { lineHeight: "1.25" }],
+            "headline-md": ["1.5rem", { lineHeight: "1.3" }],
+            "headline-sm": ["1.125rem", { lineHeight: "1.4" }],
+            "body-lg": ["1.0625rem", { lineHeight: "1.6" }],
+            "body-md": ["1rem", { lineHeight: "1.6" }],
+            "body-sm": ["0.875rem", { lineHeight: "1.55" }],
+            "label-lg": ["0.9375rem", { lineHeight: "1.4" }],
+            "label-md": ["0.8125rem", { lineHeight: "1.4" }],
+            "label-sm": ["0.75rem", { lineHeight: "1.4" }],
+            "code-num": ["1rem", { lineHeight: "1.4", letterSpacing: "0.01em" }]
+          },
+          fontFamily: {
+            "body-md": ["Inter"],
+            "headline-sm": ["Space Grotesk"],
+            "display": ["Space Grotesk"],
+            "body-sm": ["Inter"],
+            "label-lg": ["Space Grotesk"],
+            "label-md": ["Space Grotesk"],
+            "label-sm": ["Inter"],
+            "code-num": ["Space Grotesk"],
+            "headline-lg": ["Space Grotesk"],
+            "headline-md": ["Space Grotesk"],
+            "body-lg": ["Inter"],
+            "display-mobile": ["Space Grotesk"],
+            "headline-lg-mobile": ["Space Grotesk"]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Variantes de Material Symbols usadas en la página */
+    .material-symbols-filled {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+    }
+
+    /* Focus visible consistente en los role cards */
+    .role-card:focus-visible {
+      outline: 2px solid #004ac6;
+      outline-offset: 2px;
+    }
+  </style>
 </head>
 
 <body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col justify-between">
+
   <header class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
     <div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
-      <div class="flex items-center gap-6"><a class="flex items-center gap-3 text-on-surface hover:text-primary transition-colors"
-          data-path="cartelera" href="#"><img alt="Brand logo. - Primary color: #2563eb
-- Font: spaceGrotesk
-- Mode: light
-- Roundness: rounded-md
-" class="h-8 w-auto object-contain"
-            src="https://lh3.googleusercontent.com/aida/AEtjO1VFXeen7YuSwHYX-cDXF0rjsQ6S9HMFJBRbOpMnaMx6k_lKXgcYiDZRpSHC9z18LcP2kTse_S2PXa_dOAoXi4lfMX8vSfgvf7i36lsw2KEXQ1E-spneIDLVNbC6NYgKEqsi-Llshkr9klvltE2qxfl2TWHLBvxb0UxXSWTwLYgVhchcKJyFtbO1sEdM-B8pq4Et8EH-wUOqBRAN8yEK5DgAYsUJfCBs28HwXND6CaItUYdJKpzqOq4hOYpz"><span
-            class="font-headline-sm text-headline-sm text-on-surface tracking-tight">MyEvent</span></a><span
-          class="hidden sm:inline-block w-px h-5 bg-outline-variant/40"></span><a
-          class="hidden sm:inline-flex items-center text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
-          data-path="cartelera" href="#">← Volver a la cartelera</a></div>
+      <div class="flex items-center gap-6">
+        <a class="flex items-center gap-3 text-on-surface hover:text-primary transition-colors" data-path="cartelera"
+          href="#">
+          <img alt="MyEvent Tech" class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1VFXeen7YuSwHYX-cDXF0rjsQ6S9HMFJBRbOpMnaMx6k_lKXgcYiDZRpSHC9z18LcP2kTse_S2PXa_dOAoXi4lfMX8vSfgvf7i36lsw2KEXQ1E-spneIDLVNbC6NYgKEqsi-Llshkr9klvltE2qxfl2TWHLBvxb0UxXSWTwLYgVhchcKJyFtbO1sEdM-B8pq4Et8EH-wUOqBRAN8yEK5DgAYsUJfCBs28HwXND6CaItUYdJKpzqOq4hOYpz">
+          <span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">MyEvent</span>
+        </a>
+        <span class="hidden sm:inline-block w-px h-5 bg-outline-variant/40" aria-hidden="true"></span>
+        <a class="hidden sm:inline-flex items-center text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="cartelera" href="#">
+          <span aria-hidden="true">←&nbsp;</span>Volver a la cartelera
+        </a>
+      </div>
       <div class="flex items-center gap-6">
         <nav class="flex items-center gap-4 text-body-sm font-body-sm"
-          data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded-full"><a
-            class="px-3 py-1.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
-            data-path="ayuda" href="#">Ayuda</a><a
-            class="px-3 py-1.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
-            data-path="idioma" href="#">CO / COP</a></nav>
-        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span
-            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+          data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded-full">
+          <a class="px-3 py-1.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+            data-path="ayuda" href="#">Ayuda</a>
+          <a class="px-3 py-1.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+            data-path="idioma" href="#">CO / COP</a>
+        </nav>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0" aria-hidden="true">
+          <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+        </div>
       </div>
     </div>
   </header>
+
   <main class="w-full pt-16 flex-grow bg-surface">
     <div class="flex flex-col w-full">
-      <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-8 lg:py-14">
+      <!-- CORREGIDO: añadido "isolate" para que -z-10 de los blobs no caiga detrás del main -->
+      <div class="relative isolate w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-8 lg:py-14">
+
         <!-- Ambient Backdrop Aura Glows -->
-        <div class="absolute top-12 left-1/4 -z-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute bottom-20 right-10 -z-10 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-12 left-1/4 -z-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"
+          aria-hidden="true"></div>
+        <div class="absolute bottom-20 right-10 -z-10 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none"
+          aria-hidden="true"></div>
+
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
           <!-- Left Column: Registration Card & Role Switcher -->
           <section
             class="lg:col-span-7 bg-surface-container-lowest rounded-2xl shadow-xl p-6 sm:p-8 lg:p-10 relative overflow-hidden">
             <!-- Top signature subtle gradient accent rim -->
-            <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary to-secondary"></div>
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary to-secondary"
+              aria-hidden="true"></div>
+
             <!-- Eyebrow Pill -->
             <div
               class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-label-sm font-label-sm mb-4">
-              <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-              CREAR CUENTA
+              <span class="w-2 h-2 rounded-full bg-primary animate-pulse" aria-hidden="true"></span>
+              Crear cuenta
             </div>
+
             <!-- Typography Heading -->
-            <h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-2">Únete a <span
-                class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">MyEvent Tech</span></h1>
-            <p class="font-body-md text-body-md text-on-surface-variant max-w-xl mb-8">Descubre experiencias cafeteras
-              íntimas, reserva en segundos en el Quindío o publica tus propios encuentros y catas culturales.</p>
+            <h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mb-2">
+              Únete a
+              <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">MyEvent Tech</span>
+            </h1>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-xl mb-8">
+              Descubre experiencias cafeteras íntimas, reserva en segundos en el Quindío o publica tus propios encuentros
+              y catas culturales.
+            </p>
+
             <!-- Role Switcher: Large Selectable Interactive Bento Cards -->
             <div class="mb-8">
-              <label class="block font-label-md text-label-md text-on-surface mb-3 uppercase tracking-wider">
+              <label class="block font-label-md text-label-md text-on-surface mb-3 uppercase tracking-wider"
+                id="role-group-label">
                 1. Selecciona cómo vas a usar MyEvent
               </label>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="role-selector-group">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="role-selector-group" role="radiogroup"
+                aria-labelledby="role-group-label">
+
                 <!-- Option 1: Attendee (Default Active) -->
-                <div
-                  class="cursor-pointer relative p-5 rounded-xl transition-all duration-300 shadow-md bg-surface-container-lowest ring-2 ring-primary"
-                  id="card-attendee" onclick="selectRole('attendee')">
+                <div class="role-card cursor-pointer relative p-5 rounded-xl transition-all duration-300 shadow-md bg-surface-container-lowest ring-2 ring-primary"
+                  id="card-attendee" role="radio" aria-checked="true" tabindex="0" data-role="attendee"
+                  onclick="selectRole('attendee')" onkeydown="handleRoleKeydown(event, 'attendee')">
                   <div class="flex items-start justify-between mb-3">
-                    <div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+                    <div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary"
+                      aria-hidden="true">
                       <span class="material-symbols-outlined material-symbols-filled">confirmation_number</span>
                     </div>
                     <div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center"
-                      id="check-attendee">
+                      id="check-attendee" aria-hidden="true">
                       <span class="material-symbols-outlined text-[16px]">check</span>
                     </div>
                   </div>
-                  <h2 class="font-headline-sm text-headline-sm text-on-surface mb-1">
-                    Quiero asistir
-                  </h2>
+                  <h2 class="font-headline-sm text-headline-sm text-on-surface mb-1">Quiero asistir</h2>
                   <p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
                     Descubre veladas únicas, guarda tus entradas en Apple/Google Wallet y recibe alertas de plazas.
                   </p>
@@ -114,23 +264,23 @@
                       VIP</span>
                   </div>
                 </div>
+
                 <!-- Option 2: Organizer -->
-                <div
-                  class="cursor-pointer relative p-5 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md bg-surface-container-low hover:bg-surface-container-lowest"
-                  id="card-organizer" onclick="selectRole('organizer')">
+                <div class="role-card cursor-pointer relative p-5 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md bg-surface-container-low hover:bg-surface-container-lowest"
+                  id="card-organizer" role="radio" aria-checked="false" tabindex="0" data-role="organizer"
+                  onclick="selectRole('organizer')" onkeydown="handleRoleKeydown(event, 'organizer')">
                   <div class="flex items-start justify-between mb-3">
-                    <div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+                    <div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary"
+                      aria-hidden="true">
                       <span class="material-symbols-outlined material-symbols-filled">mic</span>
                     </div>
                     <div
                       class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center opacity-40"
-                      id="check-organizer">
-                      <span class="material-symbols-outlined text-[16px]">radio_button_unchecked</span>
+                      id="check-organizer" aria-hidden="true">
+                      <span class="material-symbols-outlined text-[16px]" id="check-organizer-icon">radio_button_unchecked</span>
                     </div>
                   </div>
-                  <h2 class="font-headline-sm text-headline-sm text-on-surface mb-1">
-                    Quiero organizar
-                  </h2>
+                  <h2 class="font-headline-sm text-headline-sm text-on-surface mb-1">Quiero organizar</h2>
                   <p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
                     Publica experiencias, controla aforos en tiempo real, vende tickets y gestiona acreditaciones.
                   </p>
@@ -148,60 +298,70 @@
                 </div>
               </div>
             </div>
+
             <!-- Social Quick Logins -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-              <button
-                class="flex items-center justify-center gap-3 py-3 px-4 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-lg text-label-lg transition-all shadow-sm"
-                type="button">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <button type="button" aria-label="Registrarse con Google"
+                class="flex items-center justify-center gap-3 py-3 px-4 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-lg text-label-lg transition-all shadow-sm">
+                <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
                   <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
                   <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"></path>
                   <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"></path>
                 </svg>
-                <span class="">Google</span>
+                <span>Google</span>
               </button>
-              <button
-                class="flex items-center justify-center gap-3 py-3 px-4 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-lg text-label-lg transition-all shadow-sm"
-                type="button">
-                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <button type="button" aria-label="Registrarse con Apple"
+                class="flex items-center justify-center gap-3 py-3 px-4 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-lg text-label-lg transition-all shadow-sm">
+                <svg class="w-5 h-5 shrink-0 fill-current" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                   <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.63-.77 1.06-1.85.94-2.93-.91.04-2.02.61-2.67 1.38-.58.67-1.09 1.76-.95 2.81 1.02.08 2.05-.49 2.68-1.26z"></path>
                 </svg>
-                <span class="">Apple</span>
+                <span>Apple</span>
               </button>
             </div>
+
             <!-- Separator -->
             <div class="relative flex items-center justify-center mb-6">
-              <div class="w-full h-px bg-surface-container-high"></div>
+              <div class="w-full h-px bg-surface-container-high" aria-hidden="true"></div>
               <span
                 class="absolute px-4 bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
                 O regístrate con tu correo
               </span>
             </div>
+
             <!-- Form fields (Step 1) -->
-            <form class="space-y-5" onsubmit="event.preventDefault();">
+            <form class="space-y-5" id="register-form" onsubmit="event.preventDefault(); handleRegister();" novalidate>
+
               <div>
-                <label class="block font-label-md text-label-md text-on-surface mb-1.5" for="fullname">Nombre y
-                  apellidos</label>
+                <label class="block font-label-md text-label-md text-on-surface mb-1.5" for="fullname">
+                  Nombre y apellidos
+                </label>
                 <div class="relative">
                   <span
-                    class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">badge</span>
+                    class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]"
+                    aria-hidden="true">badge</span>
                   <input
                     class="w-full h-12 pl-11 pr-4 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all"
-                    id="fullname" placeholder="Elena Morales" type="text">
+                    id="fullname" name="fullname" placeholder="Tu nombre completo" required autocomplete="name"
+                    type="text">
                 </div>
               </div>
+
               <div>
-                <label class="block font-label-md text-label-md text-on-surface mb-1.5" for="email">Correo
-                  electrónico</label>
+                <label class="block font-label-md text-label-md text-on-surface mb-1.5" for="email">
+                  Correo electrónico
+                </label>
                 <div class="relative">
                   <span
-                    class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">mail</span>
+                    class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]"
+                    aria-hidden="true">mail</span>
                   <input
                     class="w-full h-12 pl-11 pr-4 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all"
-                    id="email" placeholder="elena@ejemplo.com" type="email">
+                    id="email" name="email" placeholder="tu@correo.com" required autocomplete="email"
+                    inputmode="email" spellcheck="false" type="email">
                 </div>
               </div>
+
               <div>
                 <div class="flex items-center justify-between mb-1.5">
                   <label class="block font-label-md text-label-md text-on-surface" for="password">Contraseña</label>
@@ -209,120 +369,140 @@
                 </div>
                 <div class="relative">
                   <span
-                    class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">lock</span>
+                    class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]"
+                    aria-hidden="true">lock</span>
                   <input
                     class="w-full h-12 pl-11 pr-11 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all"
-                    id="password" oninput="updatePasswordStrength(this.value)" type="password"
-                    value="VeladaExclusive2025!">
-                  <button class="absolute right-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-on-surface"
-                    onclick="togglePasswordVisibility()" type="button">
-                    <span class="material-symbols-outlined text-[20px]" id="eye-icon">visibility</span>
+                    id="password" name="password" placeholder="Crea una contraseña segura" required minlength="8"
+                    autocomplete="new-password" oninput="updatePasswordStrength(this.value)" type="password">
+                  <button type="button" aria-label="Mostrar contraseña" aria-pressed="false"
+                    class="absolute right-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-on-surface rounded transition-colors p-0.5"
+                    onclick="togglePasswordVisibility()">
+                    <span class="material-symbols-outlined text-[20px]" id="eye-icon" aria-hidden="true">visibility</span>
                   </button>
                 </div>
                 <!-- Password Security Bar -->
                 <div class="mt-2 space-y-1">
-                  <div class="flex gap-1.5 h-1.5 w-full">
-                    <div class="flex-1 rounded-full bg-primary transition-all" id="bar-1"></div>
-                    <div class="flex-1 rounded-full bg-primary transition-all" id="bar-2"></div>
-                    <div class="flex-1 rounded-full bg-primary transition-all" id="bar-3"></div>
+                  <div class="flex gap-1.5 h-1.5 w-full" aria-hidden="true">
+                    <div class="flex-1 rounded-full bg-surface-container-highest transition-all" id="bar-1"></div>
+                    <div class="flex-1 rounded-full bg-surface-container-highest transition-all" id="bar-2"></div>
+                    <div class="flex-1 rounded-full bg-surface-container-highest transition-all" id="bar-3"></div>
                     <div class="flex-1 rounded-full bg-surface-container-highest transition-all" id="bar-4"></div>
                   </div>
                   <div class="flex items-center justify-between font-label-sm text-label-sm">
-                    <span class="text-on-surface-variant">Seguridad: <strong class="text-primary font-semibold"
-                        id="strength-label">Fuerte</strong></span>
-                    <span class="text-on-surface-variant">Contiene mayúsculas y símbolos</span>
+                    <span class="text-on-surface-variant">
+                      Seguridad:
+                      <strong class="text-on-surface-variant font-semibold" id="strength-label"
+                        aria-live="polite">—</strong>
+                    </span>
+                    <span class="text-on-surface-variant">Mínimo 8 caracteres</span>
                   </div>
                 </div>
               </div>
+
               <!-- Checkboxes -->
               <div class="space-y-3 pt-2">
-                <label class="flex items-start gap-3 cursor-pointer group">
-                  <input checked=""
+                <label class="flex items-start gap-3 cursor-pointer group" for="accept-terms">
+                  <input id="accept-terms" name="accept_terms" required checked
                     class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary accent-primary bg-surface-container"
                     type="checkbox">
-                  <span
-                    class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors">Acepto
-                    los <a class="text-primary font-semibold hover:underline" href="#">Términos del Servicio</a> y la <a
-                      class="text-primary font-semibold hover:underline" href="#">Política de Privacidad</a> de MyEvent
-                    Tech Colombia S.A.S.</span>
+                  <span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors">
+                    Acepto los
+                    <a class="text-primary font-semibold hover:underline" data-path="terminos-del-servicio" href="#">Términos del Servicio</a>
+                    y la
+                    <a class="text-primary font-semibold hover:underline" data-path="privacidad" href="#">Política de Privacidad</a>
+                    de MyEvent Tech Colombia S.A.S.
+                  </span>
                 </label>
-                <label class="flex items-start gap-3 cursor-pointer group">
-                  <input checked=""
+                <label class="flex items-start gap-3 cursor-pointer group" for="accept-marketing">
+                  <input id="accept-marketing" name="accept_marketing" checked
                     class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary accent-primary bg-surface-container"
                     type="checkbox">
-                  <span
-                    class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors">
+                  <span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors">
                     Deseo recibir recomendaciones personalizadas de veladas y acceso preferente a preventas en mi ciudad.
                   </span>
                 </label>
               </div>
-              <!-- CTA Button -->
-              <button
-                class="w-full mt-4 h-13 py-3.5 px-6 rounded-full bg-gradient-to-r from-primary to-primary-container hover:from-primary-container hover:to-primary text-on-primary font-label-lg text-label-lg shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 active:scale-[0.99] transition-all flex items-center justify-center gap-2"
-                type="submit">
-                <span class="">Crear mi cuenta gratis</span>
-                <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+
+              <!-- CTA Button (CORREGIDO: h-13 → h-12 porque h-13 no existe en Tailwind) -->
+              <button type="submit"
+                class="w-full mt-4 h-12 py-3.5 px-6 rounded-full bg-gradient-to-r from-primary to-primary-container hover:from-primary-container hover:to-primary text-on-primary font-label-lg text-label-lg shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 active:scale-[0.99] transition-all flex items-center justify-center gap-2">
+                <span>Crear mi cuenta gratis</span>
+                <span class="material-symbols-outlined text-[20px]" aria-hidden="true">arrow_forward</span>
               </button>
+
               <!-- Login Link footer -->
               <div class="text-center pt-2">
                 <p class="font-body-md text-body-md text-on-surface-variant">
-                  ¿Ya tienes una cuenta? <a class="font-label-lg text-label-lg text-primary hover:underline"
-                    data-path="login" href="#">Inicia sesión</a>
+                  ¿Ya tienes una cuenta?
+                  <a class="font-label-lg text-label-lg text-primary hover:underline" data-path="login" href="#">Inicia sesión</a>
                 </p>
               </div>
             </form>
           </section>
+
           <!-- Right Column: Inspiration, Community Proof & Event Preview -->
           <aside class="lg:col-span-5 flex flex-col gap-6">
+
             <!-- Live Event Snapshot Bento Card -->
             <div class="bg-surface-container-lowest rounded-2xl shadow-md p-5 overflow-hidden relative">
-              <div class="flex items-center justify-between mb-3">
+              <div class="flex items-center justify-between mb-3 gap-3 flex-wrap">
                 <span
-                  class="px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm inline-flex items-center gap-1.5"><span
-                    class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>Últimos 4 cupos hoy</span>
+                  class="px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm inline-flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-error animate-ping" aria-hidden="true"></span>
+                  Últimos 4 cupos hoy
+                </span>
                 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
                   En cartelera
                 </span>
               </div>
               <div class="relative h-48 w-full rounded-xl overflow-hidden mb-4 shadow-inner">
                 <img class="w-full h-full object-cover"
-                  data-alt="Intimate jazz concert in a candlelit historic cellar in Madrid with a grand piano, warm ambient lighting, glowing chandeliers, focused musicians, elegant European cultural event atmosphere, vivid blue and violet shadows"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlBs2Y0MujgwDQVtFBCBgc_MvuVCVc7vFpoyeGkfopQPfw64AqWX-ndbESzzj5wVZypXdbbQMBa-T0Q7ZpaOkyWRq2oha-eMJjXx8Xs2l7SCxkk-R5-1DKHIVGOM-GbV-mCR7cLi7G8R4FuRmLs5ol0Pl01A-T1oKcgPHfbPBpazdONXZBTrp3pBE8SJJBDCwxxpaV0L8SiGxBDm5aEW3nAQsbCOcVgRv9V7QFdXTIpu3ZKq8M3vl9xA">
-                <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent"></div>
-                <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-primary">
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlBs2Y0MujgwDQVtFBCBgc_MvuVCVc7vFpoyeGkfopQPfw64AqWX-ndbESzzj5wVZypXdbbQMBa-T0Q7ZpaOkyWRq2oha-eMJjXx8Xs2l7SCxkk-R5-1DKHIVGOM-GbV-mCR7cLi7G8R4FuRmLs5ol0Pl01A-T1oKcgPHfbPBpazdONXZBTrp3pBE8SJJBDCwxxpaV0L8SiGxBDm5aEW3nAQsbCOcVgRv9V7QFdXTIpu3ZKq8M3vl9xA"
+                  alt="Concierto íntimo de jazz en una bodega histórica a la luz de las velas en Salento, con piano de cola e iluminación ambiental cálida"
+                  loading="lazy" decoding="async">
+                <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent"
+                  aria-hidden="true"></div>
+                <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-primary gap-3">
                   <div>
-                    <p class="font-headline-sm text-headline-sm leading-tight text-white drop-shadow-sm">Cata de Café
-                      Especial &amp; Maridaje</p>
+                    <p class="font-headline-sm text-headline-sm leading-tight text-white drop-shadow-sm">
+                      Cata de Café Especial &amp; Maridaje
+                    </p>
                     <p class="font-body-sm text-body-sm text-slate-200">Hacienda El Ocaso · Salento, Quindío</p>
-                  </div><span class="font-code-num text-code-num text-white">$ 75.000 COP</span>
+                  </div>
+                  <span class="font-code-num text-code-num text-white shrink-0">$ 75.000 COP</span>
                 </div>
               </div>
               <!-- Capacity Meter Visualization -->
               <div class="bg-surface-container-low rounded-xl p-3.5 mb-2">
-                <div class="flex items-center justify-between font-label-sm text-label-sm mb-1.5">
+                <div class="flex items-center justify-between font-label-sm text-label-sm mb-1.5 gap-3">
                   <span class="text-on-surface font-semibold flex items-center gap-1.5">
-                    <span class="material-symbols-outlined text-primary text-[18px]">group</span>
+                    <span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">group</span>
                     Aforo confirmado
                   </span>
                   <span class="text-primary font-bold">96% ocupado</span>
                 </div>
-                <!-- Progress Bar -->
-                <div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+                <div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden"
+                  role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="96"
+                  aria-label="Aforo ocupado al 96 por ciento">
                   <div class="h-full rounded-full bg-gradient-to-r from-primary to-secondary w-[96%]"></div>
                 </div>
               </div>
             </div>
+
             <!-- Community Metrics Grid -->
             <div class="grid grid-cols-2 gap-4">
               <div class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm">
-                <div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary mb-3">
+                <div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary mb-3"
+                  aria-hidden="true">
                   <span class="material-symbols-outlined text-[20px]">local_activity</span>
                 </div>
                 <div class="font-code-num text-code-num text-on-surface mb-0.5">+12.000</div>
                 <div class="font-body-sm text-body-sm text-on-surface-variant">Asistentes activos en el Eje Cafetero</div>
               </div>
               <div class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm">
-                <div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary mb-3">
+                <div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary mb-3"
+                  aria-hidden="true">
                   <span class="material-symbols-outlined text-[20px]">star</span>
                 </div>
                 <div class="flex items-baseline gap-1">
@@ -332,54 +512,191 @@
                 <div class="font-body-sm text-body-sm text-on-surface-variant">Valoración media</div>
               </div>
             </div>
+
             <!-- Verified Testimonial Card -->
             <div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm relative">
               <span
-                class="material-symbols-outlined text-primary/20 text-5xl absolute top-4 right-4 pointer-events-none select-none">format_quote</span>
+                class="material-symbols-outlined text-primary/20 text-5xl absolute top-4 right-4 pointer-events-none select-none"
+                aria-hidden="true">format_quote</span>
               <div class="flex items-center gap-3 mb-4">
-                <img class="w-11 h-11 rounded-full object-cover ring-2 ring-primary-fixed"
-                  data-alt="Portrait photo of Sofia R., a young Spanish creative smiling warmly with modern eyeglasses and artistic city attire, studio lighting with soft cyan and violet rim light"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ43Ni5GSjSu-6thGCwYGlvLhSLazzh4rxj9HAKmtjnYkD_XWq8KkkedeBkJZApXwQ9h74n4hfaw4xtJ0TGES5J_39PVBfbvvTDOsjfWoe6ZS-r6itJ0sr88WzKMMjU7R_SKtZifYrYbwGuvrVF0dV4tA9qJ8cTMA6foVsctRs7eqtQzkejhqfAVJwSJlc1qejHK5S6Wg8xxCGypDH4CroBwqGhhY2vsRerI8C3HImsZqks9gKfCGqLw">
+                <div class="w-11 h-11 rounded-full bg-primary-fixed flex items-center justify-center text-primary"
+                  aria-hidden="true">
+                  <span class="material-symbols-outlined text-[22px]">person</span>
+                </div>
                 <div>
-                  <p class="font-label-lg text-label-lg text-on-surface leading-tight">Sofía Ramírez</p>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant">Asistente verificada · Armenia, Quindío</p>
+                  <p class="font-label-lg text-label-lg text-on-surface leading-tight">Asistente verificada</p>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Armenia, Quindío</p>
                 </div>
               </div>
-              <p class="font-body-md text-body-md text-on-surface-variant italic leading-relaxed">“Reservar mi cata en
-                Salento y tener el QR directo en el wallet de mi celular hace que nunca me pierda un plan en el Quindío.
-                Cero filas y curaduría impecable.”</p>
+              <p class="font-body-md text-body-md text-on-surface-variant italic leading-relaxed">
+                "Reservar mi cata en Salento y tener el QR directo en el wallet de mi celular hace que nunca me pierda un
+                plan en el Quindío. Cero filas y curaduría impecable."
+              </p>
             </div>
+
             <!-- Trust Badges & Guarantee -->
-            <div class="bg-surface-container-low rounded-xl p-4 flex items-center justify-between gap-4 text-on-surface-variant">
-              <div class="flex items-center gap-2 font-label-sm text-label-sm"><span
-                  class="material-symbols-outlined text-primary text-[18px]">verified_user</span><span class="">Garantía
-                  de Pagos PSE y Tarjetas</span></div>
-              <div class="w-px h-4 bg-outline-variant/60"></div>
-              <div class="flex items-center gap-2 font-label-sm text-label-sm"><span
-                  class="material-symbols-outlined text-tertiary text-[18px]">lock</span><span class="">Protección de
-                  Datos Habeas Data (Colombia)</span></div>
+            <div class="bg-surface-container-low rounded-xl p-4 flex items-center justify-between gap-4 text-on-surface-variant flex-wrap">
+              <div class="flex items-center gap-2 font-label-sm text-label-sm">
+                <span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">verified_user</span>
+                <span>Garantía de pagos PSE y tarjetas</span>
+              </div>
+              <div class="w-px h-4 bg-outline-variant/60 hidden sm:block" aria-hidden="true"></div>
+              <div class="flex items-center gap-2 font-label-sm text-label-sm">
+                <span class="material-symbols-outlined text-tertiary text-[18px]" aria-hidden="true">lock</span>
+                <span>Protección de datos Habeas Data (Colombia)</span>
+              </div>
             </div>
           </aside>
         </div>
       </div>
     </div>
   </main>
+
   <footer class="w-full bg-surface-container-low py-8">
     <div
       class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4 text-body-sm font-body-sm text-on-surface-variant">
-      <p class="text-center md:text-left">© 2025 MyEvent Tech Colombia S.A.S. Todos los derechos reservados. Armenia,
-        Quindío.</p>
-      <div class="flex flex-wrap items-center justify-center gap-6"><a class="hover:text-on-surface transition-colors"
-          data-path="terminos-del-servicio" href="#">Términos del Servicio</a><a
-          class="hover:text-on-surface transition-colors" data-path="privacidad" href="#">Privacidad y Cookies</a><a
-          class="hover:text-on-surface transition-colors" data-path="condiciones-de-compra" href="#">Condiciones de
-          Compra</a><a class="hover:text-on-surface transition-colors" data-path="aviso-legal" href="#">Aviso Legal</a>
+      <p class="text-center md:text-left">
+        © 2025 MyEvent Tech Colombia S.A.S. Todos los derechos reservados. Armenia, Quindío.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-6">
+        <a class="hover:text-on-surface transition-colors" data-path="terminos-del-servicio" href="#">Términos del
+          Servicio</a>
+        <a class="hover:text-on-surface transition-colors" data-path="privacidad" href="#">Privacidad y Cookies</a>
+        <a class="hover:text-on-surface transition-colors" data-path="condiciones-de-compra" href="#">Condiciones de
+          Compra</a>
+        <a class="hover:text-on-surface transition-colors" data-path="aviso-legal" href="#">Aviso Legal</a>
       </div>
     </div>
   </footer>
 
+  <!--
+    Fallback: define selectRole/togglePasswordVisibility/updatePasswordStrength/handleRoleKeydown/handleRegister
+    SOLO si script.js no los define. Al colocarse antes de script.js, cualquier declaración posterior sobrescribe
+    estas versiones.
+  -->
+  <script>
+    (function () {
+      // 1. Selector de rol (attendee / organizer) con semántica de radiogroup
+      window.selectRole = window.selectRole || function (role) {
+        var attendeeCard = document.getElementById("card-attendee");
+        var organizerCard = document.getElementById("card-organizer");
+        var attendeeCheck = document.getElementById("check-attendee");
+        var organizerCheck = document.getElementById("check-organizer");
+        var organizerIcon = document.getElementById("check-organizer-icon");
+        if (!attendeeCard || !organizerCard) return;
+
+        var isAttendee = role === "attendee";
+
+        // Attendee
+        attendeeCard.setAttribute("aria-checked", String(isAttendee));
+        attendeeCard.classList.toggle("ring-2", isAttendee);
+        attendeeCard.classList.toggle("ring-primary", isAttendee);
+        attendeeCard.classList.toggle("shadow-md", isAttendee);
+        attendeeCard.classList.toggle("shadow-sm", !isAttendee);
+        attendeeCard.classList.toggle("bg-surface-container-low", !isAttendee);
+        attendeeCard.classList.toggle("bg-surface-container-lowest", isAttendee);
+        if (attendeeCheck) {
+          attendeeCheck.classList.toggle("bg-primary", isAttendee);
+          attendeeCheck.classList.toggle("text-on-primary", isAttendee);
+          attendeeCheck.classList.toggle("bg-surface-container-highest", !isAttendee);
+          attendeeCheck.classList.toggle("text-on-surface-variant", !isAttendee);
+          attendeeCheck.classList.toggle("opacity-40", !isAttendee);
+          var inner = attendeeCheck.querySelector(".material-symbols-outlined");
+          if (inner) inner.textContent = isAttendee ? "check" : "radio_button_unchecked";
+        }
+
+        // Organizer
+        organizerCard.setAttribute("aria-checked", String(!isAttendee));
+        organizerCard.classList.toggle("ring-2", !isAttendee);
+        organizerCard.classList.toggle("ring-secondary", !isAttendee);
+        organizerCard.classList.toggle("shadow-md", !isAttendee);
+        organizerCard.classList.toggle("shadow-sm", isAttendee);
+        organizerCard.classList.toggle("bg-surface-container-lowest", !isAttendee);
+        if (organizerCheck) {
+          organizerCheck.classList.toggle("bg-secondary", !isAttendee);
+          organizerCheck.classList.toggle("text-on-secondary", !isAttendee);
+          organizerCheck.classList.toggle("bg-surface-container-highest", isAttendee);
+          organizerCheck.classList.toggle("text-on-surface-variant", isAttendee);
+          organizerCheck.classList.toggle("opacity-40", isAttendee);
+          if (organizerIcon) organizerIcon.textContent = isAttendee ? "radio_button_unchecked" : "check";
+        }
+      };
+
+      // 2. Activación por teclado (Enter / Space) en los role cards
+      window.handleRoleKeydown = window.handleRoleKeydown || function (event, role) {
+        if (event.key === "Enter" || event.key === " " || event.key === "Spacebar") {
+          event.preventDefault();
+          window.selectRole(role);
+        }
+      };
+
+      // 3. Mostrar/ocultar contraseña
+      window.togglePasswordVisibility = window.togglePasswordVisibility || function () {
+        var input = document.getElementById("password");
+        var icon = document.getElementById("eye-icon");
+        if (!input || !icon) return;
+
+        var isHidden = input.type === "password";
+        input.type = isHidden ? "text" : "password";
+        icon.textContent = isHidden ? "visibility_off" : "visibility";
+
+        var btn = icon.closest("button");
+        if (btn) {
+          btn.setAttribute("aria-pressed", String(isHidden));
+          btn.setAttribute("aria-label", isHidden ? "Ocultar contraseña" : "Mostrar contraseña");
+        }
+      };
+
+      // 4. Medidor de fuerza de contraseña
+      window.updatePasswordStrength = window.updatePasswordStrength || function (value) {
+        var bars = [1, 2, 3, 4].map(function (i) { return document.getElementById("bar-" + i); });
+        var label = document.getElementById("strength-label");
+        if (!bars[0] || !label) return;
+
+        var score = 0;
+        if (value.length >= 8) score++;
+        if (/[A-Z]/.test(value) && /[a-z]/.test(value)) score++;
+        if (/[0-9]/.test(value)) score++;
+        if (/[^A-Za-z0-9]/.test(value)) score++;
+
+        var colorClasses = ["bg-error", "bg-orange-500", "bg-yellow-500", "bg-emerald-500"];
+        var labels = ["Débil", "Regular", "Buena", "Excelente"];
+
+        bars.forEach(function (bar, i) {
+          bar.classList.remove("bg-error", "bg-orange-500", "bg-yellow-500", "bg-emerald-500");
+          bar.classList.add("bg-surface-container-highest");
+          if (value.length > 0 && i < score) {
+            bar.classList.remove("bg-surface-container-highest");
+            bar.classList.add(colorClasses[score - 1]);
+          }
+        });
+
+        if (value.length === 0) {
+          label.textContent = "—";
+        } else {
+          label.textContent = labels[Math.max(0, score - 1)];
+        }
+      };
+
+      // 5. Envío del formulario
+      window.handleRegister = window.handleRegister || function () {
+        var form = document.getElementById("register-form");
+        if (!form) return;
+        if (typeof form.reportValidity === "function" && !form.reportValidity()) return;
+        // TODO: integrar aquí la llamada real al backend de registro.
+        console.info("[MyEvent] Intento de registro:", {
+          fullname: document.getElementById("fullname")?.value,
+          email: document.getElementById("email")?.value,
+          role: document.querySelector(".role-card[aria-checked='true']")?.dataset.role || "attendee",
+          accept_terms: document.getElementById("accept-terms")?.checked,
+          accept_marketing: document.getElementById("accept-marketing")?.checked
+        });
+      };
+    })();
+  </script>
+
   <script src="script.js"></script>
-  <script src="../../nav.js"></script> 
+  <script src="../../nav.js"></script>
 
 </body>
 

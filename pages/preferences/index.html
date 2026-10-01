@@ -5,18 +5,27 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="web_standard" name="shell-type">
+  <meta name="theme-color" content="#004ac6">
+
+  <title>Personaliza tu experiencia | MyEvent Tech</title>
+  <meta name="description"
+    content="Elige tus preferencias culturales, ciudad e intereses para recibir invitaciones privadas y una cartelera curada en el Eje Cafetero.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Personaliza tu experiencia | MyEvent Tech">
+  <meta property="og:description"
+    content="Recibe invitaciones privadas, acceso preferente y una cartelera curada a tu medida en el Quindío.">
+  <meta property="og:locale" content="es_CO">
 
   <!-- Fuentes -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap"
     rel="stylesheet">
   <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap"
     rel="stylesheet">
 
   <!-- Estilos propios -->
@@ -24,192 +33,358 @@
 
   <!-- Tailwind CDN + configuración del tema -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script
-    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-tint": "#0053db", "on-tertiary-fixed-variant": "#004e5c", "surface-bright": "#f9f9ff", "on-tertiary-fixed": "#001f26", "surface-container-high": "#e2e8fc", "primary": "#004ac6", "on-surface-variant": "#434655", "secondary": "#712ae2", "on-secondary-fixed-variant": "#5a00c6", "surface": "#f9f9ff", "surface-container-highest": "#dce2f6", "secondary-fixed": "#eaddff", "on-secondary-fixed": "#25005a", "primary-fixed-dim": "#b4c5ff", "tertiary-fixed-dim": "#4cd7f6", "secondary-container": "#8a4cfc", "on-primary": "#ffffff", "tertiary-container": "#00788c", "outline-variant": "#c3c6d7", "secondary-fixed-dim": "#d2bbff", "on-tertiary": "#ffffff", "primary-container": "#2563eb", "background": "#f9f9ff", "primary-fixed": "#dbe1ff", "inverse-primary": "#b4c5ff", "surface-dim": "#d3daee", "error": "#ba1a1a", "on-tertiary-container": "#d7f6ff", "inverse-surface": "#2a3040", "tertiary-fixed": "#acedff", "on-primary-container": "#eeefff", "error-container": "#ffdad6", "on-secondary-container": "#fffbff", "on-error-container": "#93000a", "on-secondary": "#ffffff", "tertiary": "#005e6e", "on-primary-fixed": "#00174b", "surface-container-lowest": "#ffffff", "surface-variant": "#dce2f6", "on-surface": "#151b2a", "inverse-on-surface": "#edf0ff", "on-background": "#151b2a", "on-primary-fixed-variant": "#003ea8", "on-error": "#ffffff", "surface-container": "#e9edff", "outline": "#737686", "surface-container-low": "#f1f3ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "margin-sm": "1rem", "space-xs": "0.25rem", "margin-lg": "3rem", "margin": "1.5rem", "space-lg": "1.5rem", "gutter-lg": "2rem", "gutter-sm": "1rem", "space-xl": "2.5rem", "space-sm": "0.5rem", "space-md": "1rem" }, "fontFamily": { "body-md": [ "Inter" ], "headline-sm": [ "Space Grotesk" ], "display": [ "Space Grotesk" ], "body-sm": [ "Inter" ], "headline-lg": [ "Space Grotesk" ], "headline-md": [ "Space Grotesk" ], "body-lg": [ "Inter" ], "display-mobile": [ "Space Grotesk" ], "label-sm": [ "Space Grotesk" ], "headline-lg-mobile": [ "Space Grotesk" ], "label-lg": [ "Space Grotesk" ], "label-md": [ "Space Grotesk" ], "code-num": [ "Space Grotesk" ] }, "fontSize": { "body-md": [ "15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-sm": [ "20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "display": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "body-sm": [ "13px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" } ], "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "600" } ], "headline-md": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "body-lg": [ "18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "display-mobile": [ "36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "34px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "code-num": [ "24px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" } ] } } } };</script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-tint": "#0053db",
+            "on-tertiary-fixed-variant": "#004e5c",
+            "surface-bright": "#f9f9ff",
+            "on-tertiary-fixed": "#001f26",
+            "surface-container-high": "#e2e8fc",
+            "primary": "#004ac6",
+            "on-surface-variant": "#434655",
+            "secondary": "#712ae2",
+            "on-secondary-fixed-variant": "#5a00c6",
+            "surface": "#f9f9ff",
+            "surface-container-highest": "#dce2f6",
+            "secondary-fixed": "#eaddff",
+            "on-secondary-fixed": "#25005a",
+            "primary-fixed-dim": "#b4c5ff",
+            "tertiary-fixed-dim": "#4cd7f6",
+            "secondary-container": "#8a4cfc",
+            "on-primary": "#ffffff",
+            "tertiary-container": "#00788c",
+            "outline-variant": "#c3c6d7",
+            "secondary-fixed-dim": "#d2bbff",
+            "on-tertiary": "#ffffff",
+            "primary-container": "#2563eb",
+            "background": "#f9f9ff",
+            "primary-fixed": "#dbe1ff",
+            "inverse-primary": "#b4c5ff",
+            "surface-dim": "#d3daee",
+            "error": "#ba1a1a",
+            "on-tertiary-container": "#d7f6ff",
+            "inverse-surface": "#2a3040",
+            "tertiary-fixed": "#acedff",
+            "on-primary-container": "#eeefff",
+            "error-container": "#ffdad6",
+            "on-secondary-container": "#fffbff",
+            "on-error-container": "#93000a",
+            "on-secondary": "#ffffff",
+            "tertiary": "#005e6e",
+            "on-primary-fixed": "#00174b",
+            "surface-container-lowest": "#ffffff",
+            "surface-variant": "#dce2f6",
+            "on-surface": "#151b2a",
+            "inverse-on-surface": "#edf0ff",
+            "on-background": "#151b2a",
+            "on-primary-fixed-variant": "#003ea8",
+            "on-error": "#ffffff",
+            "surface-container": "#e9edff",
+            "outline": "#737686",
+            "surface-container-low": "#f1f3ff"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          },
+          spacing: {
+            "gutter": "1.5rem",
+            "margin-sm": "1rem",
+            "space-xs": "0.25rem",
+            "margin-lg": "3rem",
+            "margin": "1.5rem",
+            "space-lg": "1.5rem",
+            "gutter-lg": "2rem",
+            "gutter-sm": "1rem",
+            "space-xl": "2.5rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem"
+          },
+          /* FALTABA: escala tipográfica usada en text-headline-*, text-body-*, text-label-*, text-code-num */
+          fontSize: {
+            "display": ["3.5rem", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
+            "display-mobile": ["2.25rem", { lineHeight: "1.15", letterSpacing: "-0.02em" }],
+            "headline-lg": ["2.25rem", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
+            "headline-lg-mobile": ["1.75rem", { lineHeight: "1.25" }],
+            "headline-md": ["1.5rem", { lineHeight: "1.3" }],
+            "headline-sm": ["1.125rem", { lineHeight: "1.4" }],
+            "body-lg": ["1.0625rem", { lineHeight: "1.6" }],
+            "body-md": ["1rem", { lineHeight: "1.6" }],
+            "body-sm": ["0.875rem", { lineHeight: "1.55" }],
+            "label-lg": ["0.9375rem", { lineHeight: "1.4" }],
+            "label-md": ["0.8125rem", { lineHeight: "1.4" }],
+            "label-sm": ["0.75rem", { lineHeight: "1.4" }],
+            "code-num": ["1rem", { lineHeight: "1.4", letterSpacing: "0.01em" }]
+          },
+          fontFamily: {
+            "body-md": ["Inter"],
+            "headline-sm": ["Space Grotesk"],
+            "display": ["Space Grotesk"],
+            "body-sm": ["Inter"],
+            "label-lg": ["Space Grotesk"],
+            "label-md": ["Space Grotesk"],
+            "label-sm": ["Inter"],
+            "code-num": ["Space Grotesk"],
+            "headline-lg": ["Space Grotesk"],
+            "headline-md": ["Space Grotesk"],
+            "body-lg": ["Inter"],
+            "display-mobile": ["Space Grotesk"],
+            "headline-lg-mobile": ["Space Grotesk"]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Variantes de Material Symbols usadas en la página */
+    .material-symbols-filled {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .material-symbols-outline {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    /* Focus visible consistente para accesibilidad */
+    .toggle-switch:focus-visible,
+    .city-pill:focus-visible,
+    .interest-card:focus-visible {
+      outline: 2px solid #004ac6;
+      outline-offset: 2px;
+    }
+  </style>
 </head>
 
 <body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col justify-between">
+
   <header class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
     <div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
-      <div class="flex items-center gap-6"><a class="flex items-center gap-3 text-on-surface hover:text-primary transition-colors"
-          data-path="cartelera" href="#"><img alt="Brand logo. - Primary color: #2563eb
-- Font: spaceGrotesk
-- Mode: light
-- Roundness: rounded-md
-" class="h-8 w-auto object-contain"
-            src="https://lh3.googleusercontent.com/aida/AEtjO1VFXeen7YuSwHYX-cDXF0rjsQ6S9HMFJBRbOpMnaMx6k_lKXgcYiDZRpSHC9z18LcP2kTse_S2PXa_dOAoXi4lfMX8vSfgvf7i36lsw2KEXQ1E-spneIDLVNbC6NYgKEqsi-Llshkr9klvltE2qxfl2TWHLBvxb0UxXSWTwLYgVhchcKJyFtbO1sEdM-B8pq4Et8EH-wUOqBRAN8yEK5DgAYsUJfCBs28HwXND6CaItUYdJKpzqOq4hOYpz"><span
-            class="font-headline-sm text-headline-sm text-on-surface tracking-tight">MyEvent</span></a><span
-          class="hidden sm:inline-block w-px h-5 bg-outline-variant/40"></span><a
-          class="hidden sm:inline-flex items-center text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
-          data-path="cartelera" href="#">← Volver a la cartelera</a></div>
+      <div class="flex items-center gap-6">
+        <a class="flex items-center gap-3 text-on-surface hover:text-primary transition-colors" data-path="cartelera"
+          href="#">
+          <img alt="MyEvent Tech" class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1VFXeen7YuSwHYX-cDXF0rjsQ6S9HMFJBRbOpMnaMx6k_lKXgcYiDZRpSHC9z18LcP2kTse_S2PXa_dOAoXi4lfMX8vSfgvf7i36lsw2KEXQ1E-spneIDLVNbC6NYgKEqsi-Llshkr9klvltE2qxfl2TWHLBvxb0UxXSWTwLYgVhchcKJyFtbO1sEdM-B8pq4Et8EH-wUOqBRAN8yEK5DgAYsUJfCBs28HwXND6CaItUYdJKpzqOq4hOYpz">
+          <span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">MyEvent</span>
+        </a>
+        <span class="hidden sm:inline-block w-px h-5 bg-outline-variant/40" aria-hidden="true"></span>
+        <a class="hidden sm:inline-flex items-center text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="cartelera" href="#">
+          <span aria-hidden="true">←&nbsp;</span>Volver a la cartelera
+        </a>
+      </div>
       <div class="flex items-center gap-6">
         <nav class="flex items-center gap-4 text-body-sm font-body-sm"
-          data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded-full"><a
-            class="px-3 py-1.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
-            data-path="ayuda" href="#">Ayuda</a><a
-            class="px-3 py-1.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
-            data-path="idioma" href="#">CO / COP</a></nav>
-        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span
-            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+          data-active-classes="bg-surface-container-high text-on-surface font-semibold rounded-full">
+          <a class="px-3 py-1.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+            data-path="ayuda" href="#">Ayuda</a>
+          <a class="px-3 py-1.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+            data-path="idioma" href="#">CO / COP</a>
+        </nav>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0" aria-hidden="true">
+          <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+        </div>
       </div>
     </div>
   </header>
+
   <main class="w-full pt-16 flex-grow bg-surface">
     <div class="flex flex-col w-full">
       <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-10 lg:py-16">
+
         <!-- Top Progress Tracker -->
         <div class="max-w-3xl mx-auto mb-10">
           <div class="flex items-center justify-between gap-4 mb-3">
             <div class="flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+              <span class="w-2 h-2 rounded-full bg-primary animate-pulse" aria-hidden="true"></span>
               <span class="font-label-md text-label-md tracking-wider text-primary uppercase">Paso 2 de 2</span>
-              <span class="text-outline-variant font-label-md">/</span>
-              <span class="font-label-md text-label-md text-on-surface-variant font-medium">Personaliza tu
-                experiencia</span>
+              <span class="text-outline-variant font-label-md" aria-hidden="true">/</span>
+              <span class="font-label-md text-label-md text-on-surface-variant font-medium">Personaliza tu experiencia</span>
             </div>
             <span class="font-label-md text-label-md font-semibold text-on-surface">100% completado</span>
           </div>
-          <!-- Stepped Progress Bar -->
-          <div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden p-0.5">
+          <div class="h-2 w-full bg-surface-container-high rounded-full overflow-hidden p-0.5"
+            role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" aria-label="Progreso de configuración">
             <div class="h-full bg-gradient-to-r from-primary to-secondary rounded-full w-full transition-all duration-700 ease-out shadow-sm"></div>
           </div>
         </div>
+
         <!-- Main Grid: Setup Form + Live Preview Bento Card -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
           <!-- Left Column: Preference Configuration (8 cols) -->
           <div class="lg:col-span-8 flex flex-col gap-8">
+
             <!-- Status & Welcome Headline Container -->
             <div class="bg-surface-container-lowest rounded-xl p-8 sm:p-10 shadow-sm relative overflow-hidden">
               <div
-                class="absolute -top-24 -right-24 w-72 h-72 bg-gradient-to-br from-primary/10 via-secondary/5 to-transparent rounded-full blur-3xl pointer-events-none">
-              </div>
+                class="absolute -top-24 -right-24 w-72 h-72 bg-gradient-to-br from-primary/10 via-secondary/5 to-transparent rounded-full blur-3xl pointer-events-none"
+                aria-hidden="true"></div>
+
               <!-- Success Chip -->
               <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed shadow-sm mb-6">
-                <span class="material-symbols-outlined text-[18px] material-symbols-filled">verified</span>
+                <span class="material-symbols-outlined material-symbols-filled text-[18px]" aria-hidden="true">verified</span>
                 <span class="font-label-sm text-label-sm tracking-wider uppercase font-bold">Cuenta creada con éxito</span>
               </div>
+
               <h1 class="font-display text-headline-lg lg:text-display text-on-surface tracking-tight leading-none mb-4">
-                ¡Te damos la bienvenida, <span
-                  class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Elena</span>!
+                ¡Te damos la bienvenida a
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">MyEvent Tech</span>!
               </h1>
               <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
                 Elige tus preferencias culturales y tu ciudad para recibir invitaciones privadas, acceso preferente y una
                 cartelera curada a tu medida.
               </p>
+
               <!-- Email Verification Micro-Banner -->
               <div class="mt-8 p-4 rounded-lg bg-surface-container-low flex items-start sm:items-center justify-between gap-4">
                 <div class="flex items-start sm:items-center gap-3">
-                  <div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center shrink-0 text-primary">
+                  <div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center shrink-0 text-primary"
+                    aria-hidden="true">
                     <span class="material-symbols-outlined text-[18px]">mark_email_read</span>
                   </div>
                   <p class="font-body-sm text-body-sm text-on-surface-variant">
-                    Hemos enviado un enlace de confirmación a <span class="font-semibold text-on-surface">elena@ejemplo.com</span>.
+                    Hemos enviado un enlace de confirmación a tu correo electrónico.
                     Puedes explorar la cartelera ahora y verificar tu correo en cualquier momento.
                   </p>
                 </div>
-                <button
+                <button type="button"
                   class="shrink-0 font-label-sm text-label-sm text-primary hover:text-on-primary-fixed-variant transition-colors underline underline-offset-4 decoration-primary/40 hidden sm:block">
                   Reenviar
                 </button>
               </div>
             </div>
+
             <!-- Section 1: City Selection -->
-            <div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
+            <section class="bg-surface-container-lowest rounded-xl p-8 shadow-sm" aria-labelledby="city-heading">
               <div class="flex items-center gap-3 mb-6">
-                <div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-code-num text-label-sm">
-                  01
-                </div>
+                <div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-code-num text-label-sm"
+                  aria-hidden="true">01</div>
                 <div>
-                  <h2 class="font-headline-sm text-headline-sm text-on-surface">Tu municipio principal</h2>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant">Actos y experiencias comisariadas a menos de 45
-                    minutos</p>
+                  <h2 id="city-heading" class="font-headline-sm text-headline-sm text-on-surface">Tu municipio principal</h2>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Actos y experiencias comisariadas a menos de
+                    45 minutos</p>
                 </div>
               </div>
-              <div class="flex flex-wrap gap-3" id="city-selector"><button
+
+              <div class="flex flex-wrap gap-3" id="city-selector" role="group" aria-labelledby="city-heading">
+                <button
                   class="city-pill group flex items-center gap-2.5 px-5 py-3 rounded-full bg-primary text-on-primary shadow-sm hover:shadow-md transition-all active:scale-95"
-                  data-selected="true" type="button"><span
-                    class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim material-symbols-filled">location_on</span><span
-                    class="font-label-lg text-label-lg">Armenia</span><span
-                    class="material-symbols-outlined text-[16px] ml-1">check</span></button><button
+                  data-selected="true" type="button" aria-pressed="true">
+                  <span class="material-symbols-outlined material-symbols-filled text-[18px] text-tertiary-fixed-dim"
+                    aria-hidden="true">location_on</span>
+                  <span class="font-label-lg text-label-lg">Armenia</span>
+                  <span class="material-symbols-outlined text-[16px] ml-1" aria-hidden="true">check</span>
+                </button>
+                <button
                   class="city-pill group flex items-center gap-2.5 px-5 py-3 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-all active:scale-95"
-                  data-selected="false" type="button"><span
-                    class="material-symbols-outlined text-[18px] text-outline material-symbols-outline">location_on</span><span
-                    class="font-label-lg text-label-lg">Salento</span></button><button
+                  data-selected="false" type="button" aria-pressed="false">
+                  <span class="material-symbols-outlined material-symbols-outline text-[18px] text-outline"
+                    aria-hidden="true">location_on</span>
+                  <span class="font-label-lg text-label-lg">Salento</span>
+                </button>
+                <button
                   class="city-pill group flex items-center gap-2.5 px-5 py-3 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-all active:scale-95"
-                  data-selected="false" type="button"><span
-                    class="material-symbols-outlined text-[18px] text-outline material-symbols-outline">location_on</span><span
-                    class="font-label-lg text-label-lg">Filandia</span></button><button
+                  data-selected="false" type="button" aria-pressed="false">
+                  <span class="material-symbols-outlined material-symbols-outline text-[18px] text-outline"
+                    aria-hidden="true">location_on</span>
+                  <span class="font-label-lg text-label-lg">Filandia</span>
+                </button>
+                <button
                   class="city-pill group flex items-center gap-2.5 px-5 py-3 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-all active:scale-95"
-                  data-selected="false" type="button"><span
-                    class="material-symbols-outlined text-[18px] text-outline material-symbols-outline">location_on</span><span
-                    class="font-label-lg text-label-lg">Circasia</span></button><button
+                  data-selected="false" type="button" aria-pressed="false">
+                  <span class="material-symbols-outlined material-symbols-outline text-[18px] text-outline"
+                    aria-hidden="true">location_on</span>
+                  <span class="font-label-lg text-label-lg">Circasia</span>
+                </button>
+                <button
                   class="city-pill group flex items-center gap-2.5 px-5 py-3 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-all active:scale-95"
-                  data-selected="false" type="button"><span
-                    class="material-symbols-outlined text-[18px] text-outline material-symbols-outline">location_on</span><span
-                    class="font-label-lg text-label-lg">Quimbaya</span></button><button
+                  data-selected="false" type="button" aria-pressed="false">
+                  <span class="material-symbols-outlined material-symbols-outline text-[18px] text-outline"
+                    aria-hidden="true">location_on</span>
+                  <span class="font-label-lg text-label-lg">Quimbaya</span>
+                </button>
+                <button
                   class="city-pill group flex items-center gap-2.5 px-5 py-3 rounded-full bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all active:scale-95"
-                  data-selected="false" type="button"><span
-                    class="material-symbols-outlined text-[18px]">add_location_alt</span><span
-                    class="font-label-lg text-label-lg">Otro municipio</span></button></div>
-            </div>
+                  data-selected="false" type="button" aria-pressed="false">
+                  <span class="material-symbols-outlined text-[18px]" aria-hidden="true">add_location_alt</span>
+                  <span class="font-label-lg text-label-lg">Otro municipio</span>
+                </button>
+              </div>
+            </section>
+
             <!-- Section 2: Passions and Interests -->
-            <div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
-              <div class="flex items-center justify-between mb-6">
+            <section class="bg-surface-container-lowest rounded-xl p-8 shadow-sm" aria-labelledby="interests-heading">
+              <div class="flex items-center justify-between mb-6 gap-4">
                 <div class="flex items-center gap-3">
-                  <div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-code-num text-label-sm">
-                    02
-                  </div>
+                  <div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-code-num text-label-sm"
+                    aria-hidden="true">02</div>
                   <div>
-                    <h2 class="font-headline-sm text-headline-sm text-on-surface">¿Qué tipo de experiencias y eventos te
-                      apasionan en el Quindío?</h2>
+                    <h2 id="interests-heading" class="font-headline-sm text-headline-sm text-on-surface">
+                      ¿Qué tipo de experiencias y eventos te apasionan en el Quindío?
+                    </h2>
                     <p class="font-body-sm text-body-sm text-on-surface-variant">Selecciona un mínimo de 3 para calibrar el
                       algoritmo</p>
                   </div>
                 </div>
                 <span
-                  class="hidden sm:inline-block font-label-sm text-label-sm px-3 py-1 rounded-full bg-surface-container text-primary font-bold">
+                  class="hidden sm:inline-block font-label-sm text-label-sm px-3 py-1 rounded-full bg-surface-container text-primary font-bold whitespace-nowrap"
+                  id="interest-counter" aria-live="polite">
                   3 seleccionados
                 </span>
               </div>
+
               <!-- Interest Cards Grid -->
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5" id="interests-grid">
-                <label
-                  class="interest-card relative flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all duration-200 bg-primary-fixed/20 shadow-sm"><input
-                    checked="" class="sr-only interest-input" type="checkbox">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5" id="interests-grid" role="group"
+                aria-labelledby="interests-heading">
+
+                <label class="interest-card relative flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all duration-200 bg-primary-fixed/20 shadow-sm">
+                  <input checked class="sr-only interest-input" type="checkbox" name="interest" value="cafe">
                   <div class="flex items-center gap-3.5">
-                    <div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+                    <div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm"
+                      aria-hidden="true">
                       <span class="material-symbols-outlined text-[20px]">coffee</span>
                     </div>
                     <div>
                       <p class="font-label-lg text-label-lg text-on-surface">Catas de Café Especial &amp; Barismo</p>
-                      <p class="font-body-sm text-body-sm text-on-surface-variant">Fincas tradicionales y varietales de altura
-                      </p>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant">Fincas tradicionales y varietales de altura</p>
                     </div>
                   </div>
-                  <div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center check-badge shrink-0">
-                    <span class="material-symbols-outlined text-[16px]">check</span></div>
+                  <div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center check-badge shrink-0"
+                    aria-hidden="true">
+                    <span class="material-symbols-outlined text-[16px]">check</span>
+                  </div>
                 </label>
-                <label
-                  class="interest-card relative flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all duration-200 bg-primary-fixed/20 shadow-sm"><input
-                    checked="" class="sr-only interest-input" type="checkbox">
+
+                <label class="interest-card relative flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all duration-200 bg-primary-fixed/20 shadow-sm">
+                  <input checked class="sr-only interest-input" type="checkbox" name="interest" value="musica">
                   <div class="flex items-center gap-3.5">
-                    <div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+                    <div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm"
+                      aria-hidden="true">
                       <span class="material-symbols-outlined text-[20px]">nightlife</span>
                     </div>
                     <div>
                       <p class="font-label-lg text-label-lg text-on-surface">Música al Atardecer &amp; Acústicos</p>
-                      <p class="font-body-sm text-body-sm text-on-surface-variant">Miradores, fogatas y balcones coloniales
-                      </p>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant">Miradores, fogatas y balcones coloniales</p>
                     </div>
                   </div>
-                  <div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center check-badge shrink-0">
-                    <span class="material-symbols-outlined text-[16px]">check</span></div>
+                  <div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center check-badge shrink-0"
+                    aria-hidden="true">
+                    <span class="material-symbols-outlined text-[16px]">check</span>
+                  </div>
                 </label>
-                <label
-                  class="interest-card relative flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all duration-200 bg-primary-fixed/20 shadow-sm"><input
-                    checked="" class="sr-only interest-input" type="checkbox">
+
+                <label class="interest-card relative flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all duration-200 bg-primary-fixed/20 shadow-sm">
+                  <input checked class="sr-only interest-input" type="checkbox" name="interest" value="agrotech">
                   <div class="flex items-center gap-3.5">
-                    <div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+                    <div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm"
+                      aria-hidden="true">
                       <span class="material-symbols-outlined text-[20px]">memory</span>
                     </div>
                     <div>
@@ -217,33 +392,35 @@
                       <p class="font-body-sm text-body-sm text-on-surface-variant">Charlas de innovación rural y startups</p>
                     </div>
                   </div>
-                  <div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center check-badge shrink-0">
-                    <span class="material-symbols-outlined text-[16px]">check</span></div>
+                  <div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center check-badge shrink-0"
+                    aria-hidden="true">
+                    <span class="material-symbols-outlined text-[16px]">check</span>
+                  </div>
                 </label>
-                <label
-                  class="interest-card relative flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all duration-200 bg-surface-container-low hover:bg-surface-container"><input
-                    class="sr-only interest-input" type="checkbox">
+
+                <label class="interest-card relative flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all duration-200 bg-surface-container-low hover:bg-surface-container">
+                  <input class="sr-only interest-input" type="checkbox" name="interest" value="artesanias">
                   <div class="flex items-center gap-3.5">
-                    <div
-                      class="w-10 h-10 rounded-lg bg-surface-container-highest text-on-surface-variant flex items-center justify-center shrink-0">
+                    <div class="w-10 h-10 rounded-lg bg-surface-container-highest text-on-surface-variant flex items-center justify-center shrink-0"
+                      aria-hidden="true">
                       <span class="material-symbols-outlined text-[20px]">palette</span>
                     </div>
                     <div>
                       <p class="font-label-lg text-label-lg text-on-surface">Artesanías en Bejuco &amp; Cerámica</p>
-                      <p class="font-body-sm text-body-sm text-on-surface-variant">Talleres con maestros de Filandia y Salento
-                      </p>
+                      <p class="font-body-sm text-body-sm text-on-surface-variant">Talleres con maestros de Filandia y Salento</p>
                     </div>
                   </div>
-                  <div
-                    class="w-6 h-6 rounded-full bg-surface-container-highest text-transparent flex items-center justify-center check-badge shrink-0">
-                    <span class="material-symbols-outlined text-[16px]">check</span></div>
+                  <div class="w-6 h-6 rounded-full bg-surface-container-highest text-transparent flex items-center justify-center check-badge shrink-0"
+                    aria-hidden="true">
+                    <span class="material-symbols-outlined text-[16px]">check</span>
+                  </div>
                 </label>
-                <label
-                  class="interest-card relative flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all duration-200 bg-surface-container-low hover:bg-surface-container"><input
-                    class="sr-only interest-input" type="checkbox">
+
+                <label class="interest-card relative flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all duration-200 bg-surface-container-low hover:bg-surface-container">
+                  <input class="sr-only interest-input" type="checkbox" name="interest" value="naturaleza">
                   <div class="flex items-center gap-3.5">
-                    <div
-                      class="w-10 h-10 rounded-lg bg-surface-container-highest text-on-surface-variant flex items-center justify-center shrink-0">
+                    <div class="w-10 h-10 rounded-lg bg-surface-container-highest text-on-surface-variant flex items-center justify-center shrink-0"
+                      aria-hidden="true">
                       <span class="material-symbols-outlined text-[20px]">forest</span>
                     </div>
                     <div>
@@ -251,16 +428,17 @@
                       <p class="font-body-sm text-body-sm text-on-surface-variant">Senderismo en Cocora y aviturismo</p>
                     </div>
                   </div>
-                  <div
-                    class="w-6 h-6 rounded-full bg-surface-container-highest text-transparent flex items-center justify-center check-badge shrink-0">
-                    <span class="material-symbols-outlined text-[16px]">check</span></div>
+                  <div class="w-6 h-6 rounded-full bg-surface-container-highest text-transparent flex items-center justify-center check-badge shrink-0"
+                    aria-hidden="true">
+                    <span class="material-symbols-outlined text-[16px]">check</span>
+                  </div>
                 </label>
-                <label
-                  class="interest-card relative flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all duration-200 bg-surface-container-low hover:bg-surface-container"><input
-                    class="sr-only interest-input" type="checkbox">
+
+                <label class="interest-card relative flex items-center justify-between p-4 rounded-xl cursor-pointer transition-all duration-200 bg-surface-container-low hover:bg-surface-container">
+                  <input class="sr-only interest-input" type="checkbox" name="interest" value="gastronomia">
                   <div class="flex items-center gap-3.5">
-                    <div
-                      class="w-10 h-10 rounded-lg bg-surface-container-highest text-on-surface-variant flex items-center justify-center shrink-0">
+                    <div class="w-10 h-10 rounded-lg bg-surface-container-highest text-on-surface-variant flex items-center justify-center shrink-0"
+                      aria-hidden="true">
                       <span class="material-symbols-outlined text-[20px]">restaurant</span>
                     </div>
                     <div>
@@ -268,33 +446,36 @@
                       <p class="font-body-sm text-body-sm text-on-surface-variant">Cenas clandestinas y cocina de origen</p>
                     </div>
                   </div>
-                  <div
-                    class="w-6 h-6 rounded-full bg-surface-container-highest text-transparent flex items-center justify-center check-badge shrink-0">
-                    <span class="material-symbols-outlined text-[16px]">check</span></div>
+                  <div class="w-6 h-6 rounded-full bg-surface-container-highest text-transparent flex items-center justify-center check-badge shrink-0"
+                    aria-hidden="true">
+                    <span class="material-symbols-outlined text-[16px]">check</span>
+                  </div>
                 </label>
               </div>
-            </div>
+            </section>
+
             <!-- Section 3: Notification Preferences -->
-            <div class="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
+            <section class="bg-surface-container-lowest rounded-xl p-8 shadow-sm" aria-labelledby="notif-heading">
               <div class="flex items-center gap-3 mb-6">
-                <div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-code-num text-label-sm">
-                  03
-                </div>
+                <div class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-code-num text-label-sm"
+                  aria-hidden="true">03</div>
                 <div>
-                  <h2 class="font-headline-sm text-headline-sm text-on-surface">Preferencias de notificación</h2>
+                  <h2 id="notif-heading" class="font-headline-sm text-headline-sm text-on-surface">Preferencias de notificación</h2>
                   <p class="font-body-sm text-body-sm text-on-surface-variant">Sin spam: únicamente accesos directos y
                     lanzamientos prioritarios</p>
                 </div>
               </div>
+
               <div class="space-y-4">
                 <!-- Switch 1 -->
-                <div class="flex items-center justify-between p-4 rounded-xl bg-surface-container-low hover:bg-surface-container-high/60 transition-colors">
+                <div class="flex items-center justify-between p-4 rounded-xl bg-surface-container-low hover:bg-surface-container-high/60 transition-colors gap-4">
                   <div class="flex items-start gap-3.5 pr-4">
-                    <div class="w-8 h-8 rounded-full bg-error-container/60 text-error flex items-center justify-center shrink-0 mt-0.5">
+                    <div class="w-8 h-8 rounded-full bg-error-container/60 text-error flex items-center justify-center shrink-0 mt-0.5"
+                      aria-hidden="true">
                       <span class="material-symbols-outlined text-[18px]">bolt</span>
                     </div>
                     <div>
-                      <div class="flex items-center gap-2">
+                      <div class="flex items-center gap-2 flex-wrap">
                         <p class="font-label-lg text-label-lg text-on-surface">Alertas de plazas de última hora</p>
                         <span class="px-2 py-0.5 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm">Recomendado</span>
                       </div>
@@ -302,37 +483,38 @@
                         entradas para citas agotadas.</p>
                     </div>
                   </div>
-                  <button
-                    class="toggle-switch shrink-0 relative w-12 h-6 rounded-full bg-primary p-0.5 transition-colors focus:outline-none"
-                    data-checked="true" type="button">
-                    <span class="block w-5 h-5 rounded-full bg-on-primary shadow-sm transform translate-x-6 transition-transform"></span>
+                  <button type="button" role="switch" aria-checked="true" aria-label="Activar alertas de plazas de última hora"
+                    class="toggle-switch shrink-0 relative w-12 h-6 rounded-full bg-primary p-0.5 transition-colors">
+                    <span class="block w-5 h-5 rounded-full bg-on-primary shadow-sm transform translate-x-6 transition-transform"
+                      aria-hidden="true"></span>
                   </button>
                 </div>
+
                 <!-- Switch 2 -->
-                <div class="flex items-center justify-between p-4 rounded-xl bg-surface-container-low hover:bg-surface-container-high/60 transition-colors">
+                <div class="flex items-center justify-between p-4 rounded-xl bg-surface-container-low hover:bg-surface-container-high/60 transition-colors gap-4">
                   <div class="flex items-start gap-3.5 pr-4">
-                    <div
-                      class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center shrink-0 mt-0.5">
+                    <div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center shrink-0 mt-0.5"
+                      aria-hidden="true">
                       <span class="material-symbols-outlined text-[18px]">calendar_month</span>
                     </div>
                     <div>
-                      <p class="font-label-lg text-label-lg text-on-surface">Resumen semanal de nuevos eventos en tu ciudad
-                      </p>
+                      <p class="font-label-lg text-label-lg text-on-surface">Resumen semanal de nuevos eventos en tu ciudad</p>
                       <p class="font-body-sm text-body-sm text-on-surface-variant">Cada jueves por la mañana, la selección
                         curada del fin de semana.</p>
                     </div>
                   </div>
-                  <button
-                    class="toggle-switch shrink-0 relative w-12 h-6 rounded-full bg-primary p-0.5 transition-colors focus:outline-none"
-                    data-checked="true" type="button">
-                    <span class="block w-5 h-5 rounded-full bg-on-primary shadow-sm transform translate-x-6 transition-transform"></span>
+                  <button type="button" role="switch" aria-checked="true" aria-label="Activar resumen semanal"
+                    class="toggle-switch shrink-0 relative w-12 h-6 rounded-full bg-primary p-0.5 transition-colors">
+                    <span class="block w-5 h-5 rounded-full bg-on-primary shadow-sm transform translate-x-6 transition-transform"
+                      aria-hidden="true"></span>
                   </button>
                 </div>
+
                 <!-- Switch 3 -->
-                <div class="flex items-center justify-between p-4 rounded-xl bg-surface-container-low hover:bg-surface-container-high/60 transition-colors">
+                <div class="flex items-center justify-between p-4 rounded-xl bg-surface-container-low hover:bg-surface-container-high/60 transition-colors gap-4">
                   <div class="flex items-start gap-3.5 pr-4">
-                    <div
-                      class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center shrink-0 mt-0.5">
+                    <div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center shrink-0 mt-0.5"
+                      aria-hidden="true">
                       <span class="material-symbols-outlined text-[18px]">sync</span>
                     </div>
                     <div>
@@ -342,112 +524,132 @@
                         passbook e instrucciones.</p>
                     </div>
                   </div>
-                  <button
-                    class="toggle-switch shrink-0 relative w-12 h-6 rounded-full bg-primary p-0.5 transition-colors focus:outline-none"
-                    data-checked="true" type="button">
-                    <span class="block w-5 h-5 rounded-full bg-on-primary shadow-sm transform translate-x-6 transition-transform"></span>
+                  <button type="button" role="switch" aria-checked="true" aria-label="Activar sincronización de calendario"
+                    class="toggle-switch shrink-0 relative w-12 h-6 rounded-full bg-primary p-0.5 transition-colors">
+                    <span class="block w-5 h-5 rounded-full bg-on-primary shadow-sm transform translate-x-6 transition-transform"
+                      aria-hidden="true"></span>
                   </button>
                 </div>
               </div>
-            </div>
+            </section>
+
             <!-- Call to Action Footer -->
             <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 pb-8">
               <a class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-label-lg text-label-lg shadow-lg hover:shadow-xl hover:translate-y-[-1px] transition-all text-center"
-                href="#">
-                <span class="">Empezar a explorar la cartelera</span>
-                <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                data-path="cartelera" href="#">
+                <span>Empezar a explorar la cartelera</span>
+                <span class="material-symbols-outlined text-[20px]" aria-hidden="true">arrow_forward</span>
               </a>
               <a class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors font-label-md text-label-md text-center"
-                href="#">
+                data-path="perfil" href="#">
                 Omitir y configurar más tarde
               </a>
             </div>
           </div>
+
           <!-- Right Column: Live Bento Preview & Membership Pass Preview (4 cols) -->
-          <div class="lg:col-span-4 flex flex-col gap-6 sticky top-24">
+          <div class="lg:col-span-4 flex flex-col gap-6 lg:sticky lg:top-24">
+
             <!-- Live Personalization Preview Card -->
             <div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm overflow-hidden relative">
-              <div class="flex items-center justify-between mb-4">
-                <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">TU CARTELERA EN EL
-                  QUINDÍO</span>
-                <span
-                  class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
-                  <span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+              <div class="flex items-center justify-between mb-4 gap-3">
+                <span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Tu cartelera en el Quindío</span>
+                <span class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm shrink-0">
+                  <span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping" aria-hidden="true"></span>
                   En directo
                 </span>
               </div>
-              <p class="font-body-sm text-body-sm text-on-surface-variant mb-5">Vista previa del primer evento sugerido basado
-                en tus selecciones actuales en Armenia y municipios vecinos:</p>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mb-5">
+                Vista previa del primer evento sugerido basado en tus selecciones actuales en Armenia y municipios vecinos:
+              </p>
+
               <!-- Featured Event Preview Card -->
-              <div class="group rounded-xl bg-surface-container-low overflow-hidden hover:shadow-md transition-shadow">
+              <article class="group rounded-xl bg-surface-container-low overflow-hidden hover:shadow-md transition-shadow">
                 <div class="relative h-44 w-full overflow-hidden">
                   <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    data-alt="Intimate jazz musicians performing under amber and violet architectural lighting on an elegant urban rooftop terrace in Madrid at dusk, overlooking city landmarks with warm atmospheric haze."
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqKBq5aPPWpcieFatH8KLRG66IUTwteLWZ8NtHsRFJEIUALY_4zoYadYYkj08lQg83VOJoL1kfM2mI9Tk_JXyCH2MTXvB5FQYauOmqAySfAopYQlkgfcvdIHGNSRafwJowb-nlT8wHtd0evSw08--AuxYoKrO4rrKvUJcyhl-Hl5L8mFW0wmNLKe1YCAYtPQAW_Ti8loUzB_Hv0OymRbzqIMGR6X-F34rakIlOw0C3TZljEK1WhXZ44A">
-                  <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent"></div>
-                  <!-- Affinity Badge -->
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqKBq5aPPWpcieFatH8KLRG66IUTwteLWZ8NtHsRFJEIUALY_4zoYadYYkj08lQg83VOJoL1kfM2mI9Tk_JXyCH2MTXvB5FQYauOmqAySfAopYQlkgfcvdIHGNSRafwJowb-nlT8wHtd0evSw08--AuxYoKrO4rrKvUJcyhl-Hl5L8mFW0wmNLKe1YCAYtPQAW_Ti8loUzB_Hv0OymRbzqIMGR6X-F34rakIlOw0C3TZljEK1WhXZ44A"
+                    alt="Músicos de jazz en una terraza urbana al atardecer con iluminación ámbar y violeta"
+                    loading="lazy" decoding="async">
+                  <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent"
+                    aria-hidden="true"></div>
                   <div
                     class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-inverse-surface/90 backdrop-blur-md text-tertiary-fixed-dim font-code-num text-label-sm flex items-center gap-1 shadow-sm">
-                    <span class="material-symbols-outlined text-[14px]">auto_awesome</span>
-                    <span class="">98% afinidad</span>
+                    <span class="material-symbols-outlined text-[14px]" aria-hidden="true">auto_awesome</span>
+                    <span>98% afinidad</span>
                   </div>
-                  <!-- Date Capsule -->
                   <div
                     class="absolute bottom-3 left-3 px-2.5 py-1 rounded bg-surface/95 backdrop-blur text-on-surface font-label-sm text-label-sm flex items-center gap-1.5">
-                    <span class="material-symbols-outlined text-[14px] text-primary">event</span>
-                    <span class="">Este Sábado, 21:00h</span>
+                    <span class="material-symbols-outlined text-[14px] text-primary" aria-hidden="true">event</span>
+                    <span>Este sábado, 21:00 h</span>
                   </div>
                 </div>
                 <div class="p-4">
-                  <div class="flex items-center gap-2 mb-1.5"><span
-                      class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">FILANDIA</span><span
-                      class="text-outline-variant font-label-sm">•</span><span
-                      class="font-label-sm text-label-sm text-on-surface-variant">Finca La Colina</span></div>
-                  <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 line-clamp-1">Cata de Café Especial &amp;
-                    Atardecer</h3>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-4">Recorrido de varietales
-                    geisha y bourbon rosado con maridaje de repostería artesanal sobre el valle.</p>
-                  <div class="flex items-center justify-between pt-3 bg-surface-container rounded-lg px-3 py-2">
-                    <div class="flex items-center gap-1.5"><span
-                        class="material-symbols-outlined text-[16px] text-secondary">verified</span><span
-                        class="font-label-sm text-label-sm text-on-surface">Cupos muy limitados</span></div><span
-                      class="font-code-num text-label-lg font-bold text-primary">$ 85.000 COP</span>
+                  <div class="flex items-center gap-2 mb-1.5 flex-wrap">
+                    <span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Filandia</span>
+                    <span class="text-outline-variant font-label-sm" aria-hidden="true">•</span>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant">Finca La Colina</span>
+                  </div>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 line-clamp-1">
+                    Cata de Café Especial &amp; Atardecer
+                  </h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-4">
+                    Recorrido de varietales geisha y bourbon rosado con maridaje de repostería artesanal sobre el valle.
+                  </p>
+                  <div class="flex items-center justify-between bg-surface-container rounded-lg px-3 py-2">
+                    <div class="flex items-center gap-1.5">
+                      <span class="material-symbols-outlined text-[16px] text-secondary" aria-hidden="true">verified</span>
+                      <span class="font-label-sm text-label-sm text-on-surface">Cupos muy limitados</span>
+                    </div>
+                    <span class="font-code-num text-label-lg font-bold text-primary">$ 85.000 COP</span>
                   </div>
                 </div>
-              </div>
+              </article>
             </div>
+
             <!-- Membership Digital Pass Minimal Bento Widget -->
             <div
               class="rounded-xl p-6 bg-gradient-to-br from-inverse-surface to-surface-variant text-inverse-on-surface shadow-md relative overflow-hidden">
-              <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center justify-between mb-6 gap-3">
                 <div class="flex items-center gap-2.5">
-                  <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary"><span
-                      class="material-symbols-outlined text-[18px]">confirmation_number</span></div>
+                  <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0"
+                    aria-hidden="true">
+                    <span class="material-symbols-outlined text-[18px]">confirmation_number</span>
+                  </div>
                   <div>
                     <p class="font-label-sm text-label-sm tracking-widest uppercase opacity-75">MyEvent Tech Pass</p>
                     <p class="font-label-lg text-label-lg font-bold">Miembro Early Access</p>
                   </div>
                 </div>
-                <div class="px-2 py-1 rounded bg-white/10 backdrop-blur font-code-num text-label-sm">#MET-88219</div>
+                <div class="px-2 py-1 rounded bg-white/10 backdrop-blur font-code-num text-label-sm shrink-0">#MET-00000</div>
               </div>
+
               <div class="space-y-3 pt-2">
-                <div class="flex justify-between items-center text-body-sm font-body-sm"><span class="opacity-70">Titular de
-                    cuenta:</span><span class="font-semibold">Elena Romero</span></div>
-                <div class="flex justify-between items-center text-body-sm font-body-sm"><span class="opacity-70">Jurisdicción
-                    cultural:</span><span class="font-semibold text-tertiary-fixed-dim" id="badge-city-display">Quindío,
-                    CO</span></div>
-                <div class="flex justify-between items-center text-body-sm font-body-sm"><span class="opacity-70">Beneficio
-                    activo:</span><span class="font-semibold">Reserva prioritaria 24h</span></div>
+                <div class="flex justify-between items-center text-body-sm font-body-sm gap-3">
+                  <span class="opacity-70">Titular de cuenta:</span>
+                  <span class="font-semibold">—</span>
+                </div>
+                <div class="flex justify-between items-center text-body-sm font-body-sm gap-3">
+                  <span class="opacity-70">Jurisdicción cultural:</span>
+                  <span class="font-semibold text-tertiary-fixed-dim" id="badge-city-display">Quindío, CO</span>
+                </div>
+                <div class="flex justify-between items-center text-body-sm font-body-sm gap-3">
+                  <span class="opacity-70">Beneficio activo:</span>
+                  <span class="font-semibold">Reserva prioritaria 24h</span>
+                </div>
               </div>
-              <div class="mt-6 pt-4 flex items-center justify-between opacity-80"><span
-                  class="font-label-sm text-label-sm opacity-60">Algoritmo de recomendación listo</span><svg
-                  class="w-20 h-5 text-tertiary-fixed-dim" fill="none" stroke="currentColor" viewBox="0 0 80 20">
+
+              <div class="mt-6 pt-4 flex items-center justify-between opacity-80">
+                <span class="font-label-sm text-label-sm opacity-60">Algoritmo de recomendación listo</span>
+                <svg class="w-20 h-5 text-tertiary-fixed-dim" fill="none" stroke="currentColor" viewBox="0 0 80 20"
+                  aria-hidden="true" focusable="false">
                   <path d="M1 15 L20 12 L38 18 L55 5 L79 2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                </svg></div>
+                </svg>
+              </div>
             </div>
+
             <!-- Security & Privacy Guarantee Note -->
             <div class="p-4 rounded-xl bg-surface-container-high/40 flex items-center gap-3">
-              <span class="material-symbols-outlined text-[20px] text-outline shrink-0">shield_lock</span>
+              <span class="material-symbols-outlined text-[20px] text-outline shrink-0" aria-hidden="true">shield_lock</span>
               <p class="font-body-sm text-body-sm text-on-surface-variant">
                 Tus datos y gustos nunca se compartirán con anunciantes externos. Puedes pausar alertas desde tu perfil en
                 todo momento.
@@ -458,22 +660,143 @@
       </div>
     </div>
   </main>
+
   <footer class="w-full bg-surface-container-low py-8">
     <div
       class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4 text-body-sm font-body-sm text-on-surface-variant">
-      <p class="text-center md:text-left">© 2025 MyEvent Tech Colombia S.A.S. Todos los derechos reservados. Armenia,
-        Quindío.</p>
-      <div class="flex flex-wrap items-center justify-center gap-6"><a class="hover:text-on-surface transition-colors"
-          data-path="terminos-del-servicio" href="#">Términos del Servicio</a><a
-          class="hover:text-on-surface transition-colors" data-path="privacidad" href="#">Privacidad y Cookies</a><a
-          class="hover:text-on-surface transition-colors" data-path="condiciones-de-compra" href="#">Condiciones de
-          Compra</a><a class="hover:text-on-surface transition-colors" data-path="aviso-legal" href="#">Aviso Legal</a>
+      <p class="text-center md:text-left">
+        © 2025 MyEvent Tech Colombia S.A.S. Todos los derechos reservados. Armenia, Quindío.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-6">
+        <a class="hover:text-on-surface transition-colors" data-path="terminos-del-servicio" href="#">Términos del
+          Servicio</a>
+        <a class="hover:text-on-surface transition-colors" data-path="privacidad" href="#">Privacidad y Cookies</a>
+        <a class="hover:text-on-surface transition-colors" data-path="condiciones-de-compra" href="#">Condiciones de
+          Compra</a>
+        <a class="hover:text-on-surface transition-colors" data-path="aviso-legal" href="#">Aviso Legal</a>
       </div>
     </div>
   </footer>
 
+  <!--
+    Fallback: define la interactividad de pills, toggles e intereses SOLO si script.js no lo hace.
+    Al colocarse antes de script.js, cualquier declaración posterior sobrescribe estas versiones.
+  -->
+  <script>
+    (function () {
+      // 1. Selector de ciudad (comportamiento de radio)
+      var citySelector = document.getElementById("city-selector");
+      if (citySelector) {
+        citySelector.addEventListener("click", function (e) {
+          var pill = e.target.closest(".city-pill");
+          if (!pill) return;
+
+          citySelector.querySelectorAll(".city-pill").forEach(function (p) {
+            p.dataset.selected = "false";
+            p.setAttribute("aria-pressed", "false");
+            p.classList.remove("bg-primary", "text-on-primary", "shadow-sm");
+            p.classList.add("bg-surface-container-low", "text-on-surface");
+
+            var icon = p.querySelector(".material-symbols-outlined");
+            if (icon) {
+              icon.classList.remove("material-symbols-filled", "text-tertiary-fixed-dim");
+              icon.classList.add("material-symbols-outline", "text-outline");
+            }
+            var check = p.querySelector(".city-pill .material-symbols-outlined:last-child");
+            if (check && check.textContent.trim() === "check") check.remove();
+          });
+
+          pill.dataset.selected = "true";
+          pill.setAttribute("aria-pressed", "true");
+          pill.classList.add("bg-primary", "text-on-primary", "shadow-sm");
+          pill.classList.remove("bg-surface-container-low", "text-on-surface");
+
+          var icon = pill.querySelector(".material-symbols-outlined");
+          if (icon) {
+            icon.classList.add("material-symbols-filled", "text-tertiary-fixed-dim");
+            icon.classList.remove("material-symbols-outline", "text-outline");
+          }
+
+          if (!pill.querySelector(".material-symbols-outlined:last-child") ||
+              pill.querySelector(".material-symbols-outlined:last-child").textContent.trim() !== "check") {
+            var checkSpan = document.createElement("span");
+            checkSpan.className = "material-symbols-outlined text-[16px] ml-1";
+            checkSpan.setAttribute("aria-hidden", "true");
+            checkSpan.textContent = "check";
+            pill.appendChild(checkSpan);
+          }
+
+          // Actualiza el badge del pase
+          var badge = document.getElementById("badge-city-display");
+          var label = pill.querySelector(".font-label-lg");
+          if (badge && label) badge.textContent = label.textContent.trim() + ", CO";
+        });
+      }
+
+      // 2. Interest cards + contador
+      var interestsGrid = document.getElementById("interests-grid");
+      var interestCounter = document.getElementById("interest-counter");
+      if (interestsGrid) {
+        interestsGrid.addEventListener("change", function (e) {
+          if (!e.target.classList.contains("interest-input")) return;
+          var card = e.target.closest(".interest-card");
+          if (!card) return;
+
+          var badge = card.querySelector(".check-badge");
+          var iconWrap = card.querySelector(".w-10.h-10");
+
+          if (e.target.checked) {
+            card.classList.add("bg-primary-fixed/20", "shadow-sm");
+            card.classList.remove("bg-surface-container-low", "hover:bg-surface-container");
+            if (badge) {
+              badge.classList.add("bg-primary", "text-on-primary");
+              badge.classList.remove("bg-surface-container-highest", "text-transparent");
+            }
+            if (iconWrap) {
+              iconWrap.classList.add("bg-primary", "text-on-primary", "shadow-sm");
+              iconWrap.classList.remove("bg-surface-container-highest", "text-on-surface-variant");
+            }
+          } else {
+            card.classList.remove("bg-primary-fixed/20", "shadow-sm");
+            card.classList.add("bg-surface-container-low", "hover:bg-surface-container");
+            if (badge) {
+              badge.classList.remove("bg-primary", "text-on-primary");
+              badge.classList.add("bg-surface-container-highest", "text-transparent");
+            }
+            if (iconWrap) {
+              iconWrap.classList.remove("bg-primary", "text-on-primary", "shadow-sm");
+              iconWrap.classList.add("bg-surface-container-highest", "text-on-surface-variant");
+            }
+          }
+
+          var count = interestsGrid.querySelectorAll(".interest-input:checked").length;
+          if (interestCounter) {
+            interestCounter.textContent = count + " seleccionado" + (count === 1 ? "" : "s");
+          }
+        });
+      }
+
+      // 3. Toggle switches
+      document.querySelectorAll(".toggle-switch").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var isOn = btn.getAttribute("aria-checked") === "true";
+          btn.setAttribute("aria-checked", String(!isOn));
+          btn.classList.toggle("bg-primary", !isOn);
+          btn.classList.toggle("bg-surface-container-highest", isOn);
+
+          var knob = btn.querySelector("span");
+          if (knob) {
+            knob.classList.toggle("translate-x-6", !isOn);
+            knob.classList.toggle("bg-on-primary", !isOn);
+            knob.classList.toggle("bg-on-surface-variant", isOn);
+          }
+        });
+      });
+    })();
+  </script>
+
   <script src="script.js"></script>
-  <script src="../../nav.js"></script> 
+  <script src="../../nav.js"></script>
 
 </body>
 

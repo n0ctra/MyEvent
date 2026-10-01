@@ -5,18 +5,27 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="web_standard" name="shell-type">
+  <meta name="theme-color" content="#004ac6">
+
+  <title>Mis Reservas y Entradas | MyEvent Tech</title>
+  <meta name="description"
+    content="Gestiona tus entradas, pases digitales y reservas de experiencias en el Eje Cafetero. Sincroniza tus accesos con Apple Wallet y Google Wallet.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mis Reservas y Entradas | MyEvent Tech">
+  <meta property="og:description"
+    content="Gestiona tus accesos rápidos, entradas digitales transferibles y sincronización con tu calendario.">
+  <meta property="og:locale" content="es_CO">
 
   <!-- Fuentes -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap"
     rel="stylesheet">
   <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap"
     rel="stylesheet">
 
   <!-- Estilos propios -->
@@ -24,13 +33,120 @@
 
   <!-- Tailwind CDN + configuración del tema -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script
-    id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-surface":"#2a3040","on-secondary-fixed-variant":"#5a00c6","on-primary-fixed-variant":"#003ea8","on-secondary-container":"#fffbff","on-primary-container":"#eeefff","background":"#f9f9ff","on-surface":"#151b2a","error":"#ba1a1a","surface-bright":"#f9f9ff","on-background":"#151b2a","inverse-on-surface":"#edf0ff","secondary-container":"#8a4cfc","on-secondary-fixed":"#25005a","surface-container-highest":"#dce2f6","on-primary-fixed":"#00174b","primary":"#004ac6","on-tertiary-container":"#d7f6ff","surface-container-lowest":"#ffffff","secondary-fixed":"#eaddff","surface-dim":"#d3daee","outline":"#737686","on-tertiary-fixed":"#001f26","primary-container":"#2563eb","inverse-primary":"#b4c5ff","primary-fixed":"#dbe1ff","on-error":"#ffffff","on-error-container":"#93000a","tertiary-container":"#00788c","tertiary-fixed-dim":"#4cd7f6","surface-container":"#e9edff","surface-variant":"#dce2f6","on-tertiary-fixed-variant":"#004e5c","on-primary":"#ffffff","secondary-fixed-dim":"#d2bbff","surface-container-low":"#f1f3ff","tertiary-fixed":"#acedff","error-container":"#ffdad6","secondary":"#712ae2","surface-container-high":"#e2e8fc","on-surface-variant":"#434655","surface":"#f9f9ff","on-secondary":"#ffffff","primary-fixed-dim":"#b4c5ff","tertiary":"#005e6e","outline-variant":"#c3c6d7","on-tertiary":"#ffffff","surface-tint":"#0053db"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter-sm":"1rem","space-xs":"0.25rem",margin:"1.5rem","space-md":"1rem","space-xl":"2.5rem",gutter:"1.5rem","margin-lg":"3rem","margin-sm":"1rem","gutter-lg":"2rem","space-lg":"1.5rem","space-sm":"0.5rem"},fontFamily:{"headline-lg":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"headline-sm":["Space Grotesk"],"body-lg":["Inter"],display:["Space Grotesk"],"headline-md":["Space Grotesk"],"display-mobile":["Space Grotesk"],"label-lg":["Space Grotesk"],"label-md":["Space Grotesk"],"body-sm":["Inter"],"label-sm":["Space Grotesk"],"body-md":["Inter"],"code-num":["Space Grotesk"]},fontSize:{"headline-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.025em",fontWeight:"600"}],"headline-lg-mobile":["28px",{lineHeight:"34px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-sm":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"400"}],display:["56px",{lineHeight:"64px",letterSpacing:"-0.03em",fontWeight:"700"}],"headline-md":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"600"}],"display-mobile":["36px",{lineHeight:"42px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"600"}],"body-sm":["13px",{lineHeight:"20px",letterSpacing:"0.005em",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.06em",fontWeight:"700"}],"body-md":["15px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"code-num":["24px",{lineHeight:"28px",letterSpacing:"-0.02em",fontWeight:"700"}]}}}};</script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "inverse-surface": "#2a3040",
+            "on-secondary-fixed-variant": "#5a00c6",
+            "on-primary-fixed-variant": "#003ea8",
+            "on-secondary-container": "#fffbff",
+            "on-primary-container": "#eeefff",
+            "background": "#f9f9ff",
+            "on-surface": "#151b2a",
+            "error": "#ba1a1a",
+            "surface-bright": "#f9f9ff",
+            "on-background": "#151b2a",
+            "inverse-on-surface": "#edf0ff",
+            "secondary-container": "#8a4cfc",
+            "on-secondary-fixed": "#25005a",
+            "surface-container-highest": "#dce2f6",
+            "on-primary-fixed": "#00174b",
+            "primary": "#004ac6",
+            "on-tertiary-container": "#d7f6ff",
+            "surface-container-lowest": "#ffffff",
+            "secondary-fixed": "#eaddff",
+            "surface-dim": "#d3daee",
+            "outline": "#737686",
+            "on-tertiary-fixed": "#001f26",
+            "primary-container": "#2563eb",
+            "inverse-primary": "#b4c5ff",
+            "primary-fixed": "#dbe1ff",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a",
+            "tertiary-container": "#00788c",
+            "tertiary-fixed-dim": "#4cd7f6",
+            "surface-container": "#e9edff",
+            "surface-variant": "#dce2f6",
+            "on-tertiary-fixed-variant": "#004e5c",
+            "on-primary": "#ffffff",
+            "secondary-fixed-dim": "#d2bbff",
+            "surface-container-low": "#f1f3ff",
+            "tertiary-fixed": "#acedff",
+            "error-container": "#ffdad6",
+            "secondary": "#712ae2",
+            "surface-container-high": "#e2e8fc",
+            "on-surface-variant": "#434655",
+            "surface": "#f9f9ff",
+            "on-secondary": "#ffffff",
+            "primary-fixed-dim": "#b4c5ff",
+            "tertiary": "#005e6e",
+            "outline-variant": "#c3c6d7",
+            "on-tertiary": "#ffffff",
+            "surface-tint": "#0053db"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px"
+          },
+          spacing: {
+            "gutter-sm": "1rem",
+            "space-xs": "0.25rem",
+            "margin": "1.5rem",
+            "space-md": "1rem",
+            "space-xl": "2.5rem",
+            "gutter": "1.5rem",
+            "margin-lg": "3rem",
+            "margin-sm": "1rem",
+            "gutter-lg": "2rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem"
+          },
+          /* FALTABA: escala tipográfica usada en text-headline-*, text-body-*, text-label-*, text-code-num */
+          fontSize: {
+            "display": ["3.5rem", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
+            "display-mobile": ["2.25rem", { lineHeight: "1.15", letterSpacing: "-0.02em" }],
+            "headline-lg": ["2.25rem", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
+            "headline-lg-mobile": ["1.75rem", { lineHeight: "1.25" }],
+            "headline-md": ["1.5rem", { lineHeight: "1.3" }],
+            "headline-sm": ["1.125rem", { lineHeight: "1.4" }],
+            "body-lg": ["1.0625rem", { lineHeight: "1.6" }],
+            "body-md": ["1rem", { lineHeight: "1.6" }],
+            "body-sm": ["0.875rem", { lineHeight: "1.55" }],
+            "label-lg": ["0.9375rem", { lineHeight: "1.4" }],
+            "label-md": ["0.8125rem", { lineHeight: "1.4" }],
+            "label-sm": ["0.75rem", { lineHeight: "1.4" }],
+            "code-num": ["1rem", { lineHeight: "1.4", letterSpacing: "0.01em" }]
+          },
+          fontFamily: {
+            "headline-lg": ["Space Grotesk"],
+            "headline-lg-mobile": ["Space Grotesk"],
+            "headline-sm": ["Space Grotesk"],
+            "body-lg": ["Inter"],
+            display: ["Space Grotesk"],
+            "headline-md": ["Space Grotesk"],
+            "display-mobile": ["Space Grotesk"],
+            "label-lg": ["Space Grotesk"],
+            "label-md": ["Space Grotesk"],
+            "label-sm": ["Inter"],
+            "code-num": ["Space Grotesk"],
+            "body-md": ["Inter"],
+            "body-sm": ["Inter"]
+          }
+        }
+      }
+    }
+  </script>
 </head>
 
 <body
   class="bg-surface font-body-md text-on-surface min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed">
-  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
     <div
       class="absolute -top-40 left-1/2 -translate-x-1/2 w-[1000px] h-[480px] bg-gradient-to-b from-[#e0ecff]/60 via-[#dbeafe]/40 to-transparent blur-3xl opacity-70">
     </div>
@@ -38,59 +154,69 @@
       class="absolute top-1/4 right-0 w-[500px] h-[500px] bg-secondary-fixed/30 rounded-full blur-[120px] pointer-events-none">
     </div>
   </div>
+
   <header class="fixed top-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
     <div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-6">
-      <div class="flex items-center gap-8"><a class="flex items-center gap-3 transition-transform active:scale-95"
-          data-path="cartelera" href="#"><img alt="MyEvent Brand Logo" class="h-8 w-auto object-contain"
-            src="https://lh3.googleusercontent.com/aida/AEtjO1WlnIdFYKqyKMGajwDfJ6rsqKQQLp2dZImf9xcui5zxUQX1REhJOsgJCA0Ry42meNkqlstH75DWo0WF7HI_Wvzam6Fp-pCJTYUzpqgatTOgqZmQ3fHd5vGMoIjqkJNZatmZGcqfHdws5_uZuaItJNjK-y1jxMYNTMcc-PAXvl-wSyWPvo1GdUk6Q3zKRrLeD1KbbTL3V_3HqsXNZeBVgZ_nBZe0UWBZMXTfSBftSzAGk6HL4By27v0uDduT"><span
-            class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">MyEvent <span
-              class="text-primary font-normal text-body-sm align-middle ml-1 px-2 py-0.5 rounded-full bg-surface-container-high">Tech</span></span></a><nav
-          class="hidden md:flex items-center gap-2"
-          data-active-classes="bg-surface-container text-primary font-label-lg rounded-full px-4 py-1.5 shadow-sm"><a
-            class="px-3.5 py-1.5 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-full"
-            data-path="cartelera" href="#">Cartelera</a><a aria-current="page"
+      <div class="flex items-center gap-8">
+        <a class="flex items-center gap-3 transition-transform active:scale-95" data-path="cartelera" href="#">
+          <img alt="MyEvent Brand Logo" class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1WlnIdFYKqyKMGajwDfJ6rsqKQQLp2dZImf9xcui5zxUQX1REhJOsgJCA0Ry42meNkqlstH75DWo0WF7HI_Wvzam6Fp-pCJTYUzpqgatTOgqZmQ3fHd5vGMoIjqkJNZatmZGcqfHdws5_uZuaItJNjK-y1jxMYNTMcc-PAXvl-wSyWPvo1GdUk6Q3zKRrLeD1KbbTL3V_3HqsXNZeBVgZ_nBZe0UWBZMXTfSBftSzAGk6HL4By27v0uDduT">
+          <span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">
+            MyEvent
+            <span
+              class="text-primary font-normal text-body-sm align-middle ml-1 px-2 py-0.5 rounded-full bg-surface-container-high">Tech</span>
+          </span>
+        </a>
+        <nav class="hidden md:flex items-center gap-2"
+          data-active-classes="bg-surface-container text-primary font-label-lg rounded-full px-4 py-1.5 shadow-sm">
+          <a class="px-3.5 py-1.5 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-full"
+            data-path="cartelera" href="#">Cartelera</a>
+          <a aria-current="page"
             class="transition-colors bg-surface-container text-primary font-label-lg rounded-full px-4 py-1.5 shadow-sm"
-            data-path="my-event" href="#">Mis reservas</a><a
-            class="px-3.5 py-1.5 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-full"
-            href="#">Explorar salas</a></nav>
+            data-path="my-event" href="#">Mis reservas</a>
+          <a class="px-3.5 py-1.5 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-full"
+            data-path="explorar-salas" href="#">Explorar salas</a>
+        </nav>
       </div>
-      <div class="flex items-center gap-4"><a
-          class="hidden sm:inline-flex items-center justify-center px-4 py-2 font-label-lg text-label-lg text-on-primary bg-primary hover:bg-primary-container rounded-full transition-all shadow-[0_4px_14px_0_rgba(37,99,235,0.28)] active:scale-95"
+      <div class="flex items-center gap-4">
+        <a class="hidden sm:inline-flex items-center justify-center px-4 py-2 font-label-lg text-label-lg text-on-primary bg-primary hover:bg-primary-container rounded-full transition-all shadow-[0_4px_14px_0_rgba(37,99,235,0.28)] active:scale-95"
           data-path="new-event" href="#">Crear evento</a>
-        <div class="flex items-center gap-3 pl-2"><a
-            class="flex items-center gap-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-transform hover:scale-105"
-            data-path="preferences" href="#"><img alt="Profile"
-              class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-highest"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGkLsjvfpXHTphZcYmDJanB06P3l8CVku6iqZzxcnkE_ZcjMgyLCoIgpURTprk70L9TrqrXBP5oQ8ODHAbZDEvDy65kgpHTdUiKlGuMYOdEgskPPLsTuoJfMbBhRlyPZcNS7xPnWRHK5Vc1G6GrqmDsOutMmij0nIUuXsxEgTZSRm45D56JpxCP8resHjl7tdOK_edp1B3xucPc9lt_FnChyHOMtVh1MdaxroaUVXrQeRfPpXoiEiNtQ"></a>
+        <div class="flex items-center gap-3">
+          <a class="inline-flex items-center justify-center px-4 py-2 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-full transition-all"
+            data-path="login" href="#">Iniciar sesión</a>
+          <a class="inline-flex items-center justify-center px-4 py-2 font-label-lg text-label-lg text-on-primary bg-primary hover:bg-primary-container rounded-full transition-all shadow-[0_4px_14px_0_rgba(37,99,235,0.28)] active:scale-95"
+            data-path="register" href="#">Registrarse</a>
         </div>
       </div>
     </div>
   </header>
+
   <main class="relative z-10 w-full pt-16 bg-transparent min-h-[calc(100vh-280px)]">
     <div class="flex flex-col w-full">
+
       <!-- Interactive QR Ticket Modal Drawer (Hidden by default) -->
       <div
         class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/60 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300"
-        id="ticketModal">
+        id="ticketModal" role="dialog" aria-modal="true" aria-labelledby="modalEventTitle" aria-hidden="true">
         <div
           class="relative w-full max-w-lg mx-4 bg-surface-container-lowest rounded-xl shadow-2xl p-8 transform scale-95 transition-transform duration-300"
           id="modalCard">
           <div class="flex items-center justify-between pb-6 border-b border-surface-container">
             <div>
-              <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Pase de Acceso
-                Oficial</span>
-              <h3 class="font-headline-sm text-headline-sm text-on-surface mt-1" id="modalEventTitle">Cata de Café
-                Especial &amp; Jazz en Salento</h3>
+              <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">Pase de acceso
+                oficial</span>
+              <h3 class="font-headline-sm text-headline-sm text-on-surface mt-1" id="modalEventTitle">Evento</h3>
             </div>
-            <button
+            <button type="button" aria-label="Cerrar pase"
               class="w-10 h-10 rounded-full bg-surface-container-low hover:bg-surface-container-high flex items-center justify-center text-on-surface transition-colors"
               onclick="closeModal()">
-              <span class="material-symbols-outlined text-[20px]">close</span>
+              <span class="material-symbols-outlined text-[20px]" aria-hidden="true">close</span>
             </button>
           </div>
           <div class="py-8 flex flex-col items-center justify-center">
             <div class="p-4 bg-surface-container-lowest rounded-xl shadow-md flex items-center justify-center mb-4">
-              <svg class="w-48 h-48 text-on-surface" fill="currentColor" viewBox="0 0 100 100">
+              <svg class="w-48 h-48 text-on-surface" fill="currentColor" viewBox="0 0 100 100" role="img"
+                aria-label="Código QR del pase">
                 <path d="M10,10 h30 v30 h-30 z M15,15 v20 h20 v-20 z M20,20 h10 v10 h-10 z"></path>
                 <path d="M60,10 h30 v30 h-30 z M65,15 v20 h20 v-20 z M70,20 h10 v10 h-10 z"></path>
                 <path d="M10,60 h30 v30 h-30 z M15,65 v20 h20 v-20 z M20,70 h10 v10 h-10 z"></path>
@@ -109,40 +235,43 @@
                 <rect height="10" width="12" x="80" y="80"></rect>
               </svg>
             </div>
-            <p class="font-label-md text-label-md text-outline uppercase tracking-wider">Código de Seguridad NFC &amp;
-              Escaneo</p>
-            <p class="font-code-num text-code-num text-primary mt-1" id="modalEventCode">MET-8942-SL</p>
+            <p class="font-label-md text-label-md text-outline uppercase tracking-wider">Código de seguridad NFC &amp;
+              escaneo</p>
+            <p class="font-code-num text-code-num text-primary mt-1" id="modalEventCode">—</p>
             <span
               class="inline-flex items-center gap-1.5 px-3 py-1 mt-3 rounded-full bg-emerald-500/10 text-emerald-600 font-label-sm text-label-sm">
-              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true"></span>
               Válido para acceso directo
             </span>
           </div>
           <div class="flex gap-3 pt-4 border-t border-surface-container">
-            <button
+            <button type="button"
               class="flex-1 py-3 px-4 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-all shadow-[0_4px_14px_0_rgba(37,99,235,0.28)] flex items-center justify-center gap-2"
               onclick="closeModal()">
-              <span class="material-symbols-outlined text-[18px]">download</span>
+              <span class="material-symbols-outlined text-[18px]" aria-hidden="true">download</span>
               Guardar en Wallet
             </button>
           </div>
         </div>
       </div>
+
       <!-- Notification Toast -->
       <div
         class="fixed bottom-6 right-6 z-50 bg-inverse-surface text-inverse-on-surface px-5 py-3 rounded-xl shadow-xl transform translate-y-20 opacity-0 transition-all duration-300 flex items-center gap-3"
-        id="toast">
-        <span class="material-symbols-outlined text-primary-fixed">check_circle</span>
-        <span class="font-label-md text-label-md" id="toastMessage">Enlace de invitación copiado</span>
+        id="toast" role="status" aria-live="polite">
+        <span class="material-symbols-outlined text-primary-fixed" aria-hidden="true">check_circle</span>
+        <span class="font-label-md text-label-md" id="toastMessage">Notificación</span>
       </div>
+
       <div class="max-w-7xl mx-auto px-6 lg:px-12 w-full pt-8 pb-20">
+
         <!-- Top Header & Tabs -->
         <header class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8">
           <div>
             <div
               class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-primary uppercase tracking-wider mb-3">
-              <span class="material-symbols-outlined text-[14px]">confirmation_number</span>
-              Tu Agenda Personal
+              <span class="material-symbols-outlined text-[14px]" aria-hidden="true">confirmation_number</span>
+              Tu agenda personal
             </div>
             <h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
               Mis Reservas y Entradas
@@ -152,22 +281,24 @@
               tiempo real.
             </p>
           </div>
-          <div class="flex items-center gap-2 p-1.5 bg-surface-container-low rounded-full self-start lg:self-auto shadow-sm">
-            <button
+
+          <div class="flex items-center gap-2 p-1.5 bg-surface-container-low rounded-full self-start lg:self-auto shadow-sm"
+            role="tablist" aria-label="Filtrar reservas">
+            <button type="button" role="tab" aria-selected="true"
               class="tab-btn px-5 py-2 rounded-full font-label-lg text-label-lg bg-surface-container-lowest text-primary shadow-sm transition-all flex items-center gap-2"
               onclick="setActiveTab(this, 'upcoming')">
               <span>Próximas reservas</span>
               <span
-                class="w-5 h-5 rounded-full bg-primary-fixed text-on-primary-fixed text-label-sm flex items-center justify-center font-bold">3</span>
+                class="w-5 h-5 rounded-full bg-primary-fixed text-on-primary-fixed text-label-sm flex items-center justify-center font-bold">0</span>
             </button>
-            <button
+            <button type="button" role="tab" aria-selected="false"
               class="tab-btn px-5 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-2"
               onclick="setActiveTab(this, 'past')">
               <span>Eventos pasados</span>
               <span
-                class="w-5 h-5 rounded-full bg-surface-container text-on-surface-variant text-label-sm flex items-center justify-center font-medium">7</span>
+                class="w-5 h-5 rounded-full bg-surface-container text-on-surface-variant text-label-sm flex items-center justify-center font-medium">0</span>
             </button>
-            <button
+            <button type="button" role="tab" aria-selected="false"
               class="tab-btn px-5 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all flex items-center gap-2"
               onclick="setActiveTab(this, 'cancelled')">
               <span>Canceladas</span>
@@ -176,349 +307,143 @@
             </button>
           </div>
         </header>
+
         <!-- Main Layout Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <section class="lg:col-span-8 flex flex-col gap-6" id="reservationList">
-            <!-- RESERVATION CARD 1 -->
-            <article
-              class="bg-surface-container-lowest rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-200 relative overflow-hidden group">
-              <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-secondary"></div>
-              <div class="flex flex-col sm:flex-row gap-6">
-                <div class="relative w-full sm:w-44 h-48 sm:h-auto rounded-lg overflow-hidden shrink-0">
-                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    data-alt="Intimate evening jazz concert on an architectural Madrid rooftop overlooking historic domes under a starry twilight indigo sky with subtle warm string lights and double bass performer silhouette in European tech minimalist aesthetic."
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCZvmm85Nz4JtiGkC_b7v9hZjM9myMmG3PT0tZQG1h9bsihfcBUQzEgKJt6UDn-RNqAzduG1SBv9OszcJipwGvFH4gqfNRFUff4bC1g-2OTqJ3hjfDTftl0RKzbZfQPhAJ3V9eFp0aTn-eLwkBnQ__x4c4pgQPA9LcZrEVICQ0ZjXB0RYQgnyVSCF9fM5jcvLhNGSHfmHrmkuspGw6Wn2w8lgtNz0YaWvC7Gs3JlXe05-PXKeAJgFKaQ">
-                  <div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
-                  <div
-                    class="absolute bottom-3 left-3 flex items-center gap-1.5 text-surface-container-lowest font-label-sm text-label-sm">
-                    <span class="material-symbols-outlined text-[16px]">location_on</span><span>Salento,
-                      Quindío</span></div>
-                </div>
-                <div class="flex-1 flex flex-col justify-between">
-                  <div>
-                    <div class="flex items-center justify-between gap-3 mb-2 flex-wrap">
-                      <span
-                        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 font-label-sm text-label-sm">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                        Confirmada
-                      </span>
-                      <div class="flex items-center gap-1.5 bg-surface-container-low px-3 py-1 rounded-full">
-                        <span class="font-label-sm text-label-sm text-outline">Pase:</span>
-                        <span class="font-code-num text-[13px] text-on-surface font-semibold">MET-8942-SL</span>
-                      </div>
-                    </div>
-                    <h2
-                      class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors">
-                      Cata de Café Especial &amp; Jazz en Salento</h2>
-                    <div
-                      class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 mt-3 pt-3 border-t border-surface-container-low">
-                      <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span
-                          class="material-symbols-outlined text-primary text-[18px]">calendar_today</span><span
-                          class="font-medium text-on-surface">Sáb, 24 Mayo</span> · 16:30 h</div>
-                      <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span
-                          class="material-symbols-outlined text-primary text-[18px]">roofing</span><span
-                          class="truncate">Hacienda El Ocaso, Salento</span></div>
-                      <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span
-                          class="material-symbols-outlined text-primary text-[18px]">group</span><span>2 Cupos
-                          (Acceso General)</span></div>
-                      <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span
-                          class="material-symbols-outlined text-primary text-[18px]">table_bar</span><span>Mesa
-                          Terraza Cafetal</span></div>
-                    </div>
-                  </div>
-                  <div class="flex flex-wrap items-center justify-between gap-3 pt-5 mt-4 border-t border-surface-container-low">
-                    <div class="flex items-center gap-2">
-                      <button
-                        class="px-5 py-2.5 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-all shadow-[0_4px_14px_0_rgba(37,99,235,0.28)] active:scale-95 flex items-center gap-2"
-                        onclick="openModal('Cata de Café Especial &amp; Jazz en Salento', 'MET-8942-SL')">
-                        <span class="material-symbols-outlined text-[18px]">qr_code_2</span>
-                        Ver Entrada / QR
-                      </button>
-                      <button
-                        class="p-2.5 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors"
-                        onclick="triggerToast('Entrada PDF descargada con éxito')" title="Descargar PDF">
-                        <span class="material-symbols-outlined text-[20px]">download</span>
-                      </button>
-                    </div>
-                    <div class="flex items-center gap-2">
-                      <div class="relative group/menu">
-                        <button
-                          class="px-4 py-2 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors">
-                          <span class="material-symbols-outlined text-[16px] text-primary">event_available</span>
-                          Añadir al calendario
-                        </button>
-                        <div
-                          class="absolute right-0 bottom-full mb-2 w-48 bg-surface-container-lowest rounded-xl shadow-lg p-2 hidden group-hover/menu:flex flex-col gap-1 z-20">
-                          <a class="px-3 py-2 rounded-lg text-on-surface hover:bg-surface-container-low font-body-sm text-body-sm flex items-center gap-2"
-                            href="#" onclick="triggerToast('Añadido a Google Calendar')">
-                            <span class="material-symbols-outlined text-[16px]">calendar_month</span> Google Calendar
-                          </a>
-                          <a class="px-3 py-2 rounded-lg text-on-surface hover:bg-surface-container-low font-body-sm text-body-sm flex items-center gap-2"
-                            href="#" onclick="triggerToast('Archivo iCal (.ics) generado')">
-                            <span class="material-symbols-outlined text-[16px]">file_download</span> Apple iCal
-                          </a>
-                        </div>
-                      </div>
-                      <button
-                        class="px-3 py-2 rounded-full font-label-md text-label-md text-error hover:bg-error-container/40 transition-colors"
-                        onclick="triggerToast('Opciones de gestión enviadas al email')">
-                        Gestionar
-                      </button>
-                    </div>
-                  </div>
-                </div>
+
+          <section class="lg:col-span-8 flex flex-col gap-6" id="reservationList" aria-live="polite">
+            <!-- Empty State -->
+            <div class="bg-surface-container-lowest rounded-xl p-12 shadow-sm text-center">
+              <div
+                class="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mx-auto mb-4"
+                aria-hidden="true">
+                <span class="material-symbols-outlined text-[32px] text-on-surface-variant">confirmation_number</span>
               </div>
-            </article>
-            <!-- RESERVATION CARD 2 -->
-            <article
-              class="bg-surface-container-lowest rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-200 relative overflow-hidden group">
-              <div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
-              <div class="flex flex-col sm:flex-row gap-6">
-                <div class="relative w-full sm:w-44 h-48 sm:h-auto rounded-lg overflow-hidden shrink-0">
-                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    data-alt="Refined sensory wine tasting cellar in Barcelona with artisanal glasses illuminated by warm amber spotlight on raw concrete table in minimalist Scandinavian-Catalan interior styling."
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaSVQjOGwhUcQlJhzoLbvX07xn2KHY9XD_xIW8CVr00n3RWtmWyPhxli0MMqUCCdrqlc0iXsSmJ3xB0ZVvoXzAruiHb-wZ8fzhA_UQsnUSz8Y7ELHsB62P34A3KUTrRAFBniILZDz64LPcOkgn5pLYIrDjBS71ALJ5wwrENX4hDy_b8RC3HWlxgOZqF1x4EMBxyB1ousch_X978sZc2kY0pXHbJCqcRX_jYwYjnCh0y9uOKOdayGAytw">
-                  <div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
-                  <div
-                    class="absolute bottom-3 left-3 flex items-center gap-1.5 text-surface-container-lowest font-label-sm text-label-sm">
-                    <span class="material-symbols-outlined text-[16px]">location_on</span><span>Filandia,
-                      Quindío</span></div>
-                </div>
-                <div class="flex-1 flex flex-col justify-between">
-                  <div>
-                    <div class="flex items-center justify-between gap-3 mb-2 flex-wrap">
-                      <span
-                        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 font-label-sm text-label-sm">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                        Confirmada
-                      </span>
-                      <div class="flex items-center gap-1.5 bg-surface-container-low px-3 py-1 rounded-full">
-                        <span class="font-label-sm text-label-sm text-outline">Pase:</span>
-                        <span class="font-code-num text-[13px] text-on-surface font-semibold">MET-5510-FL</span>
-                      </div>
-                    </div>
-                    <h2
-                      class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors">
-                      Atardecer y Degustación de Varietales</h2>
-                    <div
-                      class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 mt-3 pt-3 border-t border-surface-container-low">
-                      <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span
-                          class="material-symbols-outlined text-secondary text-[18px]">calendar_today</span><span
-                          class="font-medium text-on-surface">Vie, 30 Mayo</span> · 17:30 h</div>
-                      <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span
-                          class="material-symbols-outlined text-secondary text-[18px]">landscape</span><span
-                          class="truncate">Mirador Colina Iluminada, Filandia</span></div>
-                      <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span
-                          class="material-symbols-outlined text-secondary text-[18px]">person</span><span>1
-                          Cupo Individual</span></div>
-                      <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span
-                          class="material-symbols-outlined text-secondary text-[18px]">coffee</span><span>Incluye
-                          cata de 4 varietales</span></div>
-                    </div>
-                  </div>
-                  <div class="flex flex-wrap items-center justify-between gap-3 pt-5 mt-4 border-t border-surface-container-low">
-                    <div class="flex items-center gap-2">
-                      <button
-                        class="px-5 py-2.5 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-all shadow-[0_4px_14px_0_rgba(37,99,235,0.28)] active:scale-95 flex items-center gap-2"
-                        onclick="openModal('Atardecer y Degustación de Varietales', 'MET-5510-FL')">
-                        <span class="material-symbols-outlined text-[18px]">qr_code_2</span>
-                        Ver Entrada / QR
-                      </button>
-                      <button
-                        class="p-2.5 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors"
-                        onclick="triggerToast('Entrada PDF descargada con éxito')" title="Descargar PDF">
-                        <span class="material-symbols-outlined text-[20px]">download</span>
-                      </button>
-                    </div>
-                    <div class="flex items-center gap-2">
-                      <button
-                        class="px-4 py-2 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors"
-                        onclick="triggerToast('Añadido a tu calendario personal')">
-                        <span class="material-symbols-outlined text-[16px] text-secondary">event_available</span>
-                        Añadir al calendario
-                      </button>
-                      <button
-                        class="px-3 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-error transition-colors"
-                        onclick="triggerToast('Opciones de gestión enviadas al email')">
-                        Gestionar
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-            <!-- RESERVATION CARD 3 -->
-            <article
-              class="bg-surface-container-lowest rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-200 relative overflow-hidden group">
-              <div class="absolute top-0 left-0 right-0 h-1 bg-tertiary"></div>
-              <div class="flex flex-col sm:flex-row gap-6">
-                <div class="relative w-full sm:w-44 h-48 sm:h-auto rounded-lg overflow-hidden shrink-0">
-                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    data-alt="Futuristic auditorium conference hall with ambient deep blue and cyan luminescent lighting, minimalist speaker stage showcasing sleek generative AI interface typography."
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzH7AxV2bJsEmEX_PnEhtVAPUZkD8cxsl83xEeKr0-1BG7EVg-FgGvriCJg_OSAGP85YAT2OU5e42NtrjJTlPzmbu7gQdFNEE3G0gseWFEG2gAjEippzL3P_eg2TDq2qhJlzpZrlRuySZRnXpU5oo8ic7zqdwEp55tv_2wezyXnqC6860kPCvUaNxUfUkOn5bZVCfZHKFmm_i4LIJnVrp-ustbNE45NuiQr7OEGmTQpqCulkE6-Kc-_A">
-                  <div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent"></div>
-                  <div
-                    class="absolute bottom-3 left-3 flex items-center gap-1.5 text-surface-container-lowest font-label-sm text-label-sm">
-                    <span class="material-symbols-outlined text-[16px]">location_on</span><span>Armenia,
-                      Quindío</span></div>
-                </div>
-                <div class="flex-1 flex flex-col justify-between">
-                  <div>
-                    <div class="flex items-center justify-between gap-3 mb-2 flex-wrap">
-                      <span
-                        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm">
-                        <span class="material-symbols-outlined text-[14px]">sell</span>
-                        Confirmada · Entrada Gratuita
-                      </span>
-                      <div class="flex items-center gap-1.5 bg-surface-container-low px-3 py-1 rounded-full">
-                        <span class="font-label-sm text-label-sm text-outline">Pase:</span>
-                        <span class="font-code-num text-[13px] text-on-surface font-semibold">MET-1029-AR</span>
-                      </div>
-                    </div>
-                    <h2
-                      class="font-headline-sm text-headline-sm text-on-surface tracking-tight group-hover:text-primary transition-colors">
-                      AgroTech &amp; Inteligencia Artificial Cafetera</h2>
-                    <div
-                      class="grid grid-cols-1 sm:grid-cols-2 gap-y-2 gap-x-4 mt-3 pt-3 border-t border-surface-container-low">
-                      <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span
-                          class="material-symbols-outlined text-tertiary text-[18px]">calendar_today</span><span
-                          class="font-medium text-on-surface">Mar, 10 Junio</span> · 09:00 h</div>
-                      <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span
-                          class="material-symbols-outlined text-tertiary text-[18px]">business</span><span
-                          class="truncate">Centro de Convenciones de Armenia</span></div>
-                      <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span
-                          class="material-symbols-outlined text-tertiary text-[18px]">confirmation_number</span><span>Entrada Gratuita</span></div>
-                      <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span
-                          class="material-symbols-outlined text-tertiary text-[18px]">hub</span><span>Networking
-                          + Muestra tecnológica</span></div>
-                    </div>
-                  </div>
-                  <div class="flex flex-wrap items-center justify-between gap-3 pt-5 mt-4 border-t border-surface-container-low">
-                    <div class="flex items-center gap-2">
-                      <button
-                        class="px-5 py-2.5 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-all shadow-[0_4px_14px_0_rgba(37,99,235,0.28)] active:scale-95 flex items-center gap-2"
-                        onclick="openModal('AgroTech &amp; Inteligencia Artificial Cafetera', 'MET-1029-AR')">
-                        <span class="material-symbols-outlined text-[18px]">qr_code_2</span>
-                        Ver Entrada / QR
-                      </button>
-                      <button
-                        class="p-2.5 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors"
-                        onclick="triggerToast('Entrada PDF descargada con éxito')" title="Descargar PDF">
-                        <span class="material-symbols-outlined text-[20px]">download</span>
-                      </button>
-                    </div>
-                    <div class="flex items-center gap-2">
-                      <button
-                        class="px-4 py-2 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors"
-                        onclick="triggerToast('Añadido a tu calendario personal')">
-                        <span class="material-symbols-outlined text-[16px] text-tertiary">event_available</span>
-                        Añadir al calendario
-                      </button>
-                      <button
-                        class="px-3 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-error transition-colors"
-                        onclick="triggerToast('Opciones de gestión enviadas al email')">
-                        Gestionar
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
+              <h2 class="font-headline-sm text-headline-sm text-on-surface mb-2">No tienes reservas aún</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto mb-6">
+                Explora la cartelera y reserva tu primer evento en el Eje Cafetero. Tu pase digital aparecerá aquí.
+              </p>
+              <a class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-[0_4px_14px_0_rgba(37,99,235,0.28)] transition-all active:scale-95"
+                data-path="cartelera" href="#">
+                <span class="material-symbols-outlined text-[18px]" aria-hidden="true">calendar_month</span>
+                Explorar cartelera
+              </a>
+            </div>
           </section>
+
           <!-- Companion Sidebar -->
           <aside class="lg:col-span-4 flex flex-col gap-6">
+
             <div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm">
               <div class="flex items-center justify-between mb-4">
-                <h3 class="font-headline-sm text-[18px] text-on-surface font-bold">Tu Actividad en MyEvent Tech</h3>
+                <h2 class="font-headline-sm text-[18px] text-on-surface font-bold">Tu actividad en MyEvent Tech</h2>
                 <span
                   class="px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-medium">2025</span>
               </div>
+
               <div class="p-4 rounded-xl bg-surface-container-low mb-6 flex items-center justify-between">
                 <div>
                   <span
                     class="font-label-md text-label-md text-on-surface-variant block uppercase tracking-wider">Experiencias
                     asistidas</span>
-                  <span class="font-code-num text-[36px] leading-tight text-primary font-bold">10</span>
+                  <span class="font-code-num text-[36px] leading-tight text-primary font-bold">0</span>
                 </div>
-                <div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+                <div
+                  class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed"
+                  aria-hidden="true">
                   <span class="material-symbols-outlined text-[26px]">local_activity</span>
                 </div>
               </div>
+
               <div>
                 <div class="flex items-center justify-between text-on-surface font-label-md text-label-md mb-2">
-                  <span class="font-semibold">Distribución de Intereses</span>
-                  <span class="text-outline">Top 3 Categorías</span>
+                  <span class="font-semibold">Distribución de intereses</span>
+                  <span class="text-outline">Top 3 categorías</span>
                 </div>
+                <!-- CORREGIDO: w-0% → w-[0%] (w-0% no es sintaxis válida de Tailwind) -->
                 <div class="h-3 w-full bg-surface-container-high rounded-full overflow-hidden flex gap-0.5 mb-4">
-                  <div class="h-full bg-primary metric-bar--cafe" title="Música: 50%"></div>
-                  <div class="h-full bg-secondary metric-bar--musica" title="Gastronomía: 30%"></div>
-                  <div class="h-full bg-tertiary-container metric-bar--tech" title="Tech &amp; AI: 20%"></div>
+                  <div class="h-full bg-primary metric-bar--cafe w-[0%]" title="Café: 0%"></div>
+                  <div class="h-full bg-secondary metric-bar--musica w-[0%]" title="Música: 0%"></div>
+                  <div class="h-full bg-tertiary-container metric-bar--tech w-[0%]" title="Tech: 0%"></div>
                 </div>
                 <div class="flex flex-col gap-2.5">
                   <div class="flex items-center justify-between font-body-sm text-body-sm">
                     <div class="flex items-center gap-2">
-                      <span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+                      <span class="w-2.5 h-2.5 rounded-full bg-primary" aria-hidden="true"></span>
                       <span class="text-on-surface">Café &amp; Catas</span>
                     </div>
-                    <span class="font-code-num text-label-md text-on-surface font-semibold">50%</span>
+                    <span class="font-code-num text-label-md text-on-surface font-semibold">0%</span>
                   </div>
                   <div class="flex items-center justify-between font-body-sm text-body-sm">
                     <div class="flex items-center gap-2">
-                      <span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+                      <span class="w-2.5 h-2.5 rounded-full bg-secondary" aria-hidden="true"></span>
                       <span class="text-on-surface">Música &amp; Naturaleza</span>
                     </div>
-                    <span class="font-code-num text-label-md text-on-surface font-semibold">30%</span>
+                    <span class="font-code-num text-label-md text-on-surface font-semibold">0%</span>
                   </div>
                   <div class="flex items-center justify-between font-body-sm text-body-sm">
                     <div class="flex items-center gap-2">
-                      <span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+                      <span class="w-2.5 h-2.5 rounded-full bg-tertiary-container" aria-hidden="true"></span>
                       <span class="text-on-surface">AgroTech &amp; Emprendimiento</span>
                     </div>
-                    <span class="font-code-num text-label-md text-on-surface font-semibold">20%</span>
+                    <span class="font-code-num text-label-md text-on-surface font-semibold">0%</span>
                   </div>
                 </div>
               </div>
+
               <div class="mt-6 pt-5 border-t border-surface-container-low flex items-center gap-4">
-                <svg class="w-12 h-12 transform -rotate-90" viewBox="0 0 36 36">
+                <svg class="w-12 h-12 transform -rotate-90" viewBox="0 0 36 36" aria-hidden="true" focusable="false">
                   <path class="text-surface-container"
                     d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none"
                     stroke="currentColor" stroke-width="3"></path>
                   <path class="text-primary"
                     d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none"
-                    stroke="currentColor" stroke-dasharray="85, 100" stroke-linecap="round" stroke-width="3"></path>
+                    stroke="currentColor" stroke-dasharray="0, 100" stroke-linecap="round" stroke-width="3"></path>
                 </svg>
                 <div>
                   <p class="font-label-md text-label-md font-bold text-on-surface">Pase Quindío Explorer</p>
-                  <p class="font-body-sm text-[12px] text-on-surface-variant">Estás a 2 experiencias del Nivel VIP
-                    Cafetero</p>
+                  <p class="font-body-sm text-[12px] text-on-surface-variant">Asiste a tu primera experiencia para
+                    comenzar</p>
                 </div>
               </div>
             </div>
+
             <div
               class="bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl p-6 shadow-md relative overflow-hidden">
-              <div class="absolute -right-8 -bottom-8 w-36 h-36 bg-surface-container-lowest/10 rounded-full blur-xl pointer-events-none">
-              </div>
+              <div
+                class="absolute -right-8 -bottom-8 w-36 h-36 bg-surface-container-lowest/10 rounded-full blur-xl pointer-events-none"
+                aria-hidden="true"></div>
               <div
                 class="flex items-center gap-2 font-label-sm text-label-sm uppercase tracking-wider text-primary-fixed mb-2">
-                <span class="material-symbols-outlined text-[16px]">celebration</span>Invita a tu grupo</div>
-              <h3 class="font-headline-sm text-[20px] text-on-primary leading-snug font-bold">Comparte tus eventos y
-                acumula crédito</h3>
-              <p class="font-body-sm text-body-sm text-on-primary/80 mt-2">Tus amigos reciben $ 30.000 COP de descuento y
-                tú acumulas crédito para tus próximas catas y eventos.</p>
+                <span class="material-symbols-outlined text-[16px]" aria-hidden="true">celebration</span>
+                Invita a tu grupo
+              </div>
+              <h2 class="font-headline-sm text-[20px] text-on-primary leading-snug font-bold">Comparte tus eventos y
+                acumula crédito</h2>
+              <p class="font-body-sm text-body-sm text-on-primary/80 mt-2">Tus amigos reciben un descuento y tú acumulas
+                crédito para tus próximas catas y eventos.</p>
               <div
                 class="mt-5 p-1.5 bg-surface-container-lowest/15 backdrop-blur-md rounded-full flex items-center justify-between gap-2">
-                <span class="font-code-num text-[12px] px-3 text-on-primary truncate">myevent.co/inv/alex-quindio</span>
-                <button
+                <span class="font-code-num text-[12px] px-3 text-on-primary truncate"
+                  id="referralLink">myevent.co/inv/tu-enlace</span>
+                <button type="button"
                   class="shrink-0 px-4 py-1.5 rounded-full bg-surface-container-lowest text-primary hover:bg-surface-container-low font-label-sm text-label-sm font-bold transition-transform active:scale-95 flex items-center gap-1.5"
-                  onclick="copyReferral('myevent.co/inv/alex-quindio')"><span
-                    class="material-symbols-outlined text-[14px]">content_copy</span>Copiar</button>
+                  onclick="copyReferral('myevent.co/inv/tu-enlace')" aria-label="Copiar enlace de invitación">
+                  <span class="material-symbols-outlined text-[14px]" aria-hidden="true">content_copy</span>
+                  Copiar
+                </button>
               </div>
-              <div class="mt-4 flex items-center justify-between text-primary-fixed font-label-sm text-label-sm"><span>3 amigos ya se unieron este mes</span><span class="font-bold">+$ 90.000 COP acumulados</span>
+              <div class="mt-4 flex items-center justify-between text-primary-fixed font-label-sm text-label-sm">
+                <span>0 amigos se unieron</span>
+                <span class="font-bold">$ 0 COP acumulados</span>
               </div>
             </div>
+
             <div class="bg-surface-container-low rounded-xl p-5 flex items-center justify-between">
               <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface">
+                <div
+                  class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface"
+                  aria-hidden="true">
                   <span class="material-symbols-outlined text-[20px]">help_center</span>
                 </div>
                 <div>
@@ -526,10 +451,10 @@
                   <p class="font-body-sm text-body-sm text-on-surface-variant">Soporte y reenvío de códigos</p>
                 </div>
               </div>
-              <button
+              <button type="button" aria-label="Abrir centro de ayuda"
                 class="w-8 h-8 rounded-full bg-surface-container-highest hover:bg-surface-container-lowest flex items-center justify-center text-on-surface transition-colors"
                 onclick="triggerToast('Centro de ayuda abierto en pestaña')">
-                <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+                <span class="material-symbols-outlined text-[18px]" aria-hidden="true">chevron_right</span>
               </button>
             </div>
           </aside>
@@ -537,6 +462,7 @@
       </div>
     </div>
   </main>
+
   <footer class="relative z-10 w-full bg-surface-container-low mt-20 shadow-[0_-1px_12px_rgba(0,0,0,0.02)]">
     <div class="max-w-7xl mx-auto px-6 lg:px-12 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
       <div class="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
@@ -545,20 +471,109 @@
             src="https://lh3.googleusercontent.com/aida/AEtjO1WlnIdFYKqyKMGajwDfJ6rsqKQQLp2dZImf9xcui5zxUQX1REhJOsgJCA0Ry42meNkqlstH75DWo0WF7HI_Wvzam6Fp-pCJTYUzpqgatTOgqZmQ3fHd5vGMoIjqkJNZatmZGcqfHdws5_uZuaItJNjK-y1jxMYNTMcc-PAXvl-wSyWPvo1GdUk6Q3zKRrLeD1KbbTL3V_3HqsXNZeBVgZ_nBZe0UWBZMXTfSBftSzAGk6HL4By27v0uDduT">
           <span class="font-headline-sm text-label-lg font-bold text-on-surface-variant">MyEvent Tech</span>
         </div>
-        <span class="hidden sm:inline text-outline-variant">•</span>
+        <span class="hidden sm:inline text-outline-variant" aria-hidden="true">•</span>
         <p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 MyEvent Tech Colombia S.A.S. Todos los
           derechos reservados. Armenia, Quindío.</p>
       </div>
       <div class="flex flex-wrap items-center justify-center gap-6 font-label-sm text-label-sm text-on-surface-variant">
-        <div class="flex items-center gap-2"><span
-            class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span
-            class="text-on-surface-variant font-medium">Sistemas Operativos</span></div><a
-          class="hover:text-on-surface transition-colors" href="#">Privacidad y Términos</a><a
-          class="hover:text-on-surface transition-colors" href="#">Soporte</a><a
-          class="hover:text-on-surface transition-colors" href="#">Salas y Espacios</a>
+        <div class="flex items-center gap-2">
+          <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true"></span>
+          <span class="text-on-surface-variant font-medium">Sistemas operativos</span>
+        </div>
+        <a class="hover:text-on-surface transition-colors" data-path="privacidad" href="#">Privacidad y Términos</a>
+        <a class="hover:text-on-surface transition-colors" data-path="soporte" href="#">Soporte</a>
+        <a class="hover:text-on-surface transition-colors" data-path="explorar-salas" href="#">Salas y Espacios</a>
       </div>
     </div>
   </footer>
+
+  <!--
+    Fallback: define closeModal/setActiveTab/copyReferral/triggerToast SOLO si script.js no los define.
+    Al colocarse antes de script.js, cualquier declaración posterior sobrescribe estas versiones.
+  -->
+  <script>
+    (function () {
+      // 1. Modal del pase QR
+      window.closeModal = window.closeModal || function () {
+        var modal = document.getElementById("ticketModal");
+        var card = document.getElementById("modalCard");
+        if (!modal) return;
+        modal.classList.add("opacity-0", "pointer-events-none");
+        modal.setAttribute("aria-hidden", "true");
+        if (card) card.classList.add("scale-95");
+        document.body.classList.remove("overflow-hidden");
+      };
+
+      window.openModal = window.openModal || function (title, code) {
+        var modal = document.getElementById("ticketModal");
+        var card = document.getElementById("modalCard");
+        if (!modal) return;
+        if (title) {
+          var t = document.getElementById("modalEventTitle");
+          if (t) t.textContent = title;
+        }
+        if (code) {
+          var c = document.getElementById("modalEventCode");
+          if (c) c.textContent = code;
+        }
+        modal.classList.remove("opacity-0", "pointer-events-none");
+        modal.setAttribute("aria-hidden", "false");
+        if (card) card.classList.remove("scale-95");
+        document.body.classList.add("overflow-hidden");
+      };
+
+      // 2. Tabs
+      window.setActiveTab = window.setActiveTab || function (btn, tab) {
+        var buttons = document.querySelectorAll(".tab-btn");
+        buttons.forEach(function (b) {
+          b.classList.remove("bg-surface-container-lowest", "text-primary", "shadow-sm");
+          b.classList.add("text-on-surface-variant");
+          b.setAttribute("aria-selected", "false");
+        });
+        btn.classList.add("bg-surface-container-lowest", "text-primary", "shadow-sm");
+        btn.classList.remove("text-on-surface-variant");
+        btn.setAttribute("aria-selected", "true");
+        // script.js puede conectar aquí el filtrado real de la lista
+        console.info("[MyEvent] Tab activa:", tab);
+      };
+
+      // 3. Copiar enlace de referido
+      window.copyReferral = window.copyReferral || function (text) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(function () {
+            window.triggerToast("Enlace copiado al portapapeles");
+          }).catch(function () {
+            window.triggerToast("No se pudo copiar. Copia manualmente: " + text);
+          });
+        } else {
+          window.triggerToast("Copia manualmente: " + text);
+        }
+      };
+
+      // 4. Toast
+      window.triggerToast = window.triggerToast || function (message) {
+        var toast = document.getElementById("toast");
+        var msgEl = document.getElementById("toastMessage");
+        if (!toast || !msgEl) return;
+        msgEl.textContent = message;
+        toast.classList.remove("translate-y-20", "opacity-0");
+        clearTimeout(window.__myeventToastTimer);
+        window.__myeventToastTimer = setTimeout(function () {
+          toast.classList.add("translate-y-20", "opacity-0");
+        }, 3200);
+      };
+
+      // 5. Cerrar con Escape el modal abierto
+      document.addEventListener("keydown", function (e) {
+        if (e.key !== "Escape") return;
+        var modal = document.getElementById("ticketModal");
+        if (modal && modal.getAttribute("aria-hidden") === "false") {
+          window.closeModal();
+        }
+      });
+    })();
+  </script>
+
   <script src="script.js"></script>
   <script src="../../nav.js"></script>
 </body>

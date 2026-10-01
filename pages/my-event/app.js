@@ -1,4 +1,5 @@
-function openModal(title, code) {
+(function () {
+  window.openModal = function (title, code) {
     const modal = document.getElementById('ticketModal');
     const card = document.getElementById('modalCard');
     document.getElementById('modalEventTitle').innerText = title;
@@ -8,9 +9,9 @@ function openModal(title, code) {
     modal.classList.add('opacity-100');
     card.classList.remove('scale-95');
     card.classList.add('scale-100');
-  }
+  };
 
-  function closeModal() {
+  window.closeModal = function () {
     const modal = document.getElementById('ticketModal');
     const card = document.getElementById('modalCard');
 
@@ -18,9 +19,9 @@ function openModal(title, code) {
     modal.classList.remove('opacity-100');
     card.classList.add('scale-95');
     card.classList.remove('scale-100');
-  }
+  };
 
-  function triggerToast(text) {
+  window.triggerToast = function (text) {
     const toast = document.getElementById('toast');
     const msg = document.getElementById('toastMessage');
     msg.innerText = text;
@@ -32,16 +33,16 @@ function openModal(title, code) {
       toast.classList.add('translate-y-20', 'opacity-0');
       toast.classList.remove('translate-y-0', 'opacity-100');
     }, 2600);
-  }
+  };
 
-  function copyReferral(link) {
+  window.copyReferral = function (link) {
     if (navigator.clipboard) {
       navigator.clipboard.writeText(link);
     }
-    triggerToast('Enlace copiado al portapapeles: ' + link);
-  }
+    window.triggerToast('Enlace copiado al portapapeles: ' + link);
+  };
 
-  function setActiveTab(button, tabName) {
+  window.setActiveTab = function (button, tabName) {
     document.querySelectorAll('.tab-btn').forEach(btn => {
       btn.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
       btn.classList.add('text-on-surface-variant');
@@ -50,6 +51,7 @@ function openModal(title, code) {
     button.classList.remove('text-on-surface-variant');
 
     if (tabName !== 'upcoming') {
-      triggerToast('Mostrando vista simulada para: ' + tabName);
+      window.triggerToast('Mostrando vista simulada para: ' + tabName);
     }
-  }
+  };
+})();

@@ -34,7 +34,7 @@ cityPills.forEach(pill => {
     if (cityNameSpan) {
       const cityName = cityNameSpan.textContent.trim();
       if (cityDisplayBadge && cityName !== 'Otra ciudad') {
-        cityDisplayBadge.textContent = cityName + ', ES';
+        cityDisplayBadge.textContent = cityName + ', CO';
       }
       const checkIcon = document.createElement('span');
       checkIcon.className = 'material-symbols-outlined text-[16px] ml-1';

@@ -3,7 +3,7 @@
    Lógica de vista previa en vivo, cálculos y micro-interacciones
    ============================================================ */
 
-   (function initCreateEventModule() {
+  (function initCreateEventModule() {
     // Dynamic binding targets
     const titleInput = document.getElementById('eventTitle');
     const categorySelect = document.getElementById('eventCategory');
@@ -17,7 +17,7 @@
     const ticketPrice = document.getElementById('ticketPrice');
     const netRevenueDisplay = document.getElementById('netRevenueDisplay');
     const titleCounter = document.getElementById('titleCounter');
-  
+
     // Preview targets
     const previewTitle = document.getElementById('previewTitle');
     const previewCategoryBadge = document.getElementById('previewCategoryBadge');
@@ -26,30 +26,27 @@
     const previewVenueStr = document.getElementById('previewVenueStr');
     const previewPriceBadge = document.getElementById('previewPriceBadge');
     const previewCapacityLabel = document.getElementById('previewCapacityLabel');
-  
+
     // Calculations
     function updateCalculations() {
       const cap = parseInt(capacityNumber.value) || 0;
       const price = parseFloat(ticketPrice.value) || 0;
       const gross = cap * price;
       const net = gross * 0.94; // 6% fee deduction
-  
-      netRevenueDisplay.textContent = new Intl.NumberFormat('es-ES', {
-        style: 'currency',
-        currency: 'EUR'
-      }).format(net);
-  
+
+      netRevenueDisplay.textContent = '$ ' + Math.round(net).toLocaleString('es-CO') + ' COP';
+
       if (price <= 0) {
         previewPriceBadge.textContent = 'Gratis';
         previewPriceBadge.className = 'px-3 py-1 rounded-full bg-emerald-600 text-white font-headline-sm text-headline-sm shadow-md';
       } else {
-        previewPriceBadge.textContent = price.toFixed(0) + ' €';
+        previewPriceBadge.textContent = '$ ' + Math.round(price).toLocaleString('es-CO') + ' COP';
         previewPriceBadge.className = 'px-3.5 py-1 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm shadow-md';
       }
-  
+
       previewCapacityLabel.textContent = cap + ' plazas libres';
     }
-  
+
     // Title & counter
     if (titleInput && previewTitle && titleCounter) {
       titleInput.addEventListener('input', (e) => {
@@ -58,21 +55,21 @@
         previewTitle.textContent = val.trim() || 'Título de tu evento';
       });
     }
-  
+
     // Category
     if (categorySelect && previewCategoryBadge) {
       categorySelect.addEventListener('change', (e) => {
         previewCategoryBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> ${e.target.value}`;
       });
     }
-  
+
     // Description
     if (descInput && previewDesc) {
       descInput.addEventListener('input', (e) => {
         previewDesc.textContent = e.target.value.trim() || 'Describe aquí los detalles de la experiencia...';
       });
     }
-  
+
     // Capacity sync
     if (capacitySlider && capacityNumber) {
       capacitySlider.addEventListener('input', (e) => {
@@ -84,12 +81,12 @@
         updateCalculations();
       });
     }
-  
+
     // Price
     if (ticketPrice) {
       ticketPrice.addEventListener('input', updateCalculations);
     }
-  
+
     // Date & Time formatting for preview
     function updateDatePreview() {
       if (!dateInput || !timeInput || !previewDateStr) return;
@@ -107,36 +104,36 @@
     }
     if (dateInput) dateInput.addEventListener('change', updateDatePreview);
     if (timeInput) timeInput.addEventListener('change', updateDatePreview);
-  
+
     // Venue preview
     function updateVenuePreview() {
       if (!venueNameInput || !previewVenueStr) return;
       const vName = venueNameInput.value.trim() || 'Lugar por definir';
-      previewVenueStr.textContent = `${vName} • Madrid`;
+      previewVenueStr.textContent = `${vName} • Quindío`;
     }
     if (venueNameInput) venueNameInput.addEventListener('input', updateVenuePreview);
-  
+
     // Pricing type toggles (Gratis vs Pago)
     const btnPricingFree = document.getElementById('btnPricingFree');
     const btnPricingPaid = document.getElementById('btnPricingPaid');
     if (btnPricingFree && btnPricingPaid && ticketPrice) {
       btnPricingFree.addEventListener('click', () => {
-        ticketPrice.value = '0.00';
+        ticketPrice.value = '0';
         ticketPrice.disabled = true;
         btnPricingFree.className = 'py-3 px-4 rounded-xl font-label-lg text-label-lg bg-surface-container-lowest text-primary shadow-sm transition-all';
         btnPricingPaid.className = 'py-3 px-4 rounded-xl font-label-lg text-label-lg transition-all text-on-surface-variant hover:text-on-surface';
         updateCalculations();
       });
-  
+
       btnPricingPaid.addEventListener('click', () => {
         ticketPrice.disabled = false;
-        if (parseFloat(ticketPrice.value) === 0) ticketPrice.value = '20.00';
+        if (parseFloat(ticketPrice.value) === 0) ticketPrice.value = '';
         btnPricingPaid.className = 'py-3 px-4 rounded-xl font-label-lg text-label-lg bg-surface-container-lowest text-primary shadow-sm transition-all';
         btnPricingFree.className = 'py-3 px-4 rounded-xl font-label-lg text-label-lg transition-all text-on-surface-variant hover:text-on-surface';
         updateCalculations();
       });
     }
-  
+
     // Space Type Buttons
     const spaceBtns = document.querySelectorAll('.space-type-btn');
     spaceBtns.forEach(btn => {
@@ -147,7 +144,7 @@
         btn.className = 'space-type-btn flex flex-col items-center justify-center p-3 rounded-2xl bg-primary text-on-primary shadow-sm transition-all text-center';
       });
     });
-  
+
     // Tag Pill toggle
     const tagPills = document.querySelectorAll('.tag-pill');
     tagPills.forEach(pill => {
@@ -160,7 +157,7 @@
         }
       });
     });
-  
+
     // Ticket Stepper
     const btnMinus = document.getElementById('btnMinusLimit');
     const btnPlus = document.getElementById('btnPlusLimit');
@@ -175,7 +172,7 @@
         if (val < 10) limitDisplay.textContent = val + 1;
       });
     }
-  
+
     // Toast feedback function
     const toast = document.getElementById('toastNotification');
     const toastMsg = document.getElementById('toastMsg');
@@ -189,7 +186,7 @@
         toast.classList.remove('translate-y-0', 'opacity-100');
       }, 3500);
     }
-  
+
     // Buttons
     const saveDraftBtn = document.getElementById('saveDraftBtn');
     const publishBtn = document.getElementById('publishBtn');
@@ -203,7 +200,7 @@
         showNotification('¡Tu velada ya está publicada y visible en la Cartelera!');
       });
     }
-  
+
     // Initial triggers
     updateCalculations();
     updateDatePreview();

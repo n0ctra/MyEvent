@@ -6,68 +6,83 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="web_standard" name="shell-type">
 
-  <!-- Fuentes -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-    rel="stylesheet">
+  <title>Cartelera · MyEvent Tech</title>
+  <meta name="description" content="Explora y reserva experiencias en el Quindío: café, música, gastronomía y más.">
 
-  <!-- Estilos propios -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Tailwind CDN + configuración del tema -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script
-    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-surface": "#2a3040", "on-secondary-fixed-variant": "#5a00c6", "on-primary-fixed-variant": "#003ea8", "on-secondary-container": "#fffbff", "on-primary-container": "#eeefff", "background": "#f9f9ff", "on-surface": "#151b2a", "error": "#ba1a1a", "surface-bright": "#f9f9ff", "on-background": "#151b2a", "inverse-on-surface": "#edf0ff", "secondary-container": "#8a4cfc", "on-secondary-fixed": "#25005a", "surface-container-highest": "#dce2f6", "on-primary-fixed": "#00174b", "primary": "#004ac6", "on-tertiary-container": "#d7f6ff", "surface-container-lowest": "#ffffff", "secondary-fixed": "#eaddff", "surface-dim": "#d3daee", "outline": "#737686", "on-tertiary-fixed": "#001f26", "primary-container": "#2563eb", "inverse-primary": "#b4c5ff", "primary-fixed": "#dbe1ff", "on-error": "#ffffff", "on-error-container": "#93000a", "tertiary-container": "#00788c", "tertiary-fixed-dim": "#4cd7f6", "surface-container": "#e9edff", "surface-variant": "#dce2f6", "on-tertiary-fixed-variant": "#004e5c", "on-primary": "#ffffff", "secondary-fixed-dim": "#d2bbff", "surface-container-low": "#f1f3ff", "tertiary-fixed": "#acedff", "error-container": "#ffdad6", "secondary": "#712ae2", "surface-container-high": "#e2e8fc", "on-surface-variant": "#434655", "surface": "#f9f9ff", "on-secondary": "#ffffff", "primary-fixed-dim": "#b4c5ff", "tertiary": "#005e6e", "outline-variant": "#c3c6d7", "on-tertiary": "#ffffff", "surface-tint": "#0053db" }, borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" }, spacing: { "gutter-sm": "1rem", "space-xs": "0.25rem", margin: "1.5rem", "space-md": "1rem", "space-xl": "2.5rem", gutter: "1.5rem", "margin-lg": "3rem", "margin-sm": "1rem", "gutter-lg": "2rem", "space-lg": "1.5rem", "space-sm": "0.5rem" }, fontFamily: { "headline-lg": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "body-lg": ["Inter"], display: ["Space Grotesk"], "headline-md": ["Space Grotesk"], "display-mobile": ["Space Grotesk"], "label-lg": ["Space Grotesk"], "label-md": ["Space Grotesk"], "body-sm": ["Inter"], "label-sm": ["Space Grotesk"], "body-md": ["Inter"], "code-num": ["Space Grotesk"] }, fontSize: { "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.025em", fontWeight: "600" }], "headline-lg-mobile": ["28px", { lineHeight: "34px", letterSpacing: "-0.02em", fontWeight: "600" }], "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "400" }], display: ["56px", { lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-md": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "600" }], "display-mobile": ["36px", { lineHeight: "42px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-lg": ["14px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "600" }], "body-sm": ["13px", { lineHeight: "20px", letterSpacing: "0.005em", fontWeight: "400" }], "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.06em", fontWeight: "700" }], "body-md": ["15px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }], "code-num": ["24px", { lineHeight: "28px", letterSpacing: "-0.02em", fontWeight: "700" }] } } } };</script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "inverse-surface":"#2a3040","on-secondary-fixed-variant":"#5a00c6","on-primary-fixed-variant":"#003ea8","on-secondary-container":"#fffbff","on-primary-container":"#eeefff","background":"#f9f9ff","on-surface":"#151b2a","error":"#ba1a1a","surface-bright":"#f9f9ff","on-background":"#151b2a","inverse-on-surface":"#edf0ff","secondary-container":"#8a4cfc","on-secondary-fixed":"#25005a","surface-container-highest":"#dce2f6","on-primary-fixed":"#00174b","primary":"#004ac6","on-tertiary-container":"#d7f6ff","surface-container-lowest":"#ffffff","secondary-fixed":"#eaddff","surface-dim":"#d3daee","outline":"#737686","on-tertiary-fixed":"#001f26","primary-container":"#2563eb","inverse-primary":"#b4c5ff","primary-fixed":"#dbe1ff","on-error":"#ffffff","on-error-container":"#93000a","tertiary-container":"#00788c","tertiary-fixed-dim":"#4cd7f6","surface-container":"#e9edff","surface-variant":"#dce2f6","on-tertiary-fixed-variant":"#004e5c","on-primary":"#ffffff","secondary-fixed-dim":"#d2bbff","surface-container-low":"#f1f3ff","tertiary-fixed":"#acedff","error-container":"#ffdad6","secondary":"#712ae2","surface-container-high":"#e2e8fc","on-surface-variant":"#434655","surface":"#f9f9ff","on-secondary":"#ffffff","primary-fixed-dim":"#b4c5ff","tertiary":"#005e6e","outline-variant":"#c3c6d7","on-tertiary":"#ffffff","surface-tint":"#0053db"
+          },
+          borderRadius: { DEFAULT:"0.25rem", lg:"0.5rem", xl:"0.75rem", full:"9999px" },
+          fontFamily: {
+            "headline-lg":["Space Grotesk"], "headline-lg-mobile":["Space Grotesk"], "headline-sm":["Space Grotesk"],
+            "body-lg":["Inter"], display:["Space Grotesk"], "headline-md":["Space Grotesk"], "display-mobile":["Space Grotesk"],
+            "label-lg":["Space Grotesk"], "label-md":["Space Grotesk"], "body-sm":["Inter"], "label-sm":["Space Grotesk"],
+            "body-md":["Inter"], "code-num":["Space Grotesk"]
+          },
+          fontSize: {
+            "headline-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.025em",fontWeight:"600"}],
+            "headline-lg-mobile":["28px",{lineHeight:"34px",letterSpacing:"-0.02em",fontWeight:"600"}],
+            "headline-sm":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],
+            "body-lg":["18px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"400"}],
+            display:["56px",{lineHeight:"64px",letterSpacing:"-0.03em",fontWeight:"700"}],
+            "headline-md":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"600"}],
+            "display-mobile":["36px",{lineHeight:"42px",letterSpacing:"-0.02em",fontWeight:"700"}],
+            "label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],
+            "label-md":["12px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"600"}],
+            "body-sm":["13px",{lineHeight:"20px",letterSpacing:"0.005em",fontWeight:"400"}],
+            "label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.06em",fontWeight:"700"}],
+            "body-md":["15px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],
+            "code-num":["24px",{lineHeight:"28px",letterSpacing:"-0.02em",fontWeight:"700"}]
+          }
+        }
+      }
+    };
+  </script>
 </head>
 
-<body
-  class="bg-surface font-body-md text-on-surface min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed">
+<body class="bg-surface font-body-md text-on-surface min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed">
   <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-    <div
-      class="absolute -top-40 left-1/2 -translate-x-1/2 w-[1000px] h-[480px] bg-gradient-to-b from-[#e0ecff]/60 via-[#dbeafe]/40 to-transparent blur-3xl opacity-70">
-    </div>
-    <div
-      class="absolute top-1/4 right-0 w-[500px] h-[500px] bg-secondary-fixed/30 rounded-full blur-[120px] pointer-events-none">
-    </div>
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[1000px] h-[480px] bg-gradient-to-b from-[#e0ecff]/60 via-[#dbeafe]/40 to-transparent blur-3xl opacity-70"></div>
+    <div class="absolute top-1/4 right-0 w-[500px] h-[500px] bg-secondary-fixed/30 rounded-full blur-[120px] pointer-events-none"></div>
   </div>
 
   <header class="fixed top-0 inset-x-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
     <div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-6">
-      <div class="flex items-center gap-8"><a class="flex items-center gap-3 transition-transform active:scale-95"
-          data-path="cartelera" href="#"><img alt="MyEvent Brand Logo" class="h-8 w-auto object-contain"
-            src="https://lh3.googleusercontent.com/aida/AEtjO1WlnIdFYKqyKMGajwDfJ6rsqKQQLp2dZImf9xcui5zxUQX1REhJOsgJCA0Ry42meNkqlstH75DWo0WF7HI_Wvzam6Fp-pCJTYUzpqgatTOgqZmQ3fHd5vGMoIjqkJNZatmZGcqfHdws5_uZuaItJNjK-y1jxMYNTMcc-PAXvl-wSyWPvo1GdUk6Q3zKRrLeD1KbbTL3V_3HqsXNZeBVgZ_nBZe0UWBZMXTfSBftSzAGk6HL4By27v0uDduT"><span
-            class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">MyEvent <span
-              class="text-primary font-normal text-body-sm align-middle ml-1 px-2 py-0.5 rounded-full bg-surface-container-high">Tech</span></span></a>
-        <nav class="hidden md:flex items-center gap-2"
-          data-active-classes="bg-surface-container text-primary font-label-lg rounded-full px-4 py-1.5 shadow-sm"><a
-            aria-current="page"
-            class="transition-colors bg-surface-container text-primary font-label-lg rounded-full px-4 py-1.5 shadow-sm"
-            data-path="cartelera" href="#">Cartelera</a><a
-            class="px-3.5 py-1.5 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-full"
-            data-path="my-event" href="#">Mis reservas</a><a
-            class="px-3.5 py-1.5 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-full"
-            href="#">Explorar salas</a></nav>
+      <div class="flex items-center gap-8">
+        <a class="flex items-center gap-3 transition-transform active:scale-95" data-path="cartelera" href="#">
+          <img alt="MyEvent Brand Logo" class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1WlnIdFYKqyKMGajwDfJ6rsqKQQLp2dZImf9xcui5zxUQX1REhJOsgJCA0Ry42meNkqlstH75DWo0WF7HI_Wvzam6Fp-pCJTYUzpqgatTOgqZmQ3fHd5vGMoIjqkJNZatmZGcqfHdws5_uZuaItJNjK-y1jxMYNTMcc-PAXvl-wSyWPvo1GdUk6Q3zKRrLeD1KbbTL3V_3HqsXNZeBVgZ_nBZe0UWBZMXTfSBftSzAGk6HL4By27v0uDduT">
+          <span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">MyEvent
+            <span class="text-primary font-normal text-body-sm align-middle ml-1 px-2 py-0.5 rounded-full bg-surface-container-high">Tech</span>
+          </span>
+        </a>
+        <nav class="hidden md:flex items-center gap-2">
+          <a aria-current="page" class="transition-colors bg-surface-container text-primary font-label-lg rounded-full px-4 py-1.5 shadow-sm" data-path="cartelera" href="#">Cartelera</a>
+          <a class="px-3.5 py-1.5 font-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-full" data-path="my-event" href="#">Mis reservas</a>
+          <a class="px-3.5 py-1.5 font-label-lg text-on-surface-variant hover:text-on-surface transition-colors rounded-full" href="#">Explorar salas</a>
+        </nav>
       </div>
       <div class="flex items-center gap-4">
-        <div
-          class="flex items-center gap-1.5 px-3 py-1 bg-surface-container rounded-full text-label-sm font-label-sm text-on-surface-variant border border-outline-variant">
-          <span class="material-symbols-outlined text-sm text-primary">payments</span><span class="">CO / COP</span>
-        </div><a
-          class="hidden sm:inline-flex items-center justify-center px-4 py-2 font-label-lg text-label-lg text-on-primary bg-primary hover:bg-primary-container rounded-full transition-all shadow-[0_4px_14px_0_rgba(37,99,235,0.28)] active:scale-95"
-          data-path="new-event" href="#">Crear evento</a>
-        <div class="flex items-center gap-3 pl-2"><a
-            class="flex items-center gap-2 rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-transform hover:scale-105"
-            data-path="preferences" href="#"><img alt="Profile"
-              class="w-8 h-8 rounded-full object-cover ring-2 ring-surface-container-highest"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGkLsjvfpXHTphZcYmDJanB06P3l8CVku6iqZzxcnkE_ZcjMgyLCoIgpURTprk70L9TrqrXBP5oQ8ODHAbZDEvDy65kgpHTdUiKlGuMYOdEgskPPLsTuoJfMbBhRlyPZcNS7xPnWRHK5Vc1G6GrqmDsOutMmij0nIUuXsxEgTZSRm45D56JpxCP8resHjl7tdOK_edp1B3xucPc9lt_FnChyHOMtVh1MdaxroaUVXrQeRfPpXoiEiNtQ"></a>
+        <div class="flex items-center gap-1.5 px-3 py-1 bg-surface-container rounded-full text-label-sm font-label-sm text-on-surface-variant border border-outline-variant">
+          <span class="material-symbols-outlined text-sm text-primary">payments</span><span>CO / COP</span>
+        </div>
+        <a class="hidden sm:inline-flex items-center justify-center px-4 py-2 font-label-lg text-label-lg text-on-primary bg-primary hover:bg-primary-container rounded-full transition-all shadow-[0_4px_14px_0_rgba(37,99,235,0.28)] active:scale-95" data-path="new-event" href="#">Crear evento</a>
+        <div class="flex items-center gap-3">
+          <a class="inline-flex items-center justify-center px-4 py-2 font-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-full transition-all" data-path="login" href="#">Iniciar sesión</a>
+          <a class="inline-flex items-center justify-center px-4 py-2 font-label-lg text-on-primary bg-primary hover:bg-primary-container rounded-full transition-all shadow-[0_4px_14px_0_rgba(37,99,235,0.28)] active:scale-95" data-path="register" href="#">Registrarse</a>
         </div>
       </div>
     </div>
@@ -76,451 +91,95 @@
   <main class="relative z-10 w-full pt-16 bg-transparent min-h-[calc(100vh-280px)]">
     <div class="flex flex-col w-full">
       <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-8 sm:pt-14 pb-12 sm:pb-20">
-        <div
-          class="absolute top-10 left-1/2 -translate-x-1/2 w-[720px] max-w-full h-72 bg-gradient-to-tr from-primary/10 via-secondary/5 to-tertiary-container/10 blur-3xl pointer-events-none -z-10 rounded-full">
-        </div>
+        <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[720px] max-w-full h-72 bg-gradient-to-tr from-primary/10 via-secondary/5 to-tertiary-container/10 blur-3xl pointer-events-none -z-10 rounded-full"></div>
 
-        <!-- HERO SECTION -->
+        <!-- HERO -->
         <section class="flex flex-col items-center text-center max-w-4xl mx-auto mb-14 sm:mb-20">
-          <div
-            class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-surface-container-high text-primary mb-6 shadow-sm">
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-surface-container-high text-primary mb-6 shadow-sm">
             <span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
             <span class="w-2 h-2 rounded-full bg-primary-container -ml-4"></span>
-            <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">SALA, MESA O
-              ESCENARIO</span>
+            <span class="font-label-sm uppercase tracking-wider text-on-surface-variant">SALA, MESA O ESCENARIO</span>
           </div>
-          <h1
-            class="font-display text-display max-sm:text-display-mobile text-on-surface mb-6 tracking-tight leading-[1.08]">
+          <h1 class="font-display text-display max-sm:text-display-mobile text-on-surface mb-6 tracking-tight leading-[1.08]">
             Crea el evento. <br class="hidden sm:inline">
-            <span
-              class="bg-gradient-to-r from-primary via-primary-container to-secondary text-transparent bg-clip-text">
-              Reserva tu lugar.
-            </span>
+            <span class="bg-gradient-to-r from-primary via-primary-container to-secondary text-transparent bg-clip-text">Reserva tu lugar.</span>
           </h1>
-          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-9 leading-relaxed">Publica catas de
-            café especial, talleres y encuentros en el Quindío. La gente reserva en segundos en pesos colombianos y tú
-            ves cuántas plazas quedan.</p>
+          <p class="font-body-lg text-on-surface-variant max-w-2xl mb-9 leading-relaxed">
+            Publica catas de café especial, talleres y encuentros en el Quindío. La gente reserva en segundos en pesos colombianos y tú ves cuántas plazas quedan.
+          </p>
           <div class="flex flex-wrap items-center justify-center gap-4 w-full sm:w-auto">
-            <a class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-[0_8px_20px_-4px_rgba(0,74,198,0.38)] hover:shadow-[0_12px_28px_-6px_rgba(0,74,198,0.5)] transition-all transform hover:-translate-y-0.5 active:scale-95"
-              href="#cartelera-grid">
-              <span class="material-symbols-outlined text-lg">calendar_month</span>
-              Ver cartelera
+            <a class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg shadow-[0_8px_20px_-4px_rgba(0,74,198,0.38)] transition-all active:scale-95" href="#cartelera-grid">
+              <span class="material-symbols-outlined text-lg">calendar_month</span>Ver cartelera
             </a>
-            <a class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-lg text-label-lg shadow-sm transition-all transform hover:-translate-y-0.5 active:scale-95"
-              data-path="new-event" href="#">
-              <span class="material-symbols-outlined text-lg text-primary">add_circle</span>
-              Nuevo evento
+            <a class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-lg shadow-sm transition-all active:scale-95" data-path="new-event" href="#">
+              <span class="material-symbols-outlined text-lg text-primary">add_circle</span>Nuevo evento
             </a>
-          </div>
-
-          <div class="w-full grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12 sm:mt-16 text-left">
-            <div
-              class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-6 shadow-[0_2px_12px_rgba(21,27,42,0.04)] group hover:shadow-md transition-all">
-              <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-primary to-primary-container"></div>
-              <div class="flex items-center justify-between mb-2">
-                <span
-                  class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Disponibles</span>
-                <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary">
-                  <span class="material-symbols-outlined text-base">local_activity</span>
-                </div>
-              </div>
-              <div class="font-code-num text-code-num text-on-surface group-hover:text-primary transition-colors">24
-              </div>
-              <p class="font-label-md text-label-md text-on-surface-variant mt-1">Eventos activos esta semana</p>
-            </div>
-            <div
-              class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-6 shadow-[0_2px_12px_rgba(21,27,42,0.04)] group hover:shadow-md transition-all">
-              <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-tertiary to-tertiary-container"></div>
-              <div class="flex items-center justify-between mb-2">
-                <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Aforo
-                  Total</span>
-                <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-tertiary">
-                  <span class="material-symbols-outlined text-base">group</span>
-                </div>
-              </div>
-              <div class="font-code-num text-code-num text-on-surface group-hover:text-tertiary transition-colors">380
-              </div>
-              <p class="font-label-md text-label-md text-on-surface-variant mt-1">Plazas libres confirmadas</p>
-            </div>
-            <div
-              class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-6 shadow-[0_2px_12px_rgba(21,27,42,0.04)] group hover:shadow-md transition-all">
-              <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-secondary to-secondary-container"></div>
-              <div class="flex items-center justify-between mb-2">
-                <span
-                  class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Comunidad</span>
-                <div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary">
-                  <span class="material-symbols-outlined text-base">verified</span>
-                </div>
-              </div>
-              <div class="font-code-num text-code-num text-on-surface group-hover:text-secondary transition-colors">
-                1.420</div>
-              <p class="font-label-md text-label-md text-on-surface-variant mt-1">Reservas hechas este mes</p>
-            </div>
           </div>
         </section>
 
-        <!-- EVENTS DIRECTORY -->
+        <!-- CARTELERA -->
         <section class="w-full flex flex-col pt-4 scroll-mt-24" id="cartelera-grid">
-          <div
-            class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8 pb-6 bg-surface-container-low/60 rounded-3xl p-6 sm:p-8 backdrop-blur-sm">
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8 pb-6 bg-surface-container-low/60 rounded-3xl p-6 sm:p-8 backdrop-blur-sm">
             <div>
-              <div
-                class="flex items-center gap-2 text-primary font-label-md text-label-md uppercase tracking-wider mb-2">
+              <div class="flex items-center gap-2 text-primary font-label-md uppercase tracking-wider mb-2">
                 <span class="material-symbols-outlined text-base">confirmation_number</span>
-                <span class="">Cartelera</span>
+                <span>Cartelera</span>
               </div>
               <h2 class="font-headline-lg text-headline-lg text-on-surface">Próximos eventos</h2>
-              <p class="font-body-md text-body-md text-on-surface-variant mt-1">
-                Explora experiencias exclusivas de música, gastronomía y tecnología con pase digital instantáneo.
+              <p class="font-body-md text-on-surface-variant mt-1">
+                Explora experiencias exclusivas con pase digital instantáneo.
               </p>
             </div>
             <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
               <div class="relative flex-1 sm:w-72">
-                <span
-                  class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
-                <input
-                  class="w-full h-11 pl-10 pr-4 bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all"
-                  id="event-search-input" placeholder="Buscar en Armenia, Salento, Filandia o por experiencia..."
-                  type="text">
+                <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+                <input class="w-full h-11 pl-10 pr-4 bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                  id="event-search-input" placeholder="Buscar por ciudad o experiencia..." type="text">
               </div>
               <div class="relative sm:w-56">
-                <select
-                  class="w-full h-11 pl-4 pr-10 appearance-none bg-surface-container-lowest text-on-surface font-label-md text-label-md rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer transition-all"
+                <select class="w-full h-11 pl-4 pr-10 appearance-none bg-surface-container-lowest text-on-surface font-label-md rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer transition-all"
                   id="category-dropdown">
                   <option value="all">Todas las categorías</option>
-                  <option value="cafe">Café &amp; Catas</option>
-                  <option value="musica">Música &amp; Cultura</option>
-                  <option value="gastronomia">Gastronomía</option>
-                  <option value="talleres">Talleres</option>
-                  <option value="tech">Tech &amp; Agro</option>
                 </select>
-                <span
-                  class="material-symbols-outlined absolute right-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-base">expand_more</span>
+                <span class="material-symbols-outlined absolute right-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-base">expand_more</span>
               </div>
             </div>
           </div>
 
-          <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-6 scrollbar-none" id="chip-filters"><button
-              class="filter-chip active-chip px-4 py-1.5 rounded-full font-label-md text-label-md bg-inverse-surface text-inverse-on-surface transition-all shadow-sm shrink-0"
-              data-filter="all">Todos (6)</button><button
-              class="filter-chip px-4 py-1.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all shrink-0"
-              data-filter="cafe">Café &amp; Catas</button><button
-              class="filter-chip px-4 py-1.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all shrink-0"
-              data-filter="musica">Música &amp; Cultura</button><button
-              class="filter-chip px-4 py-1.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all shrink-0"
-              data-filter="gastronomia">Gastronomía</button><button
-              class="filter-chip px-4 py-1.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all shrink-0"
-              data-filter="talleres">Talleres</button><button
-              class="filter-chip px-4 py-1.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-all shrink-0"
-              data-filter="tech">Tech &amp; Agro</button></div>
+          <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-6 scrollbar-none" id="chip-filters"></div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="cards-container">
-
-            <!-- CARD 1 -->
-            <article
-              class="event-card group flex flex-col justify-between rounded-3xl bg-surface-container-lowest p-6 shadow-[0_2px_16px_rgba(21,27,42,0.05)] hover:shadow-[0_16px_32px_-8px_rgba(0,74,198,0.12)] transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden"
-              data-category="cafe">
-              <div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-primary to-primary-container"></div>
-              <div>
-                <div class="flex items-center justify-between gap-2 mb-4"><span
-                    class="inline-flex items-center px-3 py-1 rounded-full font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed uppercase tracking-wide">CATA
-                    &amp; CAFÉ</span><span
-                    class="inline-flex items-center gap-1.5 font-label-md text-label-md text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full"><span
-                      class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>14 cupos libres</span></div>
-                <div class="relative h-44 rounded-2xl overflow-hidden mb-5 bg-surface-container"><img
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    data-alt="Specialty coffee cupping in traditional coffee hacienda Quindio Colombia"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrC1r57CH8EUiaCuou--jWnQbteuEKiZnpQ2Praoi6g48GXIbkKQsCIVzwM-K-aRqZiscOM_stHERQXZrYc_EmGYKpN7hQnAMduKrWY0jZHAo2_jR5ZCI1bLaSmskoOPprFu5m9JZsczeoXA6xy0BFgj6FVYCCQhObLidkA9DtougttTY68uW1zhyNx43sa_Ow6l4ix2DdS0DsM4V4iGdfV1EiLK50j0nItKzPC74QGHAgnVT_cgZKlA">
-                  <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent"></div>
-                  <div
-                    class="absolute bottom-3 left-3 flex items-center gap-1.5 text-surface-container-lowest font-label-md text-label-md">
-                    <span class="material-symbols-outlined text-sm">schedule</span>Jue, 24 Oct · 15:30
-                  </div>
-                </div>
-                <h3
-                  class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1 mb-1">
-                  Cata de Café Especial &amp; Maridaje en Finca Tradicional</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mb-3"><span
-                    class="material-symbols-outlined text-base text-primary">location_on</span>Hacienda Cafetera El
-                  Ocaso, Salento</p>
-                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-6">Recorrido sensorial por
-                  varietales Geisha y Borbón rosado guiado por catadores Q-Grader con maridaje de repostería artesanal.</p>
-              </div>
-              <div class="pt-4 border-t-0 bg-surface-container-low rounded-2xl p-4 flex items-center justify-between">
-                <div><span
-                    class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Entrada</span><span
-                    class="font-code-num text-code-num text-on-surface">$ 75.000 COP</span></div>
-                <div class="flex items-center gap-2"><button
-                    data-path="event-detail" data-params="id=cata-cafe-especial"
-                    class="px-3 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface bg-surface-container-lowest hover:bg-surface-container-high transition-colors">Detalles</button><button
-                    data-path="event-detail" data-params="id=cata-cafe-especial"
-                    class="px-4 py-2 rounded-full font-label-md text-label-md bg-primary hover:bg-primary-container text-on-primary shadow-sm hover:shadow transition-all active:scale-95">Reservar</button>
-                </div>
-              </div>
-            </article>
-
-            <!-- CARD 2 -->
-            <article
-              class="event-card group flex flex-col justify-between rounded-3xl bg-surface-container-lowest p-6 shadow-[0_2px_16px_rgba(21,27,42,0.05)] hover:shadow-[0_16px_32px_-8px_rgba(0,120,140,0.12)] transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden"
-              data-category="musica">
-              <div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-tertiary to-tertiary-container"></div>
-              <div>
-                <div class="flex items-center justify-between gap-2 mb-4"><span
-                    class="inline-flex items-center px-3 py-1 rounded-full font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed uppercase tracking-wide">CONCIERTO</span><span
-                    class="inline-flex items-center gap-1.5 font-label-md text-label-md text-amber-700 bg-amber-50 px-2.5 py-1 rounded-full"><span
-                      class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>6 cupos libres</span></div>
-                <div class="relative h-44 rounded-2xl overflow-hidden mb-5 bg-surface-container"><img
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    data-alt="Sunset acoustic musical concert overlooking coffee hills in Filandia Quindio"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYeoy_q4XWUZGGIfnz7416sDJQLYQKPluQk8rikrt4BnwZXQdYQT1RhIUi-Og_A8QSs3otQyIBj32OYDzdZ5Lalp80jjSUImHVwSY2P-9aa_5r1E5QU3U9vfoynREk6x6ydEagyRXXZwUk9Yme4WxpTPpslg9T-ja_CoJyK49XwweBnYxzcOavfTX5UaiNXRXMgAwn4ZitstYYx3pxf7jU5mlhcrlqBkX5S_bnq1hSXTVl8s5SknKCDA">
-                  <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent"></div>
-                  <div
-                    class="absolute bottom-3 left-3 flex items-center gap-1.5 text-surface-container-lowest font-label-md text-label-md">
-                    <span class="material-symbols-outlined text-sm">schedule</span>Sáb, 26 Oct · 17:00
-                  </div>
-                </div>
-                <h3
-                  class="font-headline-sm text-headline-sm text-on-surface group-hover:text-tertiary transition-colors line-clamp-1 mb-1">
-                  Atardecer Acústico entre Cafetales</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mb-3"><span
-                    class="material-symbols-outlined text-base text-tertiary">location_on</span>Mirador de Filandia,
-                  Quindío</p>
-                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-6">Música andina y jazz
-                  acústico al atardecer frente a las colinas del Eje Cafetero con copa de café filtrado en método
-                  Chemex.</p>
-              </div>
-              <div class="pt-4 border-t-0 bg-surface-container-low rounded-2xl p-4 flex items-center justify-between">
-                <div><span
-                    class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Entrada</span><span
-                    class="font-code-num text-code-num text-on-surface">$ 90.000 COP</span></div>
-                <div class="flex items-center gap-2"><button
-                    data-path="event-detail" data-params="id=atardecer-acustico"
-                    class="px-3 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface bg-surface-container-lowest hover:bg-surface-container-high transition-colors">Detalles</button><button
-                    data-path="event-detail" data-params="id=atardecer-acustico"
-                    class="px-4 py-2 rounded-full font-label-md text-label-md bg-primary hover:bg-primary-container text-on-primary shadow-sm hover:shadow transition-all active:scale-95">Reservar</button>
-                </div>
-              </div>
-            </article>
-
-            <!-- CARD 3 -->
-            <article
-              class="event-card group flex flex-col justify-between rounded-3xl bg-surface-container-lowest p-6 shadow-[0_2px_16px_rgba(21,27,42,0.05)] hover:shadow-[0_16px_32px_-8px_rgba(113,42,226,0.12)] transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden"
-              data-category="tech">
-              <div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-secondary to-primary"></div>
-              <div>
-                <div class="flex items-center justify-between gap-2 mb-4"><span
-                    class="inline-flex items-center px-3 py-1 rounded-full font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed uppercase tracking-wide">TECH
-                    &amp; AGRO</span><span
-                    class="inline-flex items-center gap-1.5 font-label-md text-label-md text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full"><span
-                      class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>45 cupos libres</span></div>
-                <div class="relative h-44 rounded-2xl overflow-hidden mb-5 bg-surface-container"><img
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    data-alt="Agritech and AI coffee tech conference in Armenia Quindio innovation hub"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVJTxhXNa2pTDPNZjL8obeuQf6SI2HNacFUsEN7HYaL429xABgQnsIusEYaB3TE8mlErwVJSoiD47RPfdQK2H0jcGhKhjewkBCtkxaDWrGCkfl2tKggboOQFpMiI9YV6DTYHTbMPDXa3O5eb1AapvdTbG4CdfdTkyx0M_ZNuRn8AZSeBrqak3HIpyUzgR2QJIjG4JhfNucXZtS2aofh8zmFsf1KIjtSNzLQPhf6MNlsml28n01OzHESQ">
-                  <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent"></div>
-                  <div
-                    class="absolute bottom-3 left-3 flex items-center gap-1.5 text-surface-container-lowest font-label-md text-label-md">
-                    <span class="material-symbols-outlined text-sm">schedule</span>Mar, 29 Oct · 18:30
-                  </div>
-                </div>
-                <h3
-                  class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors line-clamp-1 mb-1">
-                  Encuentro Tech, AgroTech &amp; IA Cafetera</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mb-3"><span
-                    class="material-symbols-outlined text-base text-secondary">location_on</span>Hub de Innovación
-                  Quindío, Armenia</p>
-                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-6">Conferencias sobre
-                  sensores IoT en cafetales, monitoreo satelital de cosechas e inteligencia artificial aplicada al campo
-                  cafetero.</p>
-              </div>
-              <div class="pt-4 border-t-0 bg-surface-container-low rounded-2xl p-4 flex items-center justify-between">
-                <div><span
-                    class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Entrada</span><span
-                    class="font-code-num text-code-num text-primary">Gratis</span></div>
-                <div class="flex items-center gap-2"><button
-                    data-path="event-detail" data-params="id=agrotech-ia"
-                    class="px-3 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface bg-surface-container-lowest hover:bg-surface-container-high transition-colors">Detalles</button><button
-                    data-path="event-detail" data-params="id=agrotech-ia"
-                    class="px-4 py-2 rounded-full font-label-md text-label-md bg-secondary hover:bg-secondary-container text-on-secondary shadow-sm hover:shadow transition-all active:scale-95">Reservar</button>
-                </div>
-              </div>
-            </article>
-
-            <!-- CARD 4 -->
-            <article
-              class="event-card group flex flex-col justify-between rounded-3xl bg-surface-container-lowest p-6 shadow-[0_2px_16px_rgba(21,27,42,0.05)] hover:shadow-[0_16px_32px_-8px_rgba(239,68,68,0.12)] transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden"
-              data-category="gastronomia">
-              <div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-error to-secondary"></div>
-              <div>
-                <div class="flex items-center justify-between gap-2 mb-4"><span
-                    class="inline-flex items-center px-3 py-1 rounded-full font-label-sm text-label-sm bg-error-container text-on-error-container uppercase tracking-wide">CENA
-                    SECRETA</span><span
-                    class="inline-flex items-center gap-1.5 font-label-md text-label-md text-rose-700 bg-rose-50 px-2.5 py-1 rounded-full font-bold"><span
-                      class="w-1.5 h-1.5 rounded-full bg-rose-600 animate-ping"></span>¡Últimos 2 cupos!</span></div>
-                <div class="relative h-44 rounded-2xl overflow-hidden mb-5 bg-surface-container"><img
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    data-alt="Secret Andean Colombian gastronomy dinner in misty Cocora valley Salento"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2MuedrwPUL0gMMh7nDNx9_jYuVYvwmRHCKJ5iKrUDTffVjlHJaH8xkjjve4VinisoBSOqoJrI6nkJfxy9gZPCXzMCrEB79LlCqo7048ACpS7pWzm_0KbL0ca2x_OiSQ0aZnnsJA2IPiaQgLiGjb3ZCRpB82q7iv3QshW-A2lr3mAqN780nVS2dfqBMxp_kiZiC_qhY7pYK3qERkxH4Y4R15Yd2-gkFT5Wkjc0bFM1e0sYGRXelob4FQ">
-                  <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent"></div>
-                  <div
-                    class="absolute bottom-3 left-3 flex items-center gap-1.5 text-surface-container-lowest font-label-md text-label-md">
-                    <span class="material-symbols-outlined text-sm">schedule</span>Vie, 1 Nov · 20:00
-                  </div>
-                </div>
-                <h3
-                  class="font-headline-sm text-headline-sm text-on-surface group-hover:text-error transition-colors line-clamp-1 mb-1">
-                  Cena Secreta: Sabores Autóctonos del Paisaje Cultural Cafetero</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mb-3"><span
-                    class="material-symbols-outlined text-base text-error">lock</span>Valle de Cocora, Salento</p>
-                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-6">Menú de degustación en 6
-                  tiempos rindiendo homenaje a la trucha, plátano maduro y mieles de café. Coordenadas enviadas 3h
-                  antes.</p>
-              </div>
-              <div class="pt-4 border-t-0 bg-surface-container-low rounded-2xl p-4 flex items-center justify-between">
-                <div><span
-                    class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Entrada</span><span
-                    class="font-code-num text-code-num text-on-surface">$ 140.000 COP</span></div>
-                <div class="flex items-center gap-2"><button
-                    data-path="event-detail" data-params="id=cena-secreta"
-                    class="px-3 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface bg-surface-container-lowest hover:bg-surface-container-high transition-colors">Detalles</button><button
-                    data-path="event-detail" data-params="id=cena-secreta"
-                    class="px-4 py-2 rounded-full font-label-md text-label-md bg-primary hover:bg-primary-container text-on-primary shadow-sm hover:shadow transition-all active:scale-95">Reservar</button>
-                </div>
-              </div>
-            </article>
-
-            <!-- CARD 5 -->
-            <article
-              class="event-card group flex flex-col justify-between rounded-3xl bg-surface-container-lowest/80 p-6 shadow-[0_2px_16px_rgba(21,27,42,0.03)] hover:shadow-[0_12px_24px_rgba(21,27,42,0.06)] transition-all duration-300 relative overflow-hidden opacity-95"
-              data-category="musica">
-              <div class="absolute top-0 inset-x-0 h-1.5 bg-outline-variant"></div>
-              <div>
-                <div class="flex items-center justify-between gap-2 mb-4"><span
-                    class="inline-flex items-center px-3 py-1 rounded-full font-label-sm text-label-sm bg-surface-container-highest text-on-surface-variant uppercase tracking-wide">MÚSICA
-                    EN VIVO</span><span
-                    class="inline-flex items-center gap-1 font-label-md text-label-md text-on-surface-variant bg-surface-container px-2.5 py-1 rounded-full font-medium"><span
-                      class="material-symbols-outlined text-sm">block</span>Agotado (0 cupos)</span></div>
-                <div
-                  class="relative h-44 rounded-2xl overflow-hidden mb-5 bg-surface-container filter grayscale-[40%] group-hover:grayscale-0 transition-all duration-500">
-                  <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    data-alt="Acoustic bolero and traditional string concert in historic colonial house in Circasia Quindio"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCj52ALW8TQcXkHsQiJN42XrJe3X0_ZyRLinhKjMzRjErKuSuKiC5TMKiYMibWsmJ8FcTQs5o_JvGaMakJB8X2ix7XKjpfdfwmrlTTtLzUeFmaqX3l70RLyk_j2y4W-Fj9Pn6wmIbubSTuhFby8MLxwhO8EEfCCJJAVafCjlmgsXfJmtK0tyoUtnMHtJKKC7Cv_B2eFJJUuKTKYM49mZiRP7p1TQ1HcNkwimJM1f5r7GnCDAoKUxw9zg">
-                  <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/70 via-transparent to-transparent"></div>
-                  <div
-                    class="absolute bottom-3 left-3 flex items-center gap-1.5 text-surface-container-lowest font-label-md text-label-md">
-                    <span class="material-symbols-outlined text-sm">schedule</span>Dom, 3 Nov · 19:00
-                  </div>
-                </div>
-                <h3
-                  class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1 mb-1">
-                  Noche de Cuerdas y Boleros bajo la Niebla</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mb-3"><span
-                    class="material-symbols-outlined text-base text-outline">location_on</span>Casa Tradicional de
-                  Circasia, Quindío</p>
-                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-6">Serenata de tiples y
-                  guitarras en un patio colonial quindiano entre canelazo caliente y memoria cafetera.</p>
-              </div>
-              <div class="pt-4 border-t-0 bg-surface-container-low rounded-2xl p-4 flex items-center justify-between">
-                <div><span
-                    class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Entrada</span><span
-                    class="font-code-num text-code-num text-on-surface-variant">$ 65.000 COP</span></div>
-                <div class="flex items-center gap-2"><button
-                    data-path="event-detail" data-params="id=boleros-niebla"
-                    class="px-3 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface bg-surface-container-lowest hover:bg-surface-container-high transition-colors">Detalles</button><button
-                    class="px-3 py-2 rounded-full font-label-md text-label-md bg-surface-container-highest hover:bg-surface-variant text-on-surface transition-all active:scale-95 flex items-center gap-1"><span
-                      class="material-symbols-outlined text-sm text-primary">notifications_active</span>Avisarme</button>
-                </div>
-              </div>
-            </article>
-
-            <!-- CARD 6 -->
-            <article
-              class="event-card group flex flex-col justify-between rounded-3xl bg-surface-container-lowest p-6 shadow-[0_2px_16px_rgba(21,27,42,0.05)] hover:shadow-[0_16px_32px_-8px_rgba(0,74,198,0.12)] transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden"
-              data-category="talleres">
-              <div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-primary to-tertiary"></div>
-              <div>
-                <div class="flex items-center justify-between gap-2 mb-4"><span
-                    class="inline-flex items-center px-3 py-1 rounded-full font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed uppercase tracking-wide">TALLER</span><span
-                    class="inline-flex items-center gap-1.5 font-label-md text-label-md text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full"><span
-                      class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>8 cupos libres</span></div>
-                <div class="relative h-44 rounded-2xl overflow-hidden mb-5 bg-surface-container"><img
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    data-alt="Artisanal wicker basket weaving workshop and ceramics in Filandia Quindio"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuChNbNYq1vBNxdyEajEyp2QIaXVRASRZvzcL4uH2_Qh7U3BEH05YSwJCX8eaA2u0LHBSdcnkXW-GMuUL7N6_CqGhZPVwpxfyh-yg_7Z91PqBVe6TaEhrQvxKA-PYRotZYLi6mOQ39fmIMag2n2DXi94VhTsAlH38Gtz3Fp2IlK4Cptg_BUm3pjILTI2hnx0QtvQEt44SSbX4rQL4qoU_uTBfHFhBIAE6zXC0sEm_4zRcsfkLjOIYbTYpQ">
-                  <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent"></div>
-                  <div
-                    class="absolute bottom-3 left-3 flex items-center gap-1.5 text-surface-container-lowest font-label-md text-label-md">
-                    <span class="material-symbols-outlined text-sm">schedule</span>Sáb, 9 Nov · 10:00
-                  </div>
-                </div>
-                <h3
-                  class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1 mb-1">
-                  Taller de Cestería de Bejuco y Torno Artesanal</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mb-3"><span
-                    class="material-symbols-outlined text-base text-primary">location_on</span>Aldea de Artesanos,
-                  Filandia</p>
-                <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-6">Aprende el tejido
-                  tradicional de bejuco patrimonio de Filandia y torneado de vasijas de barro para café con maestros
-                  artesanos.</p>
-              </div>
-              <div class="pt-4 border-t-0 bg-surface-container-low rounded-2xl p-4 flex items-center justify-between">
-                <div><span
-                    class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Entrada</span><span
-                    class="font-code-num text-code-num text-on-surface">$ 85.000 COP</span></div>
-                <div class="flex items-center gap-2"><button
-                    data-path="event-detail" data-params="id=cesteria-torno"
-                    class="px-3 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface bg-surface-container-lowest hover:bg-surface-container-high transition-colors">Detalles</button><button
-                    data-path="event-detail" data-params="id=cesteria-torno"
-                    class="px-4 py-2 rounded-full font-label-md text-label-md bg-primary hover:bg-primary-container text-on-primary shadow-sm hover:shadow transition-all active:scale-95">Reservar</button>
-                </div>
-              </div>
-            </article>
-
-          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="cards-container"></div>
         </section>
 
         <!-- TRUST BANNER -->
-        <section
-          class="mt-20 rounded-3xl bg-surface-container-lowest p-8 sm:p-12 shadow-[0_4px_24px_rgba(21,27,42,0.04)] relative overflow-hidden">
-          <div
-            class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-primary-fixed/40 blur-3xl pointer-events-none">
-          </div>
+        <section class="mt-20 rounded-3xl bg-surface-container-lowest p-8 sm:p-12 shadow-[0_4px_24px_rgba(21,27,42,0.04)] relative overflow-hidden">
+          <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-primary-fixed/40 blur-3xl pointer-events-none"></div>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
             <div class="flex items-start gap-4">
-              <div
-                class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+              <div class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary shrink-0">
                 <span class="material-symbols-outlined text-2xl">qr_code_2</span>
               </div>
               <div>
-                <h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">Entrada en Apple/Google Wallet</h4>
-                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Recibe tu código QR al instante por correo y añádelo con un clic a tu pase digital sin necesidad de
-                  imprimir nada.
-                </p>
+                <h4 class="font-headline-sm text-on-surface mb-1">Entrada en Apple/Google Wallet</h4>
+                <p class="font-body-sm text-on-surface-variant leading-relaxed">Recibe tu código QR al instante por correo y añádelo con un clic a tu pase digital.</p>
               </div>
             </div>
             <div class="flex items-start gap-4">
-              <div
-                class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center text-secondary shrink-0">
+              <div class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center text-secondary shrink-0">
                 <span class="material-symbols-outlined text-2xl">event_seat</span>
               </div>
               <div>
-                <h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">Aforo en tiempo real</h4>
-                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Sin sobreventas. Cada asiento, mesa o plaza queda bloqueada al momento con sincronización inmediata.
-                </p>
+                <h4 class="font-headline-sm text-on-surface mb-1">Aforo en tiempo real</h4>
+                <p class="font-body-sm text-on-surface-variant leading-relaxed">Sin sobreventas. Cada asiento queda bloqueado al momento con sincronización inmediata.</p>
               </div>
             </div>
             <div class="flex items-start gap-4">
-              <div
-                class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center text-tertiary shrink-0">
+              <div class="w-12 h-12 rounded-2xl bg-surface-container-high flex items-center justify-center text-tertiary shrink-0">
                 <span class="material-symbols-outlined text-2xl">cached</span>
               </div>
               <div>
-                <h4 class="font-headline-sm text-headline-sm text-on-surface mb-1">Cancelación flexible</h4>
-                <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Cancela hasta 48 horas antes sin preguntas o transfiere tu plaza a cualquier amigo con un solo toque.
-                </p>
+                <h4 class="font-headline-sm text-on-surface mb-1">Cancelación flexible</h4>
+                <p class="font-body-sm text-on-surface-variant leading-relaxed">Cancela hasta 48 horas antes sin preguntas o transfiere tu plaza con un solo toque.</p>
               </div>
             </div>
           </div>
@@ -532,26 +191,30 @@
   <footer class="relative z-10 w-full bg-surface-container-low mt-20 shadow-[0_-1px_12px_rgba(0,0,0,0.02)]">
     <div class="max-w-7xl mx-auto px-6 lg:px-12 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
       <div class="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-        <div class="flex items-center gap-2.5"><img alt="MyEvent Brand Logo"
-            class="h-5 w-auto object-contain grayscale opacity-70"
-            src="https://lh3.googleusercontent.com/aida/AEtjO1WlnIdFYKqyKMGajwDfJ6rsqKQQLp2dZImf9xcui5zxUQX1REhJOsgJCA0Ry42meNkqlstH75DWo0WF7HI_Wvzam6Fp-pCJTYUzpqgatTOgqZmQ3fHd5vGMoIjqkJNZatmZGcqfHdws5_uZuaItJNjK-y1jxMYNTMcc-PAXvl-wSyWPvo1GdUk6Q3zKRrLeD1KbbTL3V_3HqsXNZeBVgZ_nBZe0UWBZMXTfSBftSzAGk6HL4By27v0uDduT"><span
-            class="font-headline-sm text-label-lg font-bold text-on-surface-variant">MyEvent Tech</span></div><span
-          class="hidden sm:inline text-outline-variant">•</span>
-        <p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 MyEvent Tech Colombia S.A.S. Todos los
-          derechos reservados. Paisaje Cultural Cafetero, Quindío.</p>
+        <div class="flex items-center gap-2.5">
+          <img alt="MyEvent Brand Logo" class="h-5 w-auto object-contain grayscale opacity-70"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1WlnIdFYKqyKMGajwDfJ6rsqKQQLp2dZImf9xcui5zxUQX1REhJOsgJCA0Ry42meNkqlstH75DWo0WF7HI_Wvzam6Fp-pCJTYUzpqgatTOgqZmQ3fHd5vGMoIjqkJNZatmZGcqfHdws5_uZuaItJNjK-y1jxMYNTMcc-PAXvl-wSyWPvo1GdUk6Q3zKRrLeD1KbbTL3V_3HqsXNZeBVgZ_nBZe0UWBZMXTfSBftSzAGk6HL4By27v0uDduT">
+          <span class="font-headline-sm text-label-lg font-bold text-on-surface-variant">MyEvent Tech</span>
+        </div>
+        <span class="hidden sm:inline text-outline-variant">•</span>
+        <p class="font-body-sm text-on-surface-variant">© 2025 MyEvent Tech Colombia S.A.S. Todos los derechos reservados.</p>
       </div>
-      <div class="flex flex-wrap items-center justify-center gap-6 font-label-sm text-label-sm text-on-surface-variant">
-        <div class="flex items-center gap-2"><span
-            class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span><span
-            class="text-on-surface-variant font-medium">Sistemas Operativos</span></div><a
-          class="hover:text-on-surface transition-colors" href="#">Privacidad y Términos</a><a
-          class="hover:text-on-surface transition-colors" href="#">Soporte</a><a
-          class="hover:text-on-surface transition-colors" href="#">Salas y Espacios</a>
+      <div class="flex flex-wrap items-center justify-center gap-6 font-label-sm text-on-surface-variant">
+        <div class="flex items-center gap-2">
+          <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="font-medium">Sistemas operativos</span>
+        </div>
+        <a class="hover:text-on-surface transition-colors" href="#">Privacidad y términos</a>
+        <a class="hover:text-on-surface transition-colors" href="#">Soporte</a>
+        <a class="hover:text-on-surface transition-colors" href="#">Salas y espacios</a>
       </div>
     </div>
   </footer>
 
-  <!-- Scripts: SIEMPRE al final, JUSTO antes de cerrar body -->
+  <!-- Scripts: los tres compartidos viven en la raíz; app.js también -->
+  <script src="render-styles.js"></script>
+  <script src="events-seed.js"></script>
+  <script src="events-store.js"></script>
   <script src="app.js"></script>
   <script src="nav.js"></script>
 </body>
