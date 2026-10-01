@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2563eb" />
+  <title>Velada — Eventos y reservas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#inicio">
+      <span class="brand-mark">V</span>
+      <span>
+        <strong>Velada</strong>
+        <small>Eventos y reservas</small>
+      </span>
+    </a>
+    <nav class="nav">
+      <a href="#eventos">Cartelera</a>
+      <a href="#reservas">Mis reservas</a>
+      <button class="btn btn-primary" type="button" data-open="create">
+        Crear evento
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <p class="eyebrow">Sala, mesa o escenario</p>
+      <h1>Crea el evento.<br /><span class="accent">Reserva tu lugar.</span></h1>
+      <p class="lede">
+        Publica veladas, talleres y encuentros. La gente reserva en segundos
+        y tú ves cuántas plazas quedan.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#eventos">Ver cartelera</a>
+        <button class="btn btn-ghost" type="button" data-open="create">
+          Nuevo evento
+        </button>
+      </div>
+      <dl class="stats">
+        <div>
+          <dt id="stat-events">0</dt>
+          <dd>Eventos activos</dd>
+        </div>
+        <div>
+          <dt id="stat-seats">0</dt>
+          <dd>Plazas libres</dd>
+        </div>
+        <div>
+          <dt id="stat-bookings">0</dt>
+          <dd>Reservas hechas</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="panel" id="eventos">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">Cartelera</p>
+          <h2>Próximos eventos</h2>
+        </div>
+        <div class="filters">
+          <label class="sr-only" for="search">Buscar</label>
+          <input id="search" type="search" placeholder="Buscar por título o lugar" />
+          <label class="sr-only" for="category">Categoría</label>
+          <select id="category">
+            <option value="todas">Todas las categorías</option>
+            <option value="concierto">Concierto</option>
+            <option value="taller">Taller</option>
+            <option value="cena">Cena</option>
+            <option value="meetup">Meetup</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+      </div>
+      <div class="grid" id="event-grid"></div>
+      <p class="empty" id="event-empty" hidden>
+        No hay eventos con esos filtros. Crea el primero.
+      </p>
+    </section>
+
+    <section class="panel" id="reservas">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">Tu agenda</p>
+          <h2>Mis reservas</h2>
+        </div>
+      </div>
+      <div class="bookings" id="booking-list"></div>
+      <p class="empty" id="booking-empty">Aún no tienes reservas.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Velada · Los datos se guardan en este navegador.</p>
+  </footer>
+
+  <dialog class="modal" id="create-modal">
+    <form id="create-form" method="dialog">
+      <header>
+        <h2>Crear evento</h2>
+        <button class="icon-btn" type="button" data-close value="cancel" aria-label="Cerrar">
+          ×
+        </button>
+      </header>
+      <div class="form-grid">
+        <label>
+          Título
+          <input name="title" required maxlength="80" placeholder="Jazz en terraza" />
+        </label>
+        <label>
+          Categoría
+          <select name="category" required>
+            <option value="concierto">Concierto</option>
+            <option value="taller">Taller</option>
+            <option value="cena">Cena</option>
+            <option value="meetup">Meetup</option>
+            <option value="otro">Otro</option>
+          </select>
+        </label>
+        <label>
+          Fecha
+          <input name="date" type="date" required />
+        </label>
+        <label>
+          Hora
+          <input name="time" type="time" required />
+        </label>
+        <label class="span-2">
+          Lugar
+          <input name="place" required maxlength="80" placeholder="Café Oriente, Madrid" />
+        </label>
+        <label>
+          Plazas
+          <input name="capacity" type="number" min="1" max="500" required value="20" />
+        </label>
+        <label>
+          Precio (€)
+          <input name="price" type="number" min="0" step="0.01" required value="0" />
+        </label>
+        <label class="span-2">
+          Descripción
+          <textarea name="description" rows="3" maxlength="280"
+            placeholder="Qué va a pasar y para quién es."></textarea>
+        </label>
+      </div>
+      <footer>
+        <button class="btn btn-ghost" type="button" data-close>Cancelar</button>
+        <button class="btn btn-primary" type="submit">Publicar</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog class="modal" id="book-modal">
+    <form id="book-form" method="dialog">
+      <header>
+        <h2>Reservar plaza</h2>
+        <button class="icon-btn" type="button" data-close aria-label="Cerrar">×</button>
+      </header>
+      <p class="modal-lead" id="book-event-title"></p>
+      <div class="form-grid">
+        <input type="hidden" name="eventId" />
+        <label>
+          Nombre
+          <input name="name" required maxlength="60" placeholder="Tu nombre" />
+        </label>
+        <label>
+          Correo
+          <input name="email" type="email" required placeholder="tu@correo.com" />
+        </label>
+        <label>
+          Plazas
+          <input name="seats" type="number" min="1" max="10" required value="1" />
+        </label>
+      </div>
+      <p class="hint" id="book-hint"></p>
+      <footer>
+        <button class="btn btn-ghost" type="button" data-close>Cancelar</button>
+        <button class="btn btn-primary" type="submit">Confirmar reserva</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog class="modal" id="detail-modal">
+    <div class="detail">
+      <header>
+        <h2 id="detail-title"></h2>
+        <button class="icon-btn" type="button" data-close aria-label="Cerrar">×</button>
+      </header>
+      <p class="detail-meta" id="detail-meta"></p>
+      <p id="detail-desc"></p>
+      <p class="capacity-line" id="detail-capacity"></p>
+      <footer>
+        <button class="btn btn-ghost danger" type="button" id="delete-event">
+          Eliminar evento
+        </button>
+        <button class="btn btn-primary" type="button" id="detail-book">Reservar</button>
+      </footer>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" hidden></div>
+  <script src="app.js"></script>
+</body>
+
+</html>
