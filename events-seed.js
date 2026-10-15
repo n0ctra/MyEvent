@@ -3,7 +3,7 @@
    SOLO data. Sin HTML, sin clases CSS, sin ids de diseño.
    Al migrar a backend, este archivo se borra.
    ============================================================ */
-   window.MYEVENT_SEED = [
+   export const MYEVENT_SEED = [
     {
       id: 'cata-cafe-especial',
       title: 'Cata de Café Especial & Maridaje en Finca Tradicional',

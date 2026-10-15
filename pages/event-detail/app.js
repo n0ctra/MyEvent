@@ -1,20 +1,32 @@
 /* ============================================================
-   Renderiza el detalle de CUALQUIER evento.
-   Reserva requiere sesión y persiste en reservationsStore.
+   Detalle de un evento — lee desde Supabase (async).
+   Reserva ahora persiste en Supabase.
    ============================================================ */
-   (function () {
+
+   import {
+    categoryStyle,
+    formatCOP,
+    formatDateLong,
+    formatDuration,
+    computeUrgency,
+    urgencyClasses,
+    DOT_STYLES
+  } from '../../render-styles.js';
+  import { eventsStore, getEventIdFromUrl } from '../../events-store.js';
+  import { auth } from '../../auth-store.js';
+  import { reservationsStore } from '../../reservations-store.js';
+  
+  (async function () {
     'use strict';
   
-    const id = window.getEventIdFromUrl ? window.getEventIdFromUrl() : null;
-    const event = id
-      ? window.eventsStore.getById(id)
-      : window.eventsStore.getAll()[0];
+    await auth.ready;
+  
+    const id = getEventIdFromUrl();
+    const event = id ? await eventsStore.getById(id) : null;
   
     if (!event) return renderNotFound(id);
   
-    if (window.auth) {
-      window.auth.mountAuthNav('auth-nav', { loginPath: '../login/' });
-    }
+    auth.mountAuthNav('auth-nav', { loginPath: '../login/' });
   
     // ---------- HERO ----------
     document.title = event.title + ' | MyEvent Tech';
@@ -32,15 +44,15 @@
       heroImg.replaceWith(makePlaceholder(event.title));
     }
   
-    const cat = window.categoryStyle(event.category);
-    const urgency = window.computeUrgency(event);
+    const cat = categoryStyle(event.category);
+    const urgency = computeUrgency(event);
   
     const chips = document.getElementById('hero-chips');
     chips.appendChild(chip(cat.badge, cat.label));
-    if (event.date) chips.appendChild(chip('bg-white/15 text-white', window.formatDateLong(event.date)));
+    if (event.date) chips.appendChild(chip('bg-white/15 text-white', formatDateLong(event.date)));
     if (urgency) {
       chips.appendChild(chip(
-        window.urgencyClasses(urgency.tone),
+        urgencyClasses(urgency.tone),
         urgency.label,
         urgency.tone === 'urgent' ? 'local_fire_department' : null,
         'font-semibold'
@@ -50,7 +62,7 @@
     const meta = document.getElementById('hero-meta');
     if (event.location) meta.appendChild(metaItem('location_on', 'text-primary-fixed-dim', event.location));
     if (Number.isFinite(event.unitPrice)) {
-      const priceEl = metaItem('payments', 'text-primary-fixed-dim', window.formatCOP(event.unitPrice, event.currency));
+      const priceEl = metaItem('payments', 'text-primary-fixed-dim', formatCOP(event.unitPrice, event.currency));
       priceEl.lastChild.classList.add('text-white', 'font-semibold');
       meta.appendChild(priceEl);
     }
@@ -87,7 +99,7 @@
   
     // ---------- AGENDA ----------
     if (event.agenda.length) {
-      const dur = window.formatDuration(event.durationMinutes);
+      const dur = formatDuration(event.durationMinutes);
       if (dur) document.getElementById('duration-badge').textContent = 'Duración total: ' + dur;
       const tl = document.getElementById('agenda-timeline');
       event.agenda.forEach((item) => tl.appendChild(agendaItem(item)));
@@ -215,7 +227,7 @@
     }
   
     function agendaItem(item) {
-      const dot = window.DOT_STYLES[item.dot] || window.DOT_STYLES.primary;
+      const dot = DOT_STYLES[item.dot] || DOT_STYLES.primary;
       const wrap = document.createElement('div');
       wrap.className = 'relative';
   
@@ -330,17 +342,16 @@
         authNotice:    document.getElementById('booking-auth')
       };
   
-      if (els.unitPriceEl) els.unitPriceEl.textContent = window.formatCOP(cfg.unitPrice, event.currency);
+      if (els.unitPriceEl) els.unitPriceEl.textContent = formatCOP(cfg.unitPrice, event.currency);
       if (els.maxLabel)    els.maxLabel.textContent = cfg.max;
       if (els.spotsLabel)  els.spotsLabel.textContent = event.spotsLeft ?? 0;
   
       let tickets = cfg.initial;
       let busy = false;
   
-      // --- Estado de sesión ---
       function refreshAuthState() {
-        if (!window.auth || !els.authNotice) return;
-        const user = window.auth.getCurrentUser();
+        if (!els.authNotice) return;
+        const user = auth.getCurrentUser();
         els.authNotice.innerHTML = '';
   
         if (user) {
@@ -362,7 +373,7 @@
           row.querySelector('p.font-body-sm').textContent = user.email;
   
           row.querySelector('[data-auth-action="switch"]').addEventListener('click', () => {
-            window.auth.signOut();
+            auth.signOut();
           });
   
           els.authNotice.appendChild(row);
@@ -391,20 +402,17 @@
         }
       }
   
-      if (window.auth) {
-        window.auth.on(refreshAuthState);
-        refreshAuthState();
-      }
+      auth.on(refreshAuthState);
+      refreshAuthState();
   
-      // --- Render stepper ---
       function render() {
         const total = tickets * cfg.unitPrice;
         if (els.count)     els.count.textContent = tickets;
         if (els.labelCalc) els.labelCalc.textContent = tickets + ' x Entrada General';
-        if (els.subtotal)  els.subtotal.textContent = window.formatCOP(total, event.currency);
-        if (els.total)     els.total.textContent = window.formatCOP(total, event.currency);
+        if (els.subtotal)  els.subtotal.textContent = formatCOP(total, event.currency);
+        if (els.total)     els.total.textContent = formatCOP(total, event.currency);
         if (els.submitBtnText && !cfg.soldOut) {
-          els.submitBtnText.textContent = 'Reservar plaza (' + window.formatCOP(total, event.currency) + ') · PSE / Tarjeta';
+          els.submitBtnText.textContent = 'Reservar plaza (' + formatCOP(total, event.currency) + ') · PSE / Tarjeta';
         }
         if (els.dec) els.dec.disabled = cfg.soldOut || tickets <= cfg.min;
         if (els.inc) els.inc.disabled = cfg.soldOut || tickets >= cfg.max;
@@ -420,7 +428,6 @@
       if (els.dec) els.dec.addEventListener('click', () => change(-1));
       if (els.inc) els.inc.addEventListener('click', () => change(1));
   
-      // --- Estado agotado ---
       if (cfg.soldOut) {
         if (els.submitBtn) {
           els.submitBtn.disabled = true;
@@ -433,49 +440,41 @@
         els.form?.querySelectorAll('input, textarea').forEach((f) => (f.disabled = true));
       }
   
-      // --- Submit ---
+      // ⬇️ CAMBIO: submit ahora es async y persiste en Supabase
       if (els.form) {
-        els.form.addEventListener('submit', (e) => {
+        els.form.addEventListener('submit', async (e) => {
           e.preventDefault();
           if (busy || cfg.soldOut) return;
   
-          // 1) Auth primero
-          if (window.auth && !window.auth.requireAuth('../login/')) return;
-  
-          // 2) Validación
+          if (!auth.requireAuth('../login/')) return;
           if (!els.form.reportValidity()) return;
   
           busy = true;
           els.submitBtn.classList.add('opacity-75', 'pointer-events-none');
           if (els.submitBtnText) els.submitBtnText.textContent = 'Procesando reserva...';
   
-          const user = window.auth ? window.auth.getCurrentUser() : null;
+          // Actualizar spots disponibles visualmente tras una reserva
+          const user = auth.getCurrentUser();
   
-          window.setTimeout(() => {
-            // 3) Crear la reserva real
-            let reservation = null;
-            if (window.reservationsStore && user) {
-              reservation = window.reservationsStore.create({
-                userId:         user.id,
-                eventId:        event.id,
-                eventTitle:     event.title,
-                eventDate:      event.date,
-                eventLocation:  event.location,
-                eventAddress:   event.address,
-                eventImage:     event.heroImage,
-                eventCategory:  event.category,
-                tickets:        tickets,
-                unitPrice:      cfg.unitPrice,
-                total:          tickets * cfg.unitPrice,
-                currency:       event.currency || 'COP',
-                attendee: {
-                  name:  els.nameInput  ? els.nameInput.value.trim()  : '',
-                  email: els.emailInput ? els.emailInput.value.trim() : '',
-                  phone: els.phoneInput ? els.phoneInput.value.trim() : '',
-                  notes: els.notesInput ? els.notesInput.value.trim() : ''
-                }
-              });
-            }
+          try {
+            const reservation = await reservationsStore.create({
+              eventDbId:      event.dbId,
+              eventTitle:     event.title,
+              eventDate:      event.date,
+              eventLocation:  event.location,
+              eventImage:     event.heroImage,
+              eventCategory:  event.category,
+              tickets:        tickets,
+              unitPrice:      cfg.unitPrice,
+              total:          tickets * cfg.unitPrice,
+              currency:       event.currency || 'COP',
+              attendee: {
+                name:  els.nameInput  ? els.nameInput.value.trim()  : (user?.name || ''),
+                email: els.emailInput ? els.emailInput.value.trim() : (user?.email || ''),
+                phone: els.phoneInput ? els.phoneInput.value.trim() : '',
+                notes: els.notesInput ? els.notesInput.value.trim() : ''
+              }
+            });
   
             busy = false;
             els.submitBtn.classList.remove('opacity-75', 'pointer-events-none');
@@ -487,7 +486,29 @@
             els.success?.classList.remove('hidden');
             els.success?.classList.add('flex');
             els.success?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          }, 900);
+  
+            // Actualizar el contador visual de plazas
+            if (els.spotsLabel) {
+              const remaining = Math.max(0, (Number(els.spotsLabel.textContent) || 0) - tickets);
+              els.spotsLabel.textContent = remaining;
+            }
+          } catch (err) {
+            console.error('[event-detail] reserva:', err);
+            busy = false;
+            els.submitBtn.classList.remove('opacity-75', 'pointer-events-none');
+            if (els.submitBtnText) {
+              els.submitBtnText.textContent = 'Reservar plaza (' + formatCOP(tickets * cfg.unitPrice, event.currency) + ') · PSE / Tarjeta';
+            }
+            // Toast simple de error
+            const box = document.createElement('div');
+            box.className = 'mt-4 p-3 rounded-xl bg-error-container text-on-error-container font-body-sm flex items-start gap-2';
+            box.innerHTML =
+              '<span class="material-symbols-outlined text-[20px] shrink-0">error</span>' +
+              '<span></span>';
+            box.lastChild.textContent = err.message || 'No se pudo procesar la reserva.';
+            els.form.parentNode.insertBefore(box, els.form.nextSibling);
+            setTimeout(() => box.remove(), 5000);
+          }
         });
       }
   

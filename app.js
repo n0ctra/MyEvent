@@ -1,34 +1,46 @@
 /* ============================================================
-   Cartelera (landing): pinta las tarjetas desde eventsStore.
-   Filtros por categoría + búsqueda full-text.
-   Monta el auth-nav en el header.
+   Cartelera (landing) — lee eventos desde Supabase (async).
    ============================================================ */
-   (function () {
+
+   import {
+    CATEGORY_STYLES,
+    categoryStyle,
+    formatCOP,
+    formatDateShort,
+    computeUrgency,
+    urgencyTextClasses
+  } from './render-styles.js';
+  import { eventsStore } from './events-store.js';
+  import { auth } from './auth-store.js';
+  
+  (async function () {
     'use strict';
   
+    await auth.ready;
+  
     const state = { query: '', category: 'all' };
+    let allEvents = [];
   
-    const container   = document.getElementById('cards-container');
-    const searchInput = document.getElementById('event-search-input');
-    const dropdown    = document.getElementById('category-dropdown');
-    const chipsWrap   = document.getElementById('chip-filters');
+    const container    = document.getElementById('cards-container');
+    const searchInput  = document.getElementById('event-search-input');
+    const dropdown     = document.getElementById('category-dropdown');
+    const chipsWrap    = document.getElementById('chip-filters');
   
-    if (!container || !window.eventsStore) return;
+    if (!container) return;
   
     // ---------- Chips ----------
     function renderChips() {
-      const all = window.eventsStore.getAll();
-      const counts = all.reduce((acc, e) => {
+      const counts = allEvents.reduce((acc, e) => {
         acc[e.category] = (acc[e.category] || 0) + 1;
         return acc;
       }, {});
   
       chipsWrap.innerHTML = '';
-      chipsWrap.appendChild(makeChip('all', 'Todos (' + all.length + ')'));
-      Object.keys(window.CATEGORY_STYLES).forEach((key) => {
+      chipsWrap.appendChild(makeChip('all', 'Todos (' + allEvents.length + ')'));
+      Object.keys(CATEGORY_STYLES).forEach((key) => {
         const n = counts[key] || 0;
         if (n === 0) return;
-        chipsWrap.appendChild(makeChip(key, window.CATEGORY_STYLES[key].label + ' (' + n + ')'));
+        chipsWrap.appendChild(makeChip(key, CATEGORY_STYLES[key].label + ' (' + n + ')'));
       });
     }
   
@@ -69,10 +81,10 @@
       all.textContent = 'Todas las categorías';
       dropdown.appendChild(all);
   
-      Object.keys(window.CATEGORY_STYLES).forEach((key) => {
+      Object.keys(CATEGORY_STYLES).forEach((key) => {
         const opt = document.createElement('option');
         opt.value = key;
-        opt.textContent = window.CATEGORY_STYLES[key].label;
+        opt.textContent = CATEGORY_STYLES[key].label;
         dropdown.appendChild(opt);
       });
   
@@ -93,9 +105,9 @@
       return haystack.includes(state.query);
     }
   
-    // ---------- Render tarjetas ----------
+    // ---------- Render ----------
     function renderCards() {
-      const list = window.eventsStore.getAll().filter(matches);
+      const list = allEvents.filter(matches);
       container.innerHTML = '';
       if (!list.length) {
         container.appendChild(emptyState());
@@ -115,11 +127,10 @@
     }
   
     function buildCard(event) {
-      const cat = window.categoryStyle(event.category);
-      const urgency = window.computeUrgency(event);
+      const cat = categoryStyle(event.category);
+      const urgency = computeUrgency(event);
       const soldOut = event.spotsLeft === 0;
   
-      // Estructura raíz → pages/event-detail/
       const href = 'pages/event-detail/?id=' + encodeURIComponent(event.id);
   
       const card = document.createElement('article');
@@ -163,7 +174,7 @@
   
       const urgencyEl = card.querySelector('[data-slot="urgency"]');
       if (urgency) {
-        urgencyEl.className += ' ' + window.urgencyTextClasses(urgency.tone);
+        urgencyEl.className += ' ' + urgencyTextClasses(urgency.tone);
         if (urgency.tone === 'urgent') {
           const dot = document.createElement('span');
           dot.className = 'w-1.5 h-1.5 rounded-full bg-rose-500 animate-ping';
@@ -180,11 +191,11 @@
       img.src = event.heroImage || '';
       img.alt = event.title;
   
-      card.querySelector('[data-slot="date"]').textContent = window.formatDateShort(event.date);
+      card.querySelector('[data-slot="date"]').textContent = formatDateShort(event.date);
       card.querySelector('[data-slot="title"]').textContent = event.title;
       card.querySelector('[data-slot="location"]').textContent = event.location || '';
       card.querySelector('[data-slot="description"]').textContent = (event.description?.[0] || '').slice(0, 140);
-      card.querySelector('[data-slot="price"]').textContent = window.formatCOP(event.unitPrice, event.currency);
+      card.querySelector('[data-slot="price"]').textContent = formatCOP(event.unitPrice, event.currency);
   
       card.querySelector('[data-slot="details"]').href = href;
   
@@ -217,22 +228,26 @@
       });
     }
   
-    // ---------- Reaccionar al store ----------
-    window.eventsStore.on(() => {
+    // ---------- Carga inicial ----------
+    function showLoading() {
+      container.innerHTML = '';
+      const d = document.createElement('div');
+      d.className = 'col-span-full text-center py-20 text-on-surface-variant';
+      d.innerHTML =
+        '<span class="material-symbols-outlined text-5xl mb-3 block animate-spin">progress_activity</span>' +
+        '<p class="font-body-sm">Cargando eventos…</p>';
+      container.appendChild(d);
+    }
+  
+    async function loadEvents() {
+      showLoading();
+      allEvents = await eventsStore.getAll();
       renderCategoryDropdown();
       renderChips();
       applyChipStyles();
       renderCards();
-    });
-  
-    // ---------- Init ----------
-    renderCategoryDropdown();
-    renderChips();
-    applyChipStyles();
-    renderCards();
-  
-    // Header: botones de sesión
-    if (window.auth) {
-      window.auth.mountAuthNav('auth-nav', { loginPath: 'pages/login/' });
     }
+  
+    await loadEvents();
+    auth.mountAuthNav('auth-nav', { loginPath: 'pages/login/' });
   })();
