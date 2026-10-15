@@ -1,0 +1,40 @@
+/* ============================================================
+   MyEvent Tech — Estilos base
+   (los estilos de utilidad vienen de Tailwind CDN)
+   ============================================================ */
+
+/* ---------- Reset / Base ---------- */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overscroll-behavior: none;
+}
+
+/* Evita márgenes fantasma dentro de <main> */
+main > :first-child {
+  margin-top: 0 !important;
+}
+
+main > :last-child {
+  margin-bottom: 0 !important;
+}
+
+/* ---------- Scrollbars ---------- */
+/* Oculta la barra de scroll en todo el documento (WebKit) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Utilidad para carruseles/chips: oculta la barra de scroll */
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE / Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

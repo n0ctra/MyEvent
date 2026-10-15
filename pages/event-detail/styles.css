@@ -1,0 +1,69 @@
+/* ============================================================
+   MyEvent Tech — Detalle de Evento
+   Estilos base + utilidades propias
+   (los estilos visuales vienen de Tailwind CDN)
+   ============================================================ */
+
+/* ---------- Reset / Base ---------- */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overscroll-behavior: none;
+}
+
+/* Evita márgenes fantasma dentro de <main> */
+main > :first-child {
+  margin-top: 0 !important;
+}
+
+main > :last-child {
+  margin-bottom: 0 !important;
+}
+
+/* ---------- Scrollbars ---------- */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE / Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------- Utilidades extraídas de estilos inline ---------- */
+
+/* Icono Material Symbols con relleno sólido */
+.material-symbols-filled {
+  font-variation-settings: 'FILL' 1;
+}
+
+/* Fondo del mapa: Finca La Colina – Mirador (Filandia, Quindío) */
+.bg-map-filandia {
+  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhF4GjhD2d0pLHqNNLFpZxQpYIqhglzp6bSRiHweS8fR_mTd_5DszbLQUOtRJEqZMlE2XXs1nh2PVHHarr1TDKuolPu1Y6gXMtaWxrhzET9GUxadc7xGNxCzUWCjkB6lUWphPYPLMKmNgNglnDt3gUyKmPXrBqnNTYtR1lrjj3KYJAAtqyzvWDGUDWeUevp3IF6nq-YsfeN8mRJ9GZQtitTEoOwioNKnBATnN_O-6D5LVE2RBVkKF45w');
+  background-size: cover;
+  background-position: center;
+}
+
+/* ---------- Animación de aparición (toast de reserva) ---------- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.35s ease-out both;
+}

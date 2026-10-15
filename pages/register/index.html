@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es" data-page="register" data-root="../../">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <meta name="theme-color" content="#004ac6">
+
+  <title>Crear cuenta | MyEvent Tech</title>
+  <meta name="description"
+    content="Únete a MyEvent Tech: descubre experiencias cafeteras, reserva en segundos en el Quindío o publica tus propios eventos y catas culturales.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Crear cuenta | MyEvent Tech">
+  <meta property="og:description"
+    content="Descubre experiencias cafeteras íntimas, reserva en segundos o publica tus propios encuentros culturales.">
+  <meta property="og:locale" content="es_CO">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-tint":"#0053db","on-tertiary-fixed-variant":"#004e5c","surface-bright":"#f9f9ff","on-tertiary-fixed":"#001f26","surface-container-high":"#e2e8fc","primary":"#004ac6","on-surface-variant":"#434655","secondary":"#712ae2","on-secondary-fixed-variant":"#5a00c6","surface":"#f9f9ff","surface-container-highest":"#dce2f6","secondary-fixed":"#eaddff","on-secondary-fixed":"#25005a","primary-fixed-dim":"#b4c5ff","tertiary-fixed-dim":"#4cd7f6","secondary-container":"#8a4cfc","on-primary":"#ffffff","tertiary-container":"#00788c","outline-variant":"#c3c6d7","secondary-fixed-dim":"#d2bbff","on-tertiary":"#ffffff","primary-container":"#2563eb","background":"#f9f9ff","primary-fixed":"#dbe1ff","inverse-primary":"#b4c5ff","surface-dim":"#d3daee","error":"#ba1a1a","on-tertiary-container":"#d7f6ff","inverse-surface":"#2a3040","tertiary-fixed":"#acedff","on-primary-container":"#eeefff","error-container":"#ffdad6","on-secondary-container":"#fffbff","on-error-container":"#93000a","on-secondary":"#ffffff","tertiary":"#005e6e","on-primary-fixed":"#00174b","surface-container-lowest":"#ffffff","surface-variant":"#dce2f6","on-surface":"#151b2a","inverse-on-surface":"#edf0ff","on-background":"#151b2a","on-primary-fixed-variant":"#003ea8","on-error":"#ffffff","surface-container":"#e9edff","outline":"#737686","surface-container-low":"#f1f3ff"
+          },
+          borderRadius: { DEFAULT:"0.25rem", lg:"0.5rem", xl:"0.75rem", full:"9999px" },
+          spacing: {
+            "gutter":"1.5rem","margin-sm":"1rem","space-xs":"0.25rem","margin-lg":"3rem","margin":"1.5rem","space-lg":"1.5rem","gutter-lg":"2rem","gutter-sm":"1rem","space-xl":"2.5rem","space-sm":"0.5rem","space-md":"1rem"
+          },
+          fontSize: {
+            "display":["3.5rem",{lineHeight:"1.1",letterSpacing:"-0.02em"}],
+            "display-mobile":["2.25rem",{lineHeight:"1.15",letterSpacing:"-0.02em"}],
+            "headline-lg":["2.25rem",{lineHeight:"1.2",letterSpacing:"-0.01em"}],
+            "headline-lg-mobile":["1.75rem",{lineHeight:"1.25"}],
+            "headline-md":["1.5rem",{lineHeight:"1.3"}],
+            "headline-sm":["1.125rem",{lineHeight:"1.4"}],
+            "body-lg":["1.0625rem",{lineHeight:"1.6"}],
+            "body-md":["1rem",{lineHeight:"1.6"}],
+            "body-sm":["0.875rem",{lineHeight:"1.55"}],
+            "label-lg":["0.9375rem",{lineHeight:"1.4"}],
+            "label-md":["0.8125rem",{lineHeight:"1.4"}],
+            "label-sm":["0.75rem",{lineHeight:"1.4"}],
+            "code-num":["1rem",{lineHeight:"1.4",letterSpacing:"0.01em"}]
+          },
+          fontFamily: {
+            "body-md":["Inter"],"headline-sm":["Space Grotesk"],"display":["Space Grotesk"],"body-sm":["Inter"],"label-lg":["Space Grotesk"],"label-md":["Space Grotesk"],"label-sm":["Inter"],"code-num":["Space Grotesk"],"headline-lg":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-lg":["Inter"],"display-mobile":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col justify-between">
+
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-16 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <a class="flex items-center gap-3 text-on-surface hover:text-primary transition-colors" href="../../">
+          <img alt="MyEvent Tech" class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1VFXeen7YuSwHYX-cDXF0rjsQ6S9HMFJBRbOpMnaMx6k_lKXgcYiDZRpSHC9z18LcP2kTse_S2PXa_dOAoXi4lfMX8vSfgvf7i36lsw2KEXQ1E-spneIDLVNbC6NYgKEqsi-Llshkr9klvltE2qxfl2TWHLBvxb0UxXSWTwLYgVhchcKJyFtbO1sEdM-B8pq4Et8EH-wUOqBRAN8yEK5DgAYsUJfCBs28HwXND6CaItUYdJKpzqOq4hOYpz">
+          <span class="font-headline-sm text-on-surface tracking-tight">MyEvent</span>
+        </a>
+        <span class="hidden sm:inline-block w-px h-5 bg-outline-variant/40" aria-hidden="true"></span>
+        <a class="hidden sm:inline-flex items-center text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors" href="../../">
+          <span aria-hidden="true">←&nbsp;</span>Volver a la cartelera
+        </a>
+      </div>
+      <div class="flex items-center gap-6">
+        <nav class="flex items-center gap-4 text-body-sm font-body-sm">
+          <a class="px-3 py-1.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="#">Ayuda</a>
+          <a class="px-3 py-1.5 rounded-full text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" href="#">CO / COP</a>
+        </nav>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0" aria-hidden="true">
+          <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full pt-16 flex-grow bg-surface">
+    <div class="flex flex-col w-full">
+      <div class="relative isolate w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-8 lg:py-14">
+
+        <div class="absolute top-12 left-1/4 -z-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+        <div class="absolute bottom-20 right-10 -z-10 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+
+          <section class="lg:col-span-7 bg-surface-container-lowest rounded-2xl shadow-xl p-6 sm:p-8 lg:p-10 relative overflow-hidden">
+            <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary to-secondary" aria-hidden="true"></div>
+
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-label-sm font-label-sm mb-4">
+              <span class="w-2 h-2 rounded-full bg-primary animate-pulse" aria-hidden="true"></span>
+              Crear cuenta
+            </div>
+
+            <h1 class="font-headline-lg text-on-surface tracking-tight mb-2">
+              Únete a
+              <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">MyEvent Tech</span>
+            </h1>
+            <p class="font-body-md text-on-surface-variant max-w-xl mb-8">
+              Descubre experiencias cafeteras íntimas, reserva en segundos en el Quindío o publica tus propios encuentros y catas culturales.
+            </p>
+
+            <!-- Role switcher -->
+            <div class="mb-8">
+              <label class="block font-label-md text-on-surface mb-3 uppercase tracking-wider" id="role-group-label">
+                1. Selecciona cómo vas a usar MyEvent
+              </label>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="role-selector-group" role="radiogroup" aria-labelledby="role-group-label">
+
+                <div class="role-card cursor-pointer relative p-5 rounded-xl transition-all duration-300 shadow-md bg-surface-container-lowest ring-2 ring-primary"
+                  id="card-attendee" role="radio" aria-checked="true" tabindex="0" data-role="attendee">
+                  <div class="flex items-start justify-between mb-3">
+                    <div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary" aria-hidden="true">
+                      <span class="material-symbols-outlined material-symbols-filled">confirmation_number</span>
+                    </div>
+                    <div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center" id="check-attendee" aria-hidden="true">
+                      <span class="material-symbols-outlined text-[16px]">check</span>
+                    </div>
+                  </div>
+                  <h2 class="font-headline-sm text-on-surface mb-1">Quiero asistir</h2>
+                  <p class="font-body-sm text-on-surface-variant mb-4">
+                    Descubre veladas únicas, guarda tus entradas en Apple/Google Wallet y recibe alertas de plazas.
+                  </p>
+                  <div class="flex flex-wrap gap-1.5">
+                    <span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm">Entradas Wallet</span>
+                    <span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm">Sin costes ocultos</span>
+                    <span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm">Alertas VIP</span>
+                  </div>
+                </div>
+
+                <div class="role-card cursor-pointer relative p-5 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md bg-surface-container-low hover:bg-surface-container-lowest"
+                  id="card-organizer" role="radio" aria-checked="false" tabindex="0" data-role="organizer">
+                  <div class="flex items-start justify-between mb-3">
+                    <div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary" aria-hidden="true">
+                      <span class="material-symbols-outlined material-symbols-filled">mic</span>
+                    </div>
+                    <div class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center opacity-40" id="check-organizer" aria-hidden="true">
+                      <span class="material-symbols-outlined text-[16px]">radio_button_unchecked</span>
+                    </div>
+                  </div>
+                  <h2 class="font-headline-sm text-on-surface mb-1">Quiero organizar</h2>
+                  <p class="font-body-sm text-on-surface-variant mb-4">
+                    Publica experiencias, controla aforos en tiempo real, vende tickets y gestiona acreditaciones.
+                  </p>
+                  <div class="flex flex-wrap gap-1.5">
+                    <span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm">Liquidación 24h</span>
+                    <span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm">Aforo GPS</span>
+                    <span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm">Taquilla Pro</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+              <button type="button" aria-label="Registrarse con Google"
+                class="flex items-center justify-center gap-3 py-3 px-4 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-lg transition-all shadow-sm">
+                <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"></path>
+                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"></path>
+                </svg>
+                <span>Google</span>
+              </button>
+              <button type="button" aria-label="Registrarse con Apple"
+                class="flex items-center justify-center gap-3 py-3 px-4 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-label-lg transition-all shadow-sm">
+                <svg class="w-5 h-5 shrink-0 fill-current" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.63-.77 1.06-1.85.94-2.93-.91.04-2.02.61-2.67 1.38-.58.67-1.09 1.76-.95 2.81 1.02.08 2.05-.49 2.68-1.26z"></path>
+                </svg>
+                <span>Apple</span>
+              </button>
+            </div>
+
+            <!-- Separator -->
+            <div class="relative flex items-center justify-center mb-6">
+              <div class="w-full h-px bg-surface-container-high" aria-hidden="true"></div>
+              <span class="absolute px-4 bg-surface-container-lowest text-on-surface-variant font-label-sm uppercase tracking-wider">
+                O regístrate con tu correo
+              </span>
+            </div>
+
+            <form class="space-y-5" id="register-form" novalidate>
+
+              <div>
+                <label class="block font-label-md text-on-surface mb-1.5" for="fullname">Nombre y apellidos</label>
+                <div class="relative">
+                  <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]" aria-hidden="true">badge</span>
+                  <input class="w-full h-12 pl-11 pr-4 rounded-xl bg-surface-container-low text-on-surface font-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all"
+                    id="fullname" name="fullname" placeholder="Tu nombre completo" required autocomplete="name" type="text">
+                </div>
+              </div>
+
+              <div>
+                <label class="block font-label-md text-on-surface mb-1.5" for="email">Correo electrónico</label>
+                <div class="relative">
+                  <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]" aria-hidden="true">mail</span>
+                  <input class="w-full h-12 pl-11 pr-4 rounded-xl bg-surface-container-low text-on-surface font-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all"
+                    id="email" name="email" placeholder="tu@correo.com" required autocomplete="email" inputmode="email" spellcheck="false" type="email">
+                </div>
+              </div>
+
+              <div>
+                <div class="flex items-center justify-between mb-1.5">
+                  <label class="block font-label-md text-on-surface" for="password">Contraseña</label>
+                  <span class="font-label-sm text-primary">Mínimo 8 caracteres</span>
+                </div>
+                <div class="relative">
+                  <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]" aria-hidden="true">lock</span>
+                  <input class="w-full h-12 pl-11 pr-11 rounded-xl bg-surface-container-low text-on-surface font-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all"
+                    id="password" name="password" placeholder="Crea una contraseña segura" required minlength="8" autocomplete="new-password" type="password">
+                  <button type="button" aria-label="Mostrar contraseña" aria-pressed="false"
+                    class="absolute right-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-on-surface rounded transition-colors p-0.5"
+                    id="toggle-pwd-btn">
+                    <span class="material-symbols-outlined text-[20px]" id="eye-icon" aria-hidden="true">visibility</span>
+                  </button>
+                </div>
+                <div class="mt-2 space-y-1">
+                  <div class="flex gap-1.5 h-1.5 w-full" aria-hidden="true">
+                    <div class="flex-1 rounded-full bg-surface-container-highest transition-all" id="bar-1"></div>
+                    <div class="flex-1 rounded-full bg-surface-container-highest transition-all" id="bar-2"></div>
+                    <div class="flex-1 rounded-full bg-surface-container-highest transition-all" id="bar-3"></div>
+                    <div class="flex-1 rounded-full bg-surface-container-highest transition-all" id="bar-4"></div>
+                  </div>
+                  <div class="flex items-center justify-between font-label-sm">
+                    <span class="text-on-surface-variant">
+                      Seguridad:
+                      <strong class="text-on-surface-variant font-semibold" id="strength-label" aria-live="polite">—</strong>
+                    </span>
+                    <span class="text-on-surface-variant">Mínimo 8 caracteres</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="space-y-3 pt-2">
+                <label class="flex items-start gap-3 cursor-pointer group" for="accept-terms">
+                  <input id="accept-terms" name="accept_terms" required checked
+                    class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary accent-primary bg-surface-container" type="checkbox">
+                  <span class="font-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors">
+                    Acepto los <a class="text-primary font-semibold hover:underline" href="#">Términos del Servicio</a> y la
+                    <a class="text-primary font-semibold hover:underline" href="#">Política de Privacidad</a>
+                    de MyEvent Tech Colombia S.A.S.
+                  </span>
+                </label>
+                <label class="flex items-start gap-3 cursor-pointer group" for="accept-marketing">
+                  <input id="accept-marketing" name="accept_marketing" checked
+                    class="mt-1 w-4 h-4 rounded text-primary focus:ring-primary accent-primary bg-surface-container" type="checkbox">
+                  <span class="font-body-sm text-on-surface-variant group-hover:text-on-surface transition-colors">
+                    Deseo recibir recomendaciones personalizadas de veladas y acceso preferente a preventas en mi ciudad.
+                  </span>
+                </label>
+              </div>
+
+              <!-- Error -->
+              <div id="register-error" class="hidden p-3 rounded-xl bg-error-container text-on-error-container font-body-sm items-start gap-2">
+                <span class="material-symbols-outlined text-[20px] shrink-0" aria-hidden="true">error</span>
+                <span id="register-error-text"></span>
+              </div>
+
+              <button type="submit" id="register-submit"
+                class="w-full mt-4 h-12 py-3.5 px-6 rounded-full bg-gradient-to-r from-primary to-primary-container hover:from-primary-container hover:to-primary text-on-primary font-label-lg shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 active:scale-[0.99] transition-all flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed">
+                <span id="register-submit-text">Crear mi cuenta gratis</span>
+                <span class="material-symbols-outlined text-[20px]" id="register-submit-icon" aria-hidden="true">arrow_forward</span>
+              </button>
+
+              <div class="text-center pt-2">
+                <p class="font-body-md text-on-surface-variant">
+                  ¿Ya tienes una cuenta?
+                  <a class="font-label-lg text-primary hover:underline" href="../login/" id="login-link">Inicia sesión</a>
+                </p>
+              </div>
+            </form>
+          </section>
+
+          <aside class="lg:col-span-5 flex flex-col gap-6">
+
+            <div class="bg-surface-container-lowest rounded-2xl shadow-md p-5 overflow-hidden relative">
+              <div class="flex items-center justify-between mb-3 gap-3 flex-wrap">
+                <span class="px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm inline-flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-error animate-ping" aria-hidden="true"></span>
+                  Últimos 4 cupos hoy
+                </span>
+                <span class="font-label-sm text-on-surface-variant uppercase tracking-wider">En cartelera</span>
+              </div>
+              <div class="relative h-48 w-full rounded-xl overflow-hidden mb-4 shadow-inner">
+                <img class="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlBs2Y0MujgwDQVtFBCBgc_MvuVCVc7vFpoyeGkfopQPfw64AqWX-ndbESzzj5wVZypXdbbQMBa-T0Q7ZpaOkyWRq2oha-eMJjXx8Xs2l7SCxkk-R5-1DKHIVGOM-GbV-mCR7cLi7G8R4FuRmLs5ol0Pl01A-T1oKcgPHfbPBpazdONXZBTrp3pBE8SJJBDCwxxpaV0L8SiGxBDm5aEW3nAQsbCOcVgRv9V7QFdXTIpu3ZKq8M3vl9xA"
+                  alt="Concierto íntimo de jazz a la luz de las velas en Salento" loading="lazy" decoding="async">
+                <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent" aria-hidden="true"></div>
+                <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-primary gap-3">
+                  <div>
+                    <p class="font-headline-sm leading-tight text-white drop-shadow-sm">Cata de Café Especial &amp; Maridaje</p>
+                    <p class="font-body-sm text-slate-200">Hacienda El Ocaso · Salento, Quindío</p>
+                  </div>
+                  <span class="font-code-num text-white shrink-0">$ 75.000 COP</span>
+                </div>
+              </div>
+              <div class="bg-surface-container-low rounded-xl p-3.5 mb-2">
+                <div class="flex items-center justify-between font-label-sm mb-1.5 gap-3">
+                  <span class="text-on-surface font-semibold flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">group</span>
+                    Aforo confirmado
+                  </span>
+                  <span class="text-primary font-bold">96% ocupado</span>
+                </div>
+                <div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="96">
+                  <div class="h-full rounded-full bg-gradient-to-r from-primary to-secondary w-[96%]"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm">
+                <div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary mb-3" aria-hidden="true">
+                  <span class="material-symbols-outlined text-[20px]">local_activity</span>
+                </div>
+                <div class="font-code-num text-on-surface mb-0.5">+12.000</div>
+                <div class="font-body-sm text-on-surface-variant">Asistentes activos en el Eje Cafetero</div>
+              </div>
+              <div class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm">
+                <div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary mb-3" aria-hidden="true">
+                  <span class="material-symbols-outlined text-[20px]">star</span>
+                </div>
+                <div class="flex items-baseline gap-1">
+                  <div class="font-code-num text-on-surface">4.8</div>
+                  <span class="font-label-sm text-on-surface-variant">/ 5</span>
+                </div>
+                <div class="font-body-sm text-on-surface-variant">Valoración media</div>
+              </div>
+            </div>
+
+            <div class="bg-surface-container-lowest rounded-2xl p-6 shadow-sm relative">
+              <span class="material-symbols-outlined text-primary/20 text-5xl absolute top-4 right-4 pointer-events-none select-none" aria-hidden="true">format_quote</span>
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-11 h-11 rounded-full bg-primary-fixed flex items-center justify-center text-primary" aria-hidden="true">
+                  <span class="material-symbols-outlined text-[22px]">person</span>
+                </div>
+                <div>
+                  <p class="font-label-lg text-on-surface leading-tight">Asistente verificada</p>
+                  <p class="font-body-sm text-on-surface-variant">Armenia, Quindío</p>
+                </div>
+              </div>
+              <p class="font-body-md text-on-surface-variant italic leading-relaxed">
+                "Reservar mi cata en Salento y tener el QR directo en el wallet de mi celular hace que nunca me pierda un plan en el Quindío. Cero filas y curaduría impecable."
+              </p>
+            </div>
+
+            <div class="bg-surface-container-low rounded-xl p-4 flex items-center justify-between gap-4 text-on-surface-variant flex-wrap">
+              <div class="flex items-center gap-2 font-label-sm">
+                <span class="material-symbols-outlined text-primary text-[18px]" aria-hidden="true">verified_user</span>
+                <span>Garantía de pagos PSE y tarjetas</span>
+              </div>
+              <div class="w-px h-4 bg-outline-variant/60 hidden sm:block" aria-hidden="true"></div>
+              <div class="flex items-center gap-2 font-label-sm">
+                <span class="material-symbols-outlined text-tertiary text-[18px]" aria-hidden="true">lock</span>
+                <span>Protección de datos Habeas Data</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="w-full bg-surface-container-low py-8">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4 text-body-sm text-on-surface-variant">
+      <p class="text-center md:text-left">© 2025 MyEvent Tech Colombia S.A.S. Todos los derechos reservados. Armenia, Quindío.</p>
+      <div class="flex flex-wrap items-center justify-center gap-6">
+        <a class="hover:text-on-surface transition-colors" href="#">Términos del Servicio</a>
+        <a class="hover:text-on-surface transition-colors" href="#">Privacidad y Cookies</a>
+        <a class="hover:text-on-surface transition-colors" href="#">Condiciones de Compra</a>
+        <a class="hover:text-on-surface transition-colors" href="#">Aviso Legal</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../render-styles.js"></script>
+  <script src="../../auth-store.js"></script>
+  <script src="app.js"></script>
+  <script src="../../nav.js"></script>
+</body>
+
+</html>

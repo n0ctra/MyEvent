@@ -1,0 +1,51 @@
+/* ============================================================
+   MyEvent Tech — Onboarding / Personalización (Paso 2 de 2)
+   Estilos base + utilidades propias
+   (los estilos visuales vienen de Tailwind CDN)
+   ============================================================ */
+
+/* ---------- Reset / Base ---------- */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overscroll-behavior: none;
+}
+
+/* Evita márgenes fantasma dentro de <main> */
+main > :first-child {
+  margin-top: 0 !important;
+}
+
+main > :last-child {
+  margin-bottom: 0 !important;
+}
+
+/* ---------- Scrollbars ---------- */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE / Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---------- Utilidades extraídas de estilos inline ---------- */
+
+/* Icono Material Symbols con relleno sólido */
+.material-symbols-filled {
+  font-variation-settings: 'FILL' 1;
+}
+
+/* Icono Material Symbols con contorno (relleno 0) */
+.material-symbols-outline {
+  font-variation-settings: 'FILL' 0;
+}
